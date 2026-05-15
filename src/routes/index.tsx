@@ -82,7 +82,6 @@ function Index() {
       <SiteHeader />
       <main>
         <Hero />
-        <IntroBlock />
         <CategoryTiles />
 
         <ProductCarousel
