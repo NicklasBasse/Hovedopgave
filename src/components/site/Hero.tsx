@@ -21,7 +21,7 @@ export function Hero() {
             AC Horsens
           </p>
           <h2 className="mt-3 text-3xl font-extrabold leading-[1.05] md:text-5xl lg:text-6xl">
-            Tag AC Horsens med dig<br />i hverdagen og til kamp
+            BYENS BEDSTE<br />SAH's nye merchandise kollektion
           </h2>
           <p className="mt-4 text-sm md:text-base">
             Tilgængelig online og i SPORT 24 - Sammen for Horsens!
