@@ -5,7 +5,7 @@ export function Hero() {
   return (
     <section className="relative w-full">
       <h1 className="sr-only">AC Horsens forside</h1>
-      <div className="relative aspect-[16/9] w-full overflow-hidden">
+      <div className="relative aspect-[21/9] w-full overflow-hidden md:aspect-[24/9]">
         <img
           src={heroImg}
           alt="AC Horsens topbillede 2025"
