@@ -107,19 +107,21 @@ export function ProductCarousel({
         {/* Tail card with side image + CTA */}
         <a
           href="#"
-          className="relative block w-[220px] shrink-0 snap-start overflow-hidden md:w-[260px]"
+          className="group block w-[220px] shrink-0 snap-start md:w-[260px]"
         >
-          <img
-            src={sideImage}
-            alt={sideAlt}
-            width={512}
-            height={640}
-            loading="lazy"
-            className="h-full w-full object-cover"
-          />
-          <span className="absolute bottom-4 left-4 right-4 rounded-full bg-foreground px-4 py-3 text-center text-sm font-semibold text-background">
-            {ctaLabel}
-          </span>
+          <div className="relative aspect-square overflow-hidden bg-muted">
+            <img
+              src={sideImage}
+              alt={sideAlt}
+              width={600}
+              height={600}
+              loading="lazy"
+              className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+            />
+            <span className="absolute bottom-4 left-4 right-4 rounded-full bg-foreground px-4 py-3 text-center text-sm font-semibold text-background">
+              {ctaLabel}
+            </span>
+          </div>
         </a>
       </div>
     </section>
