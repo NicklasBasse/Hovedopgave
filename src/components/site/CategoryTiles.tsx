@@ -11,10 +11,11 @@ const TILES = [
 export function CategoryTiles() {
   return (
     <section className="mx-auto max-w-[1200px] px-6 py-20">
-      <div className="grid grid-cols-3 gap-10 md:gap-20">
+      <div className="flex flex-wrap justify-center gap-10 md:gap-20">
         {TILES.map((t) => (
           <a key={t.label} href="#" className="group flex flex-col items-center text-center">
-            <div className="flex aspect-square w-full items-center justify-center overflow-hidden rounded-full bg-muted">
+            <div className="flex h-[224px] w-[224px] items-center justify-center overflow-hidden rounded-full bg-muted">
+
               <img
                 src={t.src}
                 alt={t.label}
