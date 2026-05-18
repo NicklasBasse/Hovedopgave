@@ -10,7 +10,7 @@ const TILES = [
 
 export function CategoryTiles() {
   return (
-    <section className="mx-auto max-w-[1200px] px-6 py-20">
+    <section className="ml-6 border-l-2 border-foreground/30 py-20 pl-6">
       <div className="flex flex-wrap justify-center gap-10 md:gap-20">
         {TILES.map((t) => (
           <a key={t.label} href="#" className="group flex flex-col items-center text-center">
