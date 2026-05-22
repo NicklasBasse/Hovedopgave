@@ -23,7 +23,7 @@ export function Hero() {
             BYENS BEDSTE<br />SAH's nye merchandise kollektion
           </h2>
           <p className="mt-4 text-sm md:text-base">
-            Tilgængelig online og i SPORT 24 - Sammen for Horsens!
+            Ny merchandise kollektion til at skabe lokal stolthed og fællesskab
           </p>
           <div className="mt-6 flex flex-wrap gap-3">
             <a
