@@ -73,16 +73,14 @@ export function ProductCarousel({
           href="#"
           className="group block h-[469px] w-[329px] shrink-0 snap-start"
         >
-          <div className="relative h-[329px] w-[329px] overflow-hidden bg-muted">
+          <div className="relative h-full w-full overflow-hidden bg-muted">
             <img
               src={sideImage}
               alt={sideAlt}
-              width={600}
-              height={600}
               loading="lazy"
               className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
             />
-            <span className="absolute bottom-4 left-4 right-4 rounded-full bg-background px-4 py-3 text-center text-sm font-semibold text-foreground shadow-md">
+            <span className="absolute bottom-4 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full bg-background px-6 py-3 text-sm font-semibold text-foreground shadow-md">
               Se alt merchandise
             </span>
           </div>
