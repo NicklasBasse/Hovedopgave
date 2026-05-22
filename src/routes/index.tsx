@@ -7,6 +7,7 @@ import { CategoryTiles } from "@/components/site/CategoryTiles";
 import { ProductCarousel, type Product } from "@/components/site/ProductCarousel";
 import { SplitFeature } from "@/components/site/SplitFeature";
 import { ClosingHeading } from "@/components/site/ClosingHeading";
+import { SiteFooter } from "@/components/site/SiteFooter";
 
 import sectionLeft from "@/assets/ach/section-left.jpg";
 import sectionRight from "@/assets/ach/section-right.jpg";
@@ -126,6 +127,7 @@ function Index() {
 
         <ClosingHeading />
       </main>
+      <SiteFooter />
     </div>
   );
 }
