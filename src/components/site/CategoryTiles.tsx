@@ -3,7 +3,7 @@ import merch from "@/assets/ach/tile-merch.png";
 import logo from "@/assets/ach/tile-logo.png";
 
 const TILES = [
-  { src: jersey, label: "Spillertrøjer" },
+  { src: jersey, label: "Spillertøj" },
   { src: merch, label: "Merchandise" },
   { src: logo, label: "Se alt ACH" },
 ];
