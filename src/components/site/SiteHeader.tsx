@@ -6,7 +6,7 @@ const NAV = ["Kvinder", "Mænd", "Børn", "Aktiviteter", "Gode priser"];
 export function SiteHeader() {
   return (
     <header className="sticky top-0 z-40 w-full border-b border-border bg-background">
-      <div className="mx-auto flex max-w-[1440px] items-center gap-6 px-6 py-4">
+      <div className="mx-auto flex max-w-[1440px] items-center gap-6 px-6 py-2">
         <button aria-label="Menu" className="text-foreground">
           <Menu className="h-6 w-6" />
         </button>
@@ -20,7 +20,7 @@ export function SiteHeader() {
         </nav>
 
         <a href="/" className="mx-auto flex items-center" aria-label="SPORT 24">
-          <img src={sport24Logo} alt="SPORT 24" className="h-20 w-auto md:h-24" />
+          <img src={sport24Logo} alt="SPORT 24" className="h-12 w-auto md:h-14" />
         </a>
 
         <div className="hidden flex-1 max-w-md md:block">
