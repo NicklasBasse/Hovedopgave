@@ -92,7 +92,7 @@ export function ProductCarousel({
           <a
             key={i}
             href="#"
-            className="group block h-[469px] w-[329px] shrink-0 snap-start"
+            className="group block w-[329px] shrink-0 snap-start"
           >
             <div className="relative h-[329px] w-[329px] overflow-hidden bg-muted">
               <img
