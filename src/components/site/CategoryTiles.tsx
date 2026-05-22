@@ -1,4 +1,4 @@
-import jersey from "@/assets/ach/tile-sah-jersey-v2.webp";
+import jersey from "@/assets/ach/tile-sah-v3.webp";
 import merch from "@/assets/ach/tile-merch.png";
 import logo from "@/assets/ach/tile-logo.png";
 
