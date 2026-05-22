@@ -36,7 +36,7 @@ export function ProductCarousel({
   };
 
   return (
-    <section className="border-l-2 border-foreground/30 py-14 pl-[max(1.5rem,calc((100vw-1440px)/2+1.5rem))] pr-0">
+    <section className="border-l-2 border-foreground/30 bg-muted/40 py-14 pl-[max(1.5rem,calc((100vw-1440px)/2+1.5rem))] pr-0">
       <div className="mb-6 flex flex-wrap items-end justify-between gap-4">
         <div>
           <h2 className="text-2xl font-black tracking-tight md:text-4xl">{title}</h2>
