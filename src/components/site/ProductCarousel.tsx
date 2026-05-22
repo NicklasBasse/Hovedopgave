@@ -36,7 +36,7 @@ export function ProductCarousel({
   };
 
   return (
-    <section className="mx-auto max-w-[1440px] border-l-2 border-foreground/30 px-6 py-6 pl-12">
+    <section className="mx-auto max-w-[1440px] border-l-2 border-foreground/30 px-6 py-14 pl-12">
       <div className="mb-6 flex flex-wrap items-end justify-between gap-4">
         <div>
           <h2 className="text-2xl font-black tracking-tight md:text-4xl">{title}</h2>
@@ -92,7 +92,7 @@ export function ProductCarousel({
           <a
             key={i}
             href="#"
-            className="group block w-[329px] shrink-0 snap-start"
+            className="group block h-[469px] w-[329px] shrink-0 snap-start"
           >
             <div className="relative h-[329px] w-[329px] overflow-hidden bg-muted">
               <img
@@ -101,10 +101,10 @@ export function ProductCarousel({
                 width={600}
                 height={600}
                 loading="lazy"
-                className="h-full w-full scale-[1.35] object-contain transition-transform duration-300 group-hover:scale-[1.42]"
+                className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
               {p.excluded && (
-                <span className="absolute left-2 top-2 bg-foreground/80 px-2 py-0.5 text-[10px] font-semibold uppercase text-background z-10">
+                <span className="absolute left-2 top-2 bg-foreground/80 px-2 py-0.5 text-[10px] font-semibold uppercase text-background">
                   Undtaget af kampagnen
                 </span>
               )}
