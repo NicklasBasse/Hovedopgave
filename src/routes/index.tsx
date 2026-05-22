@@ -71,7 +71,7 @@ const jerseyProducts: Product[] = [
   { img: pSocksBlack, name: "AC Horsens Udebanestrømper 2024", price: "50 kr.", excluded: true },
   { img: pSocksWhite, name: "AC Horsens Udebanestrømper 25", price: "65 kr.", excluded: true },
   { img: pSocksYellow, name: "AC Horsens Hjemmebanestrømper 25/26", price: "105 kr.", excluded: true },
-  { img: pShortsKids, name: "AC Horsens Hjemmebaneshorts 25/26 Børn", price: "260 kr.", excluded: true },
+  { img: pShortsKids2526, name: "AC Horsens Hjemmebaneshorts 25/26 Børn", price: "260 kr.", excluded: true },
   { img: pShorts, name: "AC Horsens Hjemmebaneshorts 25/26", price: "300 kr.", excluded: true },
 ];
 
