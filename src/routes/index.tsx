@@ -26,6 +26,7 @@ import pUmbrella from "@/assets/ach/p-umbrella.jpg";
 import pCap from "@/assets/ach/p-cap.jpg";
 import pHome from "@/assets/ach/p-home-jersey.webp";
 import pShortsKids from "@/assets/ach/p-shorts-kids.webp";
+import pShortsKids2526 from "@/assets/ach/p-shorts-kids-2526.webp";
 import pSocksBlack from "@/assets/ach/p-socks-black.webp";
 import pSocksWhite from "@/assets/ach/p-socks-white.webp";
 import pSocksYellow from "@/assets/ach/p-socks-yellow.webp";
@@ -70,7 +71,7 @@ const jerseyProducts: Product[] = [
   { img: pSocksBlack, name: "AC Horsens Udebanestrømper 2024", price: "50 kr.", excluded: true },
   { img: pSocksWhite, name: "AC Horsens Udebanestrømper 25", price: "65 kr.", excluded: true },
   { img: pSocksYellow, name: "AC Horsens Hjemmebanestrømper 25/26", price: "105 kr.", excluded: true },
-  { img: pShortsKids, name: "AC Horsens Hjemmebaneshorts 25/26 Børn", price: "260 kr.", excluded: true },
+  { img: pShortsKids2526, name: "AC Horsens Hjemmebaneshorts 25/26 Børn", price: "260 kr.", excluded: true },
   { img: pShorts, name: "AC Horsens Hjemmebaneshorts 25/26", price: "300 kr.", excluded: true },
 ];
 
