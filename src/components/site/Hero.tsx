@@ -1,5 +1,4 @@
 import heroImg from "@/assets/ach/hero.jpg";
-import jerseyImg from "@/assets/ach/p-home-jersey.jpg";
 
 export function Hero() {
   return (
