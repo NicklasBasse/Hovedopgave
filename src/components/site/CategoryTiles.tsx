@@ -22,7 +22,7 @@ export function CategoryTiles() {
                 width={600}
                 height={600}
                 loading="lazy"
-                className="h-3/5 w-3/5 object-contain transition-transform duration-300 group-hover:scale-105"
+                className="h-full w-full object-contain p-4 transition-transform duration-300 group-hover:scale-105"
               />
             </div>
             <span className="mt-6 text-base font-semibold md:text-lg">{t.label}</span>
