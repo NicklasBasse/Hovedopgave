@@ -28,7 +28,7 @@ import pHome from "@/assets/ach/p-home-jersey.webp";
 import pShortsKids from "@/assets/ach/p-shorts-kids.jpg";
 import pSocksBlack from "@/assets/ach/p-socks-black.webp";
 import pSocksWhite from "@/assets/ach/p-socks-white.webp";
-import pSocksYellow from "@/assets/ach/p-socks-yellow.jpg";
+import pSocksYellow from "@/assets/ach/p-socks-yellow.webp";
 import pShorts from "@/assets/ach/p-shorts.jpg";
 
 export const Route = createFileRoute("/")({
