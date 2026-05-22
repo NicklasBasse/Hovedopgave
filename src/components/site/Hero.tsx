@@ -17,7 +17,7 @@ export function Hero() {
         {/* Bottom-left text + CTAs */}
         <div className="absolute bottom-8 left-4 max-w-[640px] text-white md:bottom-16 md:left-16">
           <p className="text-xs font-bold uppercase tracking-wider md:text-sm">
-            AC Horsens
+            Skanderborg agf håndbold
           </p>
           <h2 className="mt-3 text-3xl font-extrabold leading-[1.05] md:text-5xl lg:text-4xl">
             BYENS BEDSTE<br />SAH's nye merchandise kollektion
