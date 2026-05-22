@@ -107,7 +107,7 @@ function Index() {
 
         <ProductCarousel
           title="ACH Spillertøj"
-          count="19 produkter"
+          count="10 produkter"
           subtitle="AC Horsens - ren gul stolthed, skabt til kamp og fællesskab!"
           products={jerseyProducts}
           ctaLabel="Find din trøje her"
