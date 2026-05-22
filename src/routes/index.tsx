@@ -25,7 +25,7 @@ import pSweatshirt from "@/assets/ach/p-sweatshirt.jpg";
 import pUmbrella from "@/assets/ach/p-umbrella.jpg";
 import pCap from "@/assets/ach/p-cap.jpg";
 import pHome from "@/assets/ach/p-home-jersey.webp";
-import pShortsKids from "@/assets/ach/p-shorts-kids.jpg";
+import pShortsKids from "@/assets/ach/p-shorts-kids.webp";
 import pSocksBlack from "@/assets/ach/p-socks-black.webp";
 import pSocksWhite from "@/assets/ach/p-socks-white.webp";
 import pSocksYellow from "@/assets/ach/p-socks-yellow.webp";
