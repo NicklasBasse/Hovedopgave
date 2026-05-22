@@ -71,7 +71,7 @@ export function ProductCarousel({
         {/* Lead card with side image + CTA */}
         <a
           href="#"
-          className="group block h-[469px] w-[329px] shrink-0 snap-start"
+          className="group block h-[459px] w-[329px] shrink-0 snap-start"
         >
           <div className="relative h-full w-full overflow-hidden">
             <img
@@ -90,7 +90,7 @@ export function ProductCarousel({
           <a
             key={i}
             href="#"
-            className="group flex h-[469px] w-[329px] shrink-0 snap-start flex-col"
+            className="group flex h-[459px] w-[329px] shrink-0 snap-start flex-col"
           >
             <div className="relative w-full flex-1 overflow-hidden">
               <img
