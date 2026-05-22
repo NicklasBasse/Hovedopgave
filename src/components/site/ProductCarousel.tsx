@@ -36,8 +36,8 @@ export function ProductCarousel({
   };
 
   return (
-    <section className="border-l-2 border-foreground/30 bg-muted/40 py-14 pl-[max(1.5rem,calc((100vw-1440px)/2+1.5rem))] pr-0">
-      <div className="mb-6 flex flex-wrap items-end justify-between gap-4">
+    <section className="border-l-2 border-foreground/30 py-14 pl-[max(1.5rem,calc((100vw-1440px)/2+1.5rem))] pr-0">
+      <div className="mb-6 flex flex-wrap items-end justify-between gap-4 pr-[max(1.5rem,calc((100vw-1440px)/2+1.5rem))]">
         <div>
           <h2 className="text-2xl font-black tracking-tight md:text-4xl">{title}</h2>
           <p className="mt-2 text-sm text-muted-foreground">
@@ -65,7 +65,7 @@ export function ProductCarousel({
 
       <div
         ref={scroller}
-        className="flex snap-x snap-mandatory gap-4 overflow-x-auto [&::-webkit-scrollbar]:hidden"
+        className="flex snap-x snap-mandatory gap-4 overflow-x-auto bg-muted/50 py-6 [&::-webkit-scrollbar]:hidden"
         style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
       >
         {/* Lead card with side image + CTA */}
