@@ -18,7 +18,7 @@ export function SplitFeature({
   imageSide,
 }: Props) {
   return (
-    <section className="mx-auto max-w-[1440px] px-6 py-14">
+    <section className="mx-auto max-w-[1440px] px-6 py-[50px]">
       <div
         className={`grid items-center gap-10 md:grid-cols-2 ${
           imageSide === "right" ? "md:[&>div:first-child]:order-1 md:[&>div:last-child]:order-2" : ""

@@ -1,6 +1,6 @@
 export function ClosingHeading() {
   return (
-    <section className="mx-auto max-w-[1100px] px-6 py-16 text-center">
+    <section className="mx-auto max-w-[1100px] px-6 py-[50px] text-center">
       <h2 className="text-2xl font-black tracking-tight md:text-4xl">
         Altid gode priser, hurtig levering og 365 dages fuld returret
       </h2>
