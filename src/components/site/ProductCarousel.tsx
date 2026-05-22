@@ -65,8 +65,8 @@ export function ProductCarousel({
 
       <div
         ref={scroller}
-        className="flex snap-x snap-mandatory gap-4 overflow-x-auto scrollbar-thin"
-        style={{ scrollbarWidth: "thin" }}
+        className="flex snap-x snap-mandatory gap-4 overflow-x-auto [&::-webkit-scrollbar]:hidden"
+        style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
       >
         {/* Lead card with side image + CTA */}
         <a
