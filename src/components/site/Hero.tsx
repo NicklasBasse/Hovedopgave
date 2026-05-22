@@ -42,7 +42,7 @@ export function Hero() {
               href="#alt"
               className="rounded-full bg-white px-6 py-3 text-sm font-semibold text-foreground transition hover:bg-white/90"
             >
-              Se alt AC Horsens
+              Se alt SAH
             </a>
           </div>
         </div>
