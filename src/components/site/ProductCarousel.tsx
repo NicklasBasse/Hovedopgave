@@ -73,7 +73,7 @@ export function ProductCarousel({
           href="#"
           className="group block h-[469px] w-[329px] shrink-0 snap-start"
         >
-          <div className="relative h-full w-full overflow-hidden bg-muted">
+          <div className="relative h-full w-full overflow-hidden">
             <img
               src={sideImage}
               alt={sideAlt}
