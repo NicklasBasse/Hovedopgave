@@ -90,18 +90,13 @@ export function ProductCarousel({
               )}
             </div>
 
-            <p className="mt-3 text-[13px] font-semibold leading-tight">{p.name}</p>
-            <div className="mt-1 flex items-baseline gap-2">
+            <p className="mt-3 text-center text-[13px] font-semibold leading-tight">{p.name}</p>
+            <div className="mt-1 flex items-baseline justify-center gap-2">
               <span className="text-base font-bold">{p.price}</span>
               {p.oldPrice && (
                 <span className="text-xs text-muted-foreground line-through">{p.oldPrice}</span>
               )}
             </div>
-            {p.badge && (
-              <span className="mt-2 inline-block bg-brand-yellow px-2 py-0.5 text-[11px] font-bold uppercase">
-                {p.badge}
-              </span>
-            )}
           </a>
         ))}
 
