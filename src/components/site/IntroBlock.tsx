@@ -14,7 +14,7 @@ export function IntroBlock() {
         {[
           { label: "Spillertøj" },
           { label: "Merch" },
-          { label: "Se alt ACH" },
+          { label: "Se alt SAH" },
         ].map((b) => (
           <a
             key={b.label}
