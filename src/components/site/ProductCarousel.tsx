@@ -101,10 +101,10 @@ export function ProductCarousel({
                 width={600}
                 height={600}
                 loading="lazy"
-                className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                className="h-full w-full scale-[1.35] object-contain transition-transform duration-300 group-hover:scale-[1.42]"
               />
               {p.excluded && (
-                <span className="absolute left-2 top-2 bg-foreground/80 px-2 py-0.5 text-[10px] font-semibold uppercase text-background">
+                <span className="absolute left-2 top-2 bg-foreground/80 px-2 py-0.5 text-[10px] font-semibold uppercase text-background z-10">
                   Undtaget af kampagnen
                 </span>
               )}
