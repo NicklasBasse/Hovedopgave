@@ -48,24 +48,6 @@ export function Hero() {
           </div>
         </div>
 
-        {/* Overlay product card */}
-        <div className="absolute bottom-6 right-6 hidden w-[220px] bg-white p-3 shadow-lg lg:block">
-          <img
-            src={jerseyImg}
-            alt="AC Horsens Hjemmebanetrøje 25/26"
-            width={600}
-            height={600}
-            className="h-40 w-full object-contain"
-            loading="lazy"
-          />
-          <p className="mt-2 text-[13px] font-semibold leading-tight">
-            AC Horsens Hjemmebanetrøje 25/26
-          </p>
-          <p className="mt-1 text-base font-bold">455 kr.</p>
-          <span className="mt-2 inline-block bg-brand-yellow px-2 py-0.5 text-[11px] font-bold uppercase">
-            Skarp Pris
-          </span>
-        </div>
       </div>
     </section>
   );
