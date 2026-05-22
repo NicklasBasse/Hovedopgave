@@ -1,4 +1,5 @@
 import { Facebook, Instagram, Youtube } from "lucide-react";
+import sport24Logo from "@/assets/sport24-logo.webp";
 
 const kundeservice = [
   "Se butikker og åbningstider",
