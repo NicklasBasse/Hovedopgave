@@ -6,7 +6,7 @@ const NAV = ["Kvinder", "Mænd", "Børn", "Aktiviteter", "Gode priser"];
 export function SiteHeader() {
   return (
     <header className="sticky top-0 z-40 w-full border-b border-border bg-background">
-      <div className="mx-auto flex max-w-[1440px] items-center gap-6 px-6 py-2">
+      <div className="mx-auto flex max-w-[1440px] items-center gap-6 px-6 py-5">
         <button aria-label="Menu" className="text-foreground">
           <Menu className="h-6 w-6" />
         </button>
