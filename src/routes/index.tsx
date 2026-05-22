@@ -106,13 +106,13 @@ function Index() {
         />
 
         <ProductCarousel
-          title="ACH Spillertrøjer"
+          title="ACH Spillertøj"
           count="19 produkter"
           subtitle="AC Horsens - ren gul stolthed, skabt til kamp og fællesskab!"
           products={jerseyProducts}
           ctaLabel="Find din trøje her"
           sideImage={side2}
-          sideAlt="ACH Spillertrøjer"
+          sideAlt="ACH Spillertøj"
         />
 
         <SplitFeature
