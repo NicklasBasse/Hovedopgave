@@ -12,14 +12,14 @@ export function Hero() {
           height={1080}
           className="h-full w-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-r from-black/50 via-black/20 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-black/40 via-transparent to-transparent" />
 
         {/* Bottom-left text + CTAs */}
-        <div className="absolute bottom-6 left-4 max-w-[560px] text-white md:bottom-12 md:left-12">
+        <div className="absolute bottom-8 left-4 max-w-[640px] text-white md:bottom-16 md:left-16">
           <p className="text-xs font-bold uppercase tracking-wider md:text-sm">
             AC Horsens
           </p>
-          <h2 className="mt-3 text-3xl font-extrabold leading-[1.05] md:text-5xl lg:text-3xl">
+          <h2 className="mt-3 text-3xl font-extrabold leading-[1.05] md:text-5xl lg:text-6xl">
             BYENS BEDSTE<br />SAH's nye merchandise kollektion
           </h2>
           <p className="mt-4 text-sm md:text-base">
