@@ -127,6 +127,7 @@ function Index() {
 
         <ClosingHeading />
       </main>
+      <SiteFooter />
     </div>
   );
 }
