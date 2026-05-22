@@ -1,4 +1,5 @@
 import { Menu, Search, User, Heart, ShoppingBag } from "lucide-react";
+import sport24Logo from "@/assets/sport24-logo.webp";
 
 const NAV = ["Kvinder", "Mænd", "Børn", "Aktiviteter", "Gode priser"];
 
@@ -19,12 +20,7 @@ export function SiteHeader() {
         </nav>
 
         <a href="/" className="mx-auto flex items-center" aria-label="SPORT 24">
-          <span
-            className="inline-flex items-center justify-center bg-brand-red px-3 py-2 text-2xl font-black italic tracking-tight text-white"
-            style={{ borderRadius: 4 }}
-          >
-            SPORT<span className="ml-1 rounded-sm bg-white px-1 text-brand-red">24</span>
-          </span>
+          <img src={sport24Logo} alt="SPORT 24" className="h-10 w-auto" />
         </a>
 
         <div className="hidden flex-1 max-w-md md:block">
