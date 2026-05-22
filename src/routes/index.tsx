@@ -50,8 +50,8 @@ export const Route = createFileRoute("/")({
 });
 
 const focusProducts: Product[] = [
-  { img: pAway, name: "AC Horsens Udebanetrøje 25", price: "420 kr.", badge: "Skarp Pris", excluded: true },
-  { img: pAwayKids, name: "AC Horsens Udebanetrøje 25 Børn", price: "385 kr.", badge: "Skarp Pris", excluded: true },
+  { img: pAway, name: "AC Horsens Udebanetrøje 25", price: "420 kr.", excluded: true },
+  { img: pAwayKids, name: "AC Horsens Udebanetrøje 25 Børn", price: "385 kr.", excluded: true },
   { img: pBallBlue, name: "AC Horsens Precision Training Fodbold", price: "200 kr.", oldPrice: "250 kr.", badge: "KLUBPRIS - SPAR 20%" },
   { img: pBootbag, name: "AC Horsens Støvlepose", price: "100 kr.", oldPrice: "125 kr.", badge: "KLUBPRIS - SPAR 20%" },
   { img: pBallGreen, name: "AC Horsens Precision Training Fodbold", price: "200 kr.", oldPrice: "250 kr.", badge: "KLUBPRIS - SPAR 20%" },
@@ -63,16 +63,16 @@ const focusProducts: Product[] = [
 ];
 
 const jerseyProducts: Product[] = [
-  { img: pShortsKids, name: "AC Horsens Hjemmebaneshorts 24/25 Børn", price: "245 kr.", badge: "Skarp Pris", excluded: true },
-  { img: pAwayKids, name: "AC Horsens 23/24 Udebanetrøje Børn", price: "420 kr.", badge: "Skarp Pris", excluded: true },
-  { img: pHome, name: "AC Horsens Hjemmebanetrøje 25/26", price: "455 kr.", badge: "Skarp Pris", excluded: true },
-  { img: pSocksBlack, name: "AC Horsens Udebanestrømper 2024", price: "50 kr.", badge: "Skarp Pris", excluded: true },
-  { img: pSocksWhite, name: "AC Horsens Udebanestrømper 25", price: "65 kr.", badge: "Skarp Pris", excluded: true },
-  { img: pSocksYellow, name: "AC Horsens Hjemmebanestrømper 25/26", price: "105 kr.", badge: "Skarp Pris", excluded: true },
-  { img: pShortsKids, name: "AC Horsens Hjemmebaneshorts 25/26 Børn", price: "260 kr.", badge: "Skarp Pris", excluded: true },
-  { img: pShorts, name: "AC Horsens Hjemmebaneshorts 25/26", price: "300 kr.", badge: "Skarp Pris", excluded: true },
-  { img: pHome, name: "AC Horsens Hjemmebanetrøje 24/25 Børn", price: "275 kr.", badge: "Skarp Pris", excluded: true },
-  { img: pHome, name: "AC Horsens Hjemmebanetrøje 25/26 Børn", price: "420 kr.", badge: "Skarp Pris", excluded: true },
+  { img: pShortsKids, name: "AC Horsens Hjemmebaneshorts 24/25 Børn", price: "245 kr.", excluded: true },
+  { img: pAwayKids, name: "AC Horsens 23/24 Udebanetrøje Børn", price: "420 kr.", excluded: true },
+  { img: pHome, name: "AC Horsens Hjemmebanetrøje 25/26", price: "455 kr.", excluded: true },
+  { img: pSocksBlack, name: "AC Horsens Udebanestrømper 2024", price: "50 kr.", excluded: true },
+  { img: pSocksWhite, name: "AC Horsens Udebanestrømper 25", price: "65 kr.", excluded: true },
+  { img: pSocksYellow, name: "AC Horsens Hjemmebanestrømper 25/26", price: "105 kr.", excluded: true },
+  { img: pShortsKids, name: "AC Horsens Hjemmebaneshorts 25/26 Børn", price: "260 kr.", excluded: true },
+  { img: pShorts, name: "AC Horsens Hjemmebaneshorts 25/26", price: "300 kr.", excluded: true },
+  { img: pHome, name: "AC Horsens Hjemmebanetrøje 24/25 Børn", price: "275 kr.", excluded: true },
+  { img: pHome, name: "AC Horsens Hjemmebanetrøje 25/26 Børn", price: "420 kr.", excluded: true },
 ];
 
 function Index() {
