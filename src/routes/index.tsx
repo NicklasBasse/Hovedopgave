@@ -29,7 +29,7 @@ import pShortsKids from "@/assets/ach/p-shorts-kids.webp";
 import pSocksBlack from "@/assets/ach/p-socks-black.webp";
 import pSocksWhite from "@/assets/ach/p-socks-white.webp";
 import pSocksYellow from "@/assets/ach/p-socks-yellow.webp";
-import pShorts from "@/assets/ach/p-shorts.jpg";
+import pShorts from "@/assets/ach/p-shorts.webp";
 
 export const Route = createFileRoute("/")({
   head: () => ({
