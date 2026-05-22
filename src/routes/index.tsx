@@ -72,8 +72,6 @@ const jerseyProducts: Product[] = [
   { img: pSocksYellow, name: "AC Horsens Hjemmebanestrømper 25/26", price: "105 kr.", excluded: true },
   { img: pShortsKids, name: "AC Horsens Hjemmebaneshorts 25/26 Børn", price: "260 kr.", excluded: true },
   { img: pShorts, name: "AC Horsens Hjemmebaneshorts 25/26", price: "300 kr.", excluded: true },
-  { img: pHome, name: "AC Horsens Hjemmebanetrøje 24/25 Børn", price: "275 kr.", excluded: true },
-  { img: pHome, name: "AC Horsens Hjemmebanetrøje 25/26 Børn", price: "420 kr.", excluded: true },
 ];
 
 function Index() {
@@ -107,7 +105,7 @@ function Index() {
 
         <ProductCarousel
           title="ACH Spillertøj"
-          count="10 produkter"
+          count="8 produkter"
           subtitle="AC Horsens - ren gul stolthed, skabt til kamp og fællesskab!"
           products={jerseyProducts}
           ctaLabel="Find din trøje her"
