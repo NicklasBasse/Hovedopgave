@@ -1,10 +1,10 @@
-import heroImg from "@/assets/ach/hero.jpg";
+import heroImg from "@/assets/ach/hero-sah-studio.webp";
 
 export function Hero() {
   return (
     <section className="relative w-full">
       <h1 className="sr-only">AC Horsens forside</h1>
-      <div className="relative aspect-[21/9] w-full overflow-hidden md:aspect-[24/9]">
+      <div className="relative aspect-[21/9] w-full overflow-hidden md:aspect-[21/8]">
         <img
           src={heroImg}
           alt="AC Horsens topbillede 2025"
