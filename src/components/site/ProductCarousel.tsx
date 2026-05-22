@@ -92,14 +92,12 @@ export function ProductCarousel({
           <a
             key={i}
             href="#"
-            className="group block h-[469px] w-[329px] shrink-0 snap-start"
+            className="group flex h-[469px] w-[329px] shrink-0 snap-start flex-col"
           >
-            <div className="relative h-[329px] w-[329px] overflow-hidden bg-muted">
+            <div className="relative w-full flex-1 overflow-hidden bg-muted">
               <img
                 src={p.img}
                 alt={p.name}
-                width={600}
-                height={600}
                 loading="lazy"
                 className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
               />
