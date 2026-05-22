@@ -5,7 +5,7 @@ import logo from "@/assets/ach/tile-logo.png";
 const TILES = [
   { src: jersey, label: "Spillertøj" },
   { src: merch, label: "Merchandise" },
-  { src: logo, label: "Se alt ACH" },
+  { src: logo, label: "Se alt SAH" },
 ];
 
 export function CategoryTiles() {
