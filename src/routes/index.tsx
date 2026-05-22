@@ -11,7 +11,7 @@ import { SiteFooter } from "@/components/site/SiteFooter";
 
 import sectionLeft from "@/assets/ach/section-left.jpg";
 import sectionRight from "@/assets/ach/section-right.jpg";
-import side1 from "@/assets/ach/carousel-side-1.jpg";
+import side1 from "@/assets/ach/carousel-side-sah.webp";
 import side2 from "@/assets/ach/carousel-side-2.jpg";
 
 import pAway from "@/assets/ach/p-away-jersey.jpg";
