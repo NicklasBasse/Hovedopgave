@@ -20,7 +20,7 @@ export function SiteHeader() {
         </nav>
 
         <a href="/" className="mx-auto flex items-center" aria-label="SPORT 24">
-          <img src={sport24Logo} alt="SPORT 24" className="h-14 w-auto md:h-16" />
+          <img src={sport24Logo} alt="SPORT 24" className="h-20 w-auto md:h-24" />
         </a>
 
         <div className="hidden flex-1 max-w-md md:block">
