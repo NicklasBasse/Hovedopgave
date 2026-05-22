@@ -1,5 +1,5 @@
 import jersey from "@/assets/ach/tile-sah-v3.webp";
-import merch from "@/assets/ach/tile-merch.png";
+import merch from "@/assets/ach/tile-merch-v2.webp";
 import logo from "@/assets/ach/tile-logo.png";
 
 const TILES = [
