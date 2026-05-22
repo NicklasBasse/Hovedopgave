@@ -71,9 +71,9 @@ export function ProductCarousel({
         {/* Lead card with side image + CTA */}
         <a
           href="#"
-          className="group block w-[430px] shrink-0 snap-start"
+          className="group block h-[469px] w-[329px] shrink-0 snap-start"
         >
-          <div className="relative h-[545px] w-[430px] overflow-hidden bg-muted">
+          <div className="relative h-[329px] w-[329px] overflow-hidden bg-muted">
             <img
               src={sideImage}
               alt={sideAlt}
@@ -92,9 +92,9 @@ export function ProductCarousel({
           <a
             key={i}
             href="#"
-            className="group block w-[430px] shrink-0 snap-start"
+            className="group block w-[329px] shrink-0 snap-start"
           >
-            <div className="relative h-[545px] w-[430px] overflow-hidden bg-muted">
+            <div className="relative h-[329px] w-[329px] overflow-hidden bg-muted">
               <img
                 src={p.img}
                 alt={p.name}
@@ -110,7 +110,7 @@ export function ProductCarousel({
               )}
             </div>
 
-            <p className="mt-3 text-center text-sm font-semibold leading-tight">{p.name}</p>
+            <p className="mt-3 text-center text-[13px] font-semibold leading-tight">{p.name}</p>
             <div className="mt-1 flex items-baseline justify-center gap-2">
               <span className="text-base font-bold">{p.price}</span>
               {p.oldPrice && (
