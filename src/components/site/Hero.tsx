@@ -19,7 +19,7 @@ export function Hero() {
           <p className="text-xs font-bold uppercase tracking-wider md:text-sm">
             AC Horsens
           </p>
-          <h2 className="mt-3 text-3xl font-extrabold leading-[1.05] md:text-5xl lg:text-5xl">
+          <h2 className="mt-3 text-3xl font-extrabold leading-[1.05] md:text-5xl lg:text-4xl">
             BYENS BEDSTE<br />SAH's nye merchandise kollektion
           </h2>
           <p className="mt-4 text-sm md:text-base">
