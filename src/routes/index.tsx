@@ -120,7 +120,7 @@ function Index() {
           imageAlt="ACH Merchandise"
           eyebrow="sah MERCHANDISE"
           title="Håndbold merchandise med stolthed"
-          body="Støt AC Horsens, og vis farverne med stolthed! Køb det nyeste gule merchandise, og vær en del af fællesskabet, både på stadion og i hverdagen. Når du bærer Horsens farver, står du sammen med klubben og byens passion - en ægte gul hyldest til holdet!"
+          body="For dig, der elsker fællesskabet og stemningen på lægterne. Vi har designet en fan-linje med et helt unikt SAH-mønster, der binder fans, spillere og frivillige sammen i én stærk enhed. Det markante design gør det nemt at genkende andre fans ude i bybilledet, og det fungerer som den perfekte anledning til at falde i snak om holdet."
           ctaLabel="Se alt merch"
         />
 
