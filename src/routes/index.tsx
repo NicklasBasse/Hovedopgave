@@ -118,7 +118,7 @@ function Index() {
           imageSide="right"
           image={sectionRight}
           imageAlt="ACH Merchandise"
-          eyebrow="ACH MERCHANDISE"
+          eyebrow="sah MERCHANDISE"
           title="Håndbold merchandise med stolthed"
           body="Støt AC Horsens, og vis farverne med stolthed! Køb det nyeste gule merchandise, og vær en del af fællesskabet, både på stadion og i hverdagen. Når du bærer Horsens farver, står du sammen med klubben og byens passion - en ægte gul hyldest til holdet!"
           ctaLabel="Se alt merch"
