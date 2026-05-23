@@ -99,7 +99,7 @@ function Index() {
           image={sectionLeft}
           imageAlt="Hjemmebanetrøjen"
           eyebrow="Hjemmebanetrøjen"
-          title="Når design og fodbold smelter sammen"
+          title="SAH merchandise til din hverdag"
           body="Vores nye streetwear-linje er skåret helt ind til benet, så du kan bære din stolthed med stil. Vi har skabt et rent og minimalistisk design, der passer perfekt ind i din hverdagsgarderobe – uanset om du er på studiet, caféen eller i hallen. Med en diskret hyldest til holdet kan du mærke fællesskabet og vise, hvem du holder med, uden at gå på kompromis med dit personlige udtryk."
           ctaLabel="Køb spillertrøjen"
         />
