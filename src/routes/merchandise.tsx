@@ -6,7 +6,7 @@ import { CategoryLanding, type CategoryProduct, type SubCategory } from "@/compo
 
 import logo from "@/assets/ach/tile-logo-v2.webp";
 import tileMerch from "@/assets/ach/tile-merch-v2.webp";
-import pBallBlue from "@/assets/ach/p-ball-blue-new.webp";
+import tileJersey from "@/assets/ach/tile-sah-v3.webp";
 import { getProductsByCategory } from "@/data/products";
 
 export const Route = createFileRoute("/merchandise")({
@@ -22,9 +22,9 @@ export const Route = createFileRoute("/merchandise")({
 });
 
 const subCategories: SubCategory[] = [
-  { img: logo, label: "SAH" },
-  { img: tileMerch, label: "Fan-tøj" },
-  { img: pBallBlue, label: "Fodbolde" },
+  { img: logo, label: "Alt SAH", to: "/se-alt-sah" },
+  { img: tileJersey, label: "Spillertøj", to: "/spillertoj" },
+  { img: tileMerch, label: "Merchandise", to: "/merchandise" },
 ];
 
 const products: CategoryProduct[] = getProductsByCategory("merchandise").slice(0, 7);

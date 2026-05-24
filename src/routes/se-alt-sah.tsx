@@ -22,9 +22,9 @@ export const Route = createFileRoute("/se-alt-sah")({
 });
 
 const subCategories: SubCategory[] = [
-  { img: logo, label: "SAH" },
-  { img: tileJersey, label: "Spillertøj" },
-  { img: tileMerch, label: "Merchandise" },
+  { img: logo, label: "Alt SAH", to: "/se-alt-sah" },
+  { img: tileJersey, label: "Spillertøj", to: "/spillertoj" },
+  { img: tileMerch, label: "Merchandise", to: "/merchandise" },
 ];
 
 const products: CategoryProduct[] = PRODUCTS;
