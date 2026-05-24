@@ -59,9 +59,6 @@ const focusProducts: Product[] = [
   { img: pBallGreen, name: "AC Horsens Precision Training Fodbold", price: "200 kr.", oldPrice: "250 kr.", badge: "KLUBPRIS - SPAR 20%" },
   { img: pBallYellow, name: "AC Horsens Fodbold", price: "72,80 kr.", oldPrice: "130 kr.", badge: "KLUBPRIS - SPAR 44%" },
   { img: pBlanket, name: "AC Horsens 130x160 Fleecetæppe", price: "200 kr." },
-  { img: pSweatshirt, name: "AC Horsens Sweatshirt", price: "400 kr." },
-  { img: pUmbrella, name: "AC Horsens Paraply", price: "75 kr.", oldPrice: "150 kr.", badge: "Slutsalg - SPAR 50%" },
-  { img: pCap, name: "AC Horsens Cap", price: "140 kr.", oldPrice: "200 kr.", badge: "Slutsalg - SPAR 30%" },
 ];
 
 const jerseyProducts: Product[] = [
@@ -86,7 +83,7 @@ function Index() {
 
         <ProductCarousel
           title="ACH-produkter i fokus"
-          count="72 produkter"
+          count="7 produkter"
           subtitle="Stå bag klubben - med din støtte skaber vi store øjeblikke både på og uden for banen."
           products={focusProducts}
           ctaLabel="Se alt fra ACH"
