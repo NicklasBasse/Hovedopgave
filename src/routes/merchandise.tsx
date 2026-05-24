@@ -36,11 +36,11 @@ const subCategories: SubCategory[] = [
 
 const products: CategoryProduct[] = [
   { slug: "sah-udebanetroje-25", img: pAway, name: "SAH t-shirt", price: "150 kr." },
-  { slug: "sah-udebanetroje-25-born", img: pAwayKids, name: "SAH hoodie", price: "175 kr." },
-  { slug: "sah-precision-training-fodbold", img: pBallBlue, name: "SAH halstørklæde", price: "175 kr." },
+  { slug: "sah-udebanetroje-25-born", img: pAwayKids, name: "SAH hoodie", price: "250 kr." },
+  { slug: "sah-precision-training-fodbold", img: pBallBlue, name: "SAH halstørklæde", price: "250 kr." },
   { slug: "sah-stovlepose", img: pBootbag, name: "SAH cap", price: "175 kr." },
   { slug: "sah-precision-training-fodbold-gron", img: pBallGreen, name: "SAH bøllehat", price: "175 kr." },
-  { slug: "sah-fodbold-gul", img: pBallYellow, name: "SAH håndklæde", price: "175 kr." },
+  { slug: "sah-fodbold-gul", img: pBallYellow, name: "SAH håndklæde", price: "250 kr." },
   { slug: "sah-130x160-fleecetaeppe", img: pBlanket, name: "SAH flag", price: "175 kr." },
 ];
 
