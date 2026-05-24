@@ -70,20 +70,21 @@ export function CategoryLanding({
           {FILTERS.map((f) => (
             <button
               key={f}
+              type="button"
               className="flex items-center gap-1.5 rounded-full border border-border px-4 py-2 text-sm hover:bg-muted"
             >
               {f}
             </button>
           ))}
         </div>
-        <button className="flex items-center gap-1.5 text-sm font-semibold">
-          <ArrowUpDown className="h-4 w-4" />
+        <button type="button" className="flex items-center gap-1.5 text-sm font-semibold">
+          <ArrowUpDown className="h-4 w-4" aria-hidden="true" />
           Sortering
         </button>
       </div>
 
       {/* Product grid */}
-      <div className="mt-8 grid grid-cols-2 gap-x-4 gap-y-10 md:grid-cols-3 lg:grid-cols-4">
+      <ul className="mt-8 grid list-none grid-cols-2 gap-x-4 gap-y-10 md:grid-cols-3 lg:grid-cols-4">
         {products.map((p, i) => {
           const cardInner = (
             <>
@@ -93,13 +94,6 @@ export function CategoryLanding({
                     Undtaget af kampagnen
                   </span>
                 )}
-                <button
-                  aria-label="Tilføj til favoritter"
-                  onClick={(e) => e.preventDefault()}
-                  className="absolute right-3 top-3 z-10 flex h-9 w-9 items-center justify-center rounded-full bg-background/80 backdrop-blur transition hover:bg-background"
-                >
-                  <Heart className="h-4 w-4" />
-                </button>
                 <img
                   src={p.img}
                   alt={p.name}
@@ -117,22 +111,34 @@ export function CategoryLanding({
             </>
           );
 
-          return p.slug ? (
-            <Link
-              key={i}
-              to="/produkt/$slug"
-              params={{ slug: p.slug }}
-              className="group flex flex-col"
-            >
-              {cardInner}
-            </Link>
-          ) : (
-            <div key={i} className="group flex flex-col">
-              {cardInner}
-            </div>
+          return (
+            <li key={i} className="relative flex flex-col">
+              {/* Heart button is a sibling of the link to avoid nested interactive
+                  elements (invalid HTML, breaks tab order). It follows the link
+                  in DOM order so keyboard users hit the product link first. */}
+              {p.slug ? (
+                <Link
+                  to="/produkt/$slug"
+                  params={{ slug: p.slug }}
+                  className="group flex flex-col"
+                  aria-label={`${p.name} – ${p.price}`}
+                >
+                  {cardInner}
+                </Link>
+              ) : (
+                <div className="group flex flex-col">{cardInner}</div>
+              )}
+              <button
+                type="button"
+                aria-label={`Tilføj ${p.name} til favoritter`}
+                className="absolute right-3 top-3 z-10 flex h-9 w-9 items-center justify-center rounded-full bg-background/80 backdrop-blur transition hover:bg-background"
+              >
+                <Heart className="h-4 w-4" aria-hidden="true" />
+              </button>
+            </li>
           );
         })}
-      </div>
+      </ul>
     </section>
   );
 }
