@@ -58,7 +58,7 @@ const focusProducts: Product[] = [
   { slug: "sah-stovlepose", img: pBootbag, name: "AC Horsens Støvlepose", price: "100 kr." },
   { slug: "sah-precision-training-fodbold-gron", img: pBallGreen, name: "SAH bøllehat", price: "175 kr." },
   { slug: "sah-fodbold-gul", img: pBallYellow, name: "SAH håndklæde", price: "250 kr." },
-  { slug: "sah-130x160-fleecetaeppe", img: pBlanket, name: "AC Horsens 130x160 Fleecetæppe", price: "175 kr." },
+  { slug: "sah-130x160-fleecetaeppe", img: pBlanket, name: "SAH flag", price: "175 kr." },
 ];
 
 const jerseyProducts: Product[] = [
