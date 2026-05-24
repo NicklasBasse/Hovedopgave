@@ -50,18 +50,20 @@ export function ProductCarousel({
         </div>
         <div className="flex gap-2">
           <button
+            type="button"
             aria-label="Vis forrige produkter"
             onClick={() => scroll(-1)}
             className="flex h-10 w-10 items-center justify-center rounded-full border border-border hover:bg-muted"
           >
-            <ChevronLeft className="h-5 w-5" />
+            <ChevronLeft className="h-5 w-5" aria-hidden="true" />
           </button>
           <button
+            type="button"
             aria-label="Vis næste produkter"
             onClick={() => scroll(1)}
             className="flex h-10 w-10 items-center justify-center rounded-full border border-border hover:bg-muted"
           >
-            <ChevronRight className="h-5 w-5" />
+            <ChevronRight className="h-5 w-5" aria-hidden="true" />
           </button>
         </div>
       </div>
