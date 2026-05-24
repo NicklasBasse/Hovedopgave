@@ -100,12 +100,6 @@ function ProductPage() {
             <div className="aspect-square w-full overflow-hidden bg-muted">
               <img src={product.img} alt={product.name} className="h-full w-full object-cover" style={{ transform: "scaleX(-1)" }} />
             </div>
-            <div className="aspect-square w-full overflow-hidden bg-muted">
-              <img src={product.img} alt={product.name} className="h-full w-full object-cover scale-150" />
-            </div>
-            <div className="aspect-square w-full overflow-hidden bg-muted">
-              <img src={product.img} alt={product.name} className="h-full w-full object-cover scale-125" style={{ objectPosition: "bottom" }} />
-            </div>
           </div>
 
           {/* Sidebar */}
