@@ -9,7 +9,7 @@ import { SplitFeature } from "@/components/site/SplitFeature";
 import { ClosingHeading } from "@/components/site/ClosingHeading";
 import { SiteFooter } from "@/components/site/SiteFooter";
 
-import sectionLeft from "@/assets/ach/section-left.jpg";
+import sectionLeft from "@/assets/ach/section-left-new.webp";
 import sectionRight from "@/assets/ach/section-right.jpg";
 import side1 from "@/assets/ach/carousel-side-sah.webp";
 import side2 from "@/assets/ach/carousel-side-2.jpg";
