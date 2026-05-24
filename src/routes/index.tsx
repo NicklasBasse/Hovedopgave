@@ -16,6 +16,7 @@ import side2 from "@/assets/ach/carousel-side-2.webp";
 
 import pAway from "@/assets/ach/p-away-sah.webp";
 import pAwayKids from "@/assets/ach/p-away-kids-sah.webp";
+import pAwayKidsJersey from "@/assets/ach/p-away-kids-sah-jersey.webp";
 import pBallBlue from "@/assets/ach/p-ball-blue-new.webp";
 import pBootbag from "@/assets/ach/p-bootbag-new.webp";
 import pBallGreen from "@/assets/ach/p-ball-green-new.webp";
@@ -63,7 +64,7 @@ const focusProducts: Product[] = [
 
 const jerseyProducts: Product[] = [
   { slug: "sah-hjemmebaneshorts-24-25-born", img: pShortsKids, name: "AC Horsens Hjemmebaneshorts 24/25 Børn", price: "245 kr.", excluded: true },
-  { slug: "sah-udebanetroje-25-born", img: pAwayKids, name: "AC Horsens 23/24 Merchandise Børn", price: "420 kr.", excluded: true },
+  { slug: "sah-udebanetroje-25-born", img: pAwayKidsJersey, name: "AC Horsens 23/24 Merchandise Børn", price: "420 kr.", excluded: true },
   { slug: "sah-hjemmebanetroje-25-26", img: pHome, name: "AC Horsens Hjemmebanetrøje 25/26", price: "455 kr.", excluded: true },
   { slug: "sah-udebanestromper-2024", img: pSocksBlack, name: "AC Horsens Merchandise Strømper 2024", price: "50 kr.", excluded: true },
   { slug: "sah-udebanestromper-25", img: pSocksWhite, name: "AC Horsens Merchandise Strømper 25", price: "65 kr.", excluded: true },
