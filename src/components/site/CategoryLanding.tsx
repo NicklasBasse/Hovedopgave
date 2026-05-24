@@ -13,6 +13,7 @@ export type CategoryProduct = {
 export type SubCategory = {
   img: string;
   label: string;
+  to?: string;
 };
 
 type Props = {
@@ -50,7 +51,11 @@ export function CategoryLanding({
       {/* Subcategory circles */}
       <div className="mt-8 flex flex-wrap gap-8 md:gap-12">
         {subCategories.map((s) => (
-          <a key={s.label} href="#" className="group flex flex-col items-center text-center">
+          <Link
+            key={s.label}
+            to={s.to ?? "#"}
+            className="group flex flex-col items-center text-center"
+          >
             <div className="flex h-[120px] w-[120px] items-center justify-center overflow-hidden rounded-full bg-muted md:h-[140px] md:w-[140px]">
               <img
                 src={s.img}
@@ -60,7 +65,7 @@ export function CategoryLanding({
               />
             </div>
             <span className="mt-3 text-sm font-semibold">{s.label}</span>
-          </a>
+          </Link>
         ))}
       </div>
 
