@@ -1,3 +1,4 @@
+import { Link } from "@tanstack/react-router";
 import heroImg from "@/assets/ach/hero-sah-studio.webp";
 
 export function Hero() {
@@ -26,24 +27,24 @@ export function Hero() {
             Ny merchandise kollektion til at skabe lokal stolthed og fællesskab
           </p>
           <div className="mt-6 flex flex-wrap gap-3">
-            <a
-              href="#spillertoj"
+            <Link
+              to="/spillertoj"
               className="rounded-full bg-white px-6 py-3 text-sm font-semibold text-foreground transition hover:bg-white/90"
             >
               Spillertøj
-            </a>
-            <a
-              href="#merch"
+            </Link>
+            <Link
+              to="/merchandise"
               className="rounded-full bg-white px-6 py-3 text-sm font-semibold text-foreground transition hover:bg-white/90"
             >
               Merch
-            </a>
-            <a
-              href="#alt"
+            </Link>
+            <Link
+              to="/se-alt-sah"
               className="rounded-full bg-white px-6 py-3 text-sm font-semibold text-foreground transition hover:bg-white/90"
             >
               Se alt SAH
-            </a>
+            </Link>
           </div>
         </div>
 
