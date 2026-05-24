@@ -64,7 +64,7 @@ const focusProducts: Product[] = [
 
 const jerseyProducts: Product[] = [
   { slug: "sah-hjemmebaneshorts-24-25-born", img: pShortsKids, name: "SAH hjemmebane spillertrøje 25/26", price: "375 kr.", excluded: true },
-  { slug: "sah-udebanetroje-25-born", img: pAwayKidsJersey, name: "SAH udebane spillertrøje 25/26", price: "420 kr.", excluded: true },
+  { slug: "sah-udebanetroje-25-born", img: pAwayKidsJersey, name: "SAH udebane spillertrøje 25/26", price: "375 kr.", excluded: true },
   { slug: "sah-hjemmebanetroje-25-26", img: pHome, name: "SAH Hjemmebanetrøje 25/26", price: "455 kr.", excluded: true },
   { slug: "sah-udebanestromper-2024", img: pSocksBlack, name: "SAH Merchandise Strømper 2024", price: "50 kr.", excluded: true },
   { slug: "sah-udebanestromper-25", img: pSocksWhite, name: "SAH Merchandise Strømper 25", price: "65 kr.", excluded: true },
