@@ -3,6 +3,7 @@ import pAway from "@/assets/ach/p-away-sah.webp";
 import pAway2 from "@/assets/ach/p-away-sah-2.webp";
 import pAwayKids from "@/assets/ach/p-away-kids-sah.webp";
 import pAwayKids2 from "@/assets/ach/p-away-kids-sah-2.webp";
+import pAwayKidsJersey from "@/assets/ach/p-away-kids-sah-jersey.webp";
 import pShorts from "@/assets/ach/p-shorts.webp";
 import pShortsKids from "@/assets/ach/p-shorts-kids.webp";
 import pShortsKids2526 from "@/assets/ach/p-shorts-kids-2526.webp";
