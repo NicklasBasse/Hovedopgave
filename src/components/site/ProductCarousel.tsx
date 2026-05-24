@@ -1,5 +1,6 @@
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronLeft, ChevronRight, Plus } from "lucide-react";
 import { useRef } from "react";
+import { cartStore } from "@/hooks/useCart";
 
 export type Product = {
   img: string;
@@ -104,6 +105,18 @@ export function ProductCarousel({
                   Undtaget af kampagnen
                 </span>
               )}
+              <button
+                type="button"
+                aria-label={`Læg ${p.name} i kurven`}
+                onClick={(e) => {
+                  e.preventDefault();
+                  e.stopPropagation();
+                  cartStore.add(1);
+                }}
+                className="absolute bottom-2 right-2 flex h-10 w-10 items-center justify-center rounded-full bg-background text-foreground shadow-md transition hover:bg-foreground hover:text-background"
+              >
+                <Plus className="h-5 w-5" />
+              </button>
             </div>
 
             <p className="mt-3 text-center text-[13px] font-semibold leading-tight">{p.name}</p>
