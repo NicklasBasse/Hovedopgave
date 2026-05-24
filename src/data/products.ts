@@ -30,13 +30,13 @@ export type Product = {
 
 export const PRODUCTS: Product[] = [
   { slug: "sah-hjemmebanetroje-25-26", img: pHome, name: "SAH Hjemmebanetrøje 25/26", price: "455 kr.", excluded: true, brand: "adidas", hasSizes: true, category: "spillertoj" },
-  { slug: "sah-udebanetroje-25", img: pAway, name: "SAH Udebanetrøje 25", price: "420 kr.", excluded: true, brand: "adidas", hasSizes: true, category: "spillertoj" },
-  { slug: "sah-udebanetroje-25-born", img: pAwayKids, name: "SAH Udebanetrøje 25 Børn", price: "385 kr.", excluded: true, brand: "adidas", hasSizes: true, category: "spillertoj" },
+  { slug: "sah-udebanetroje-25", img: pAway, name: "SAH Merchandise 25", price: "420 kr.", excluded: true, brand: "adidas", hasSizes: true, category: "spillertoj" },
+  { slug: "sah-udebanetroje-25-born", img: pAwayKids, name: "SAH Merchandise 25 Børn", price: "385 kr.", excluded: true, brand: "adidas", hasSizes: true, category: "spillertoj" },
   { slug: "sah-hjemmebaneshorts-25-26", img: pShorts, name: "SAH Hjemmebaneshorts 25/26", price: "300 kr.", excluded: true, brand: "adidas", hasSizes: true, category: "spillertoj" },
   { slug: "sah-hjemmebaneshorts-24-25-born", img: pShortsKids, name: "SAH Hjemmebaneshorts 24/25 Børn", price: "245 kr.", excluded: true, brand: "adidas", hasSizes: true, category: "spillertoj" },
   { slug: "sah-hjemmebaneshorts-25-26-born", img: pShortsKids2526, name: "SAH Hjemmebaneshorts 25/26 Børn", price: "260 kr.", excluded: true, brand: "adidas", hasSizes: true, category: "spillertoj" },
-  { slug: "sah-udebanestromper-2024", img: pSocksBlack, name: "SAH Udebanestrømper 2024", price: "50 kr.", excluded: true, brand: "adidas", hasSizes: true, category: "spillertoj" },
-  { slug: "sah-udebanestromper-25", img: pSocksWhite, name: "SAH Udebanestrømper 25", price: "65 kr.", excluded: true, brand: "adidas", hasSizes: true, category: "spillertoj" },
+  { slug: "sah-udebanestromper-2024", img: pSocksBlack, name: "SAH Merchandise Strømper 2024", price: "50 kr.", excluded: true, brand: "adidas", hasSizes: true, category: "spillertoj" },
+  { slug: "sah-udebanestromper-25", img: pSocksWhite, name: "SAH Merchandise Strømper 25", price: "65 kr.", excluded: true, brand: "adidas", hasSizes: true, category: "spillertoj" },
   { slug: "sah-hjemmebanestromper-25-26", img: pSocksYellow, name: "SAH Hjemmebanestrømper 25/26", price: "105 kr.", excluded: true, brand: "adidas", hasSizes: true, category: "spillertoj" },
   { slug: "sah-precision-training-fodbold", img: pBallBlue, name: "SAH Precision Training Fodbold", price: "200 kr.", oldPrice: "250 kr.", brand: "adidas", hasSizes: false, category: "merchandise" },
   { slug: "sah-precision-training-fodbold-gron", img: pBallGreen, name: "SAH Precision Training Fodbold Grøn", price: "200 kr.", oldPrice: "250 kr.", brand: "adidas", hasSizes: false, category: "merchandise" },
