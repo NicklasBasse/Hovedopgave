@@ -16,7 +16,7 @@ import side2 from "@/assets/ach/carousel-side-2.jpg";
 
 import pAway from "@/assets/ach/p-away-sah.webp";
 import pAwayKids from "@/assets/ach/p-away-kids-sah.webp";
-import pBallBlue from "@/assets/ach/p-ball-blue.webp";
+import pBallBlue from "@/assets/ach/p-ball-blue-new.webp";
 import pBootbag from "@/assets/ach/p-bootbag.webp";
 import pBallGreen from "@/assets/ach/p-ball-green.jpg";
 import pBallYellow from "@/assets/ach/p-ball-yellow.jpg";
