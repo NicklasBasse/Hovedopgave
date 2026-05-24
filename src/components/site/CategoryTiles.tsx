@@ -1,12 +1,13 @@
+import { Link } from "@tanstack/react-router";
 import jersey from "@/assets/ach/tile-sah-v3.webp";
 import merch from "@/assets/ach/tile-merch-v2.webp";
 import logo from "@/assets/ach/tile-logo-v2.webp";
 
 const TILES = [
-  { src: jersey, label: "Spillertøj" },
-  { src: merch, label: "Merchandise" },
-  { src: logo, label: "Se alt SAH" },
-];
+  { src: jersey, label: "Spillertøj", to: "/spillertoj" },
+  { src: merch, label: "Merchandise", to: "/merchandise" },
+  { src: logo, label: "Se alt SAH", to: "/se-alt-sah" },
+] as const;
 
 export function CategoryTiles() {
   return (
