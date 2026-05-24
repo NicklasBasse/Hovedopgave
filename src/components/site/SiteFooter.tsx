@@ -69,7 +69,7 @@ export function SiteFooter() {
         {/* Brand column */}
         <div>
           <a href="/" className="inline-flex items-center" aria-label="SPORT 24">
-            <img src={sport24Logo} alt="SPORT 24" className="h-12 w-auto" />
+            <img src={sport24Logo} alt="SPORT 24" className="h-12 w-auto" loading="lazy" />
           </a>
           <p className="mt-6 text-sm leading-relaxed text-foreground/80">
             SPORT 24 er en danskejet og landsdækkende sportskæde. Vi er hele familiens sportskæde, som
