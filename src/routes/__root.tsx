@@ -100,7 +100,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 
 function RootShell({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="da">
       <head>
         <HeadContent />
       </head>
@@ -117,7 +117,10 @@ function RootComponent() {
 
   return (
     <QueryClientProvider client={queryClient}>
-      <Outlet />
+      <a href="#main-content" className="skip-link">Spring til indhold</a>
+      <main id="main-content">
+        <Outlet />
+      </main>
     </QueryClientProvider>
   );
 }
