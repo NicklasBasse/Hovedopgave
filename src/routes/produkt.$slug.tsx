@@ -98,7 +98,7 @@ function ProductPage() {
               <img src={product.img} alt={product.name} className="h-full w-full object-cover" />
             </div>
             <div className="aspect-square w-full overflow-hidden bg-muted">
-              <img src={product.img} alt={product.name} className="h-full w-full object-cover" style={{ transform: "scaleX(-1)" }} />
+              <img src={product.img2 ?? product.img} alt={product.name} className="h-full w-full object-cover" style={product.img2 ? undefined : { transform: "scaleX(-1)" }} />
             </div>
           </div>
 
