@@ -45,7 +45,6 @@ const products: CategoryProduct[] = [
   { img: pShortsKids2526, name: "SAH Hjemmebaneshorts 25/26 Børn", price: "260 kr.", excluded: true },
   { img: pSocksBlack, name: "SAH Udebanestrømper 2024", price: "50 kr.", excluded: true },
   { img: pSocksWhite, name: "SAH Udebanestrømper 25", price: "65 kr.", excluded: true },
-  { img: pSocksYellow, name: "SAH Hjemmebanestrømper 25/26", price: "105 kr.", excluded: true },
 ];
 
 function Page() {
