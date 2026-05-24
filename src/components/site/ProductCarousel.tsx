@@ -19,6 +19,7 @@ type Props = {
   subtitle: string;
   products: Product[];
   ctaLabel: string;
+  ctaHref: string;
   sideImage: string;
   sideAlt: string;
 };
@@ -29,6 +30,7 @@ export function ProductCarousel({
   subtitle,
   products,
   ctaLabel,
+  ctaHref,
   sideImage,
   sideAlt,
 }: Props) {
@@ -74,8 +76,8 @@ export function ProductCarousel({
         style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
       >
         {/* Lead card with side image + CTA */}
-        <a
-          href="#"
+        <Link
+          to={ctaHref}
           className="group block h-[459px] w-[329px] shrink-0 snap-start"
         >
           <div className="relative h-full w-full overflow-hidden">
@@ -86,10 +88,10 @@ export function ProductCarousel({
               className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
             />
             <span className="absolute bottom-4 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full bg-background px-6 py-3 text-sm font-semibold text-foreground shadow-md">
-              Se alt merchandise
+              {ctaLabel}
             </span>
           </div>
-        </a>
+        </Link>
 
         {products.map((p, i) => {
           const card = (
