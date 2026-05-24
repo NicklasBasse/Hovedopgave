@@ -20,7 +20,7 @@ import pBallBlue from "@/assets/ach/p-ball-blue-new.webp";
 import pBootbag from "@/assets/ach/p-bootbag-new.webp";
 import pBallGreen from "@/assets/ach/p-ball-green-new.webp";
 import pBallYellow from "@/assets/ach/p-ball-yellow-new.webp";
-import pBlanket from "@/assets/ach/p-blanket.jpg";
+import pBlanket from "@/assets/ach/p-blanket-new.webp";
 import pSweatshirt from "@/assets/ach/p-sweatshirt.jpg";
 import pUmbrella from "@/assets/ach/p-umbrella.jpg";
 import pCap from "@/assets/ach/p-cap.jpg";
