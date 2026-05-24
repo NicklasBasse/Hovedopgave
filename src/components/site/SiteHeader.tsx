@@ -9,11 +9,11 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-40 w-full border-b border-border bg-background">
       <div className="mx-auto flex max-w-[1440px] items-center gap-6 px-6 py-5">
-        <button aria-label="Menu" className="text-foreground">
-          <Menu className="h-6 w-6" />
+        <button type="button" aria-label="Menu" className="text-foreground">
+          <Menu className="h-6 w-6" aria-hidden="true" />
         </button>
 
-        <nav className="hidden items-center gap-7 text-[15px] font-semibold lg:flex">
+        <nav aria-label="Hovedmenu" className="hidden items-center gap-7 text-[15px] font-semibold lg:flex">
           {NAV.map((item) => (
             <a key={item} href="#" className="hover:text-brand-red">
               {item}
@@ -21,15 +21,17 @@ export function SiteHeader() {
           ))}
         </nav>
 
-        <a href="/" className="mx-auto flex items-center" aria-label="SPORT 24">
-          <img src={sport24Logo} alt="SPORT 24" className="h-8 w-auto md:h-9" />
+        <a href="/" className="mx-auto flex items-center" aria-label="SPORT 24 – forside">
+          <img src={sport24Logo} alt="" className="h-8 w-auto md:h-9" />
         </a>
 
         <div className="hidden flex-1 max-w-md md:block">
+          <label htmlFor="site-search" className="sr-only">Søg</label>
           <div className="flex items-center rounded-full bg-muted px-4 py-2.5">
-            <Search className="mr-2 h-4 w-4 text-muted-foreground" />
+            <Search className="mr-2 h-4 w-4 text-muted-foreground" aria-hidden="true" />
             <input
-              type="text"
+              id="site-search"
+              type="search"
               placeholder="Hvad leder du efter?"
               className="w-full bg-transparent text-sm outline-none placeholder:text-muted-foreground"
             />
@@ -37,21 +39,22 @@ export function SiteHeader() {
         </div>
 
         <div className="flex items-center gap-4">
-          <button aria-label="Konto"><User className="h-6 w-6" /></button>
-          <button aria-label="Ønskeliste"><Heart className="h-6 w-6" /></button>
-          <div
-            aria-label="Indkøbskurv"
-            aria-disabled="true"
-            className="relative cursor-not-allowed select-none"
+          <button type="button" aria-label="Konto"><User className="h-6 w-6" aria-hidden="true" /></button>
+          <button type="button" aria-label="Ønskeliste"><Heart className="h-6 w-6" aria-hidden="true" /></button>
+          <button
+            type="button"
+            disabled
+            aria-label={`Indkøbskurv (${cartCount} ${cartCount === 1 ? "vare" : "varer"}) – ikke tilgængelig`}
             title="Kurven er ikke tilgængelig"
+            className="relative cursor-not-allowed select-none disabled:opacity-100"
           >
-            <ShoppingBag className="h-6 w-6" />
+            <ShoppingBag className="h-6 w-6" aria-hidden="true" />
             {cartCount > 0 && (
-              <span className="absolute -right-2 -top-2 flex h-5 min-w-5 items-center justify-center rounded-full bg-brand-red px-1 text-[11px] font-bold leading-none text-white">
+              <span aria-hidden="true" className="absolute -right-2 -top-2 flex h-5 min-w-5 items-center justify-center rounded-full bg-brand-red px-1 text-[11px] font-bold leading-none text-white">
                 {cartCount}
               </span>
             )}
-          </div>
+          </button>
         </div>
       </div>
     </header>
