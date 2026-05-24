@@ -31,8 +31,6 @@ const subCategories: SubCategory[] = [
   { img: logo, label: "SAH" },
   { img: tileMerch, label: "Fan-tøj" },
   { img: pBallBlue, label: "Fodbolde" },
-  { img: pBlanket, label: "Tæpper" },
-  { img: pUmbrella, label: "Tilbehør" },
 ];
 
 const products: CategoryProduct[] = [
