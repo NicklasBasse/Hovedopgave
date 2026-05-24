@@ -89,47 +89,68 @@ export function ProductCarousel({
           </div>
         </a>
 
-        {products.map((p, i) => (
-          <a
-            key={i}
-            href="#"
-            className="group flex h-[459px] w-[329px] shrink-0 snap-start flex-col"
-          >
-            <div className="relative w-full flex-1 overflow-hidden">
-              <img
-                src={p.img}
-                alt={p.name}
-                loading="lazy"
-                className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
-              />
-              {p.excluded && (
-                <span className="absolute left-2 top-2 bg-foreground/80 px-2 py-0.5 text-[10px] font-semibold uppercase text-background">
-                  Undtaget af kampagnen
-                </span>
-              )}
-              <button
-                type="button"
-                aria-label={`Læg ${p.name} i kurven`}
-                onClick={(e) => {
-                  e.preventDefault();
-                  e.stopPropagation();
-                  cartStore.add(1);
-                }}
-                className="absolute bottom-2 right-2 flex h-10 w-10 items-center justify-center rounded-full bg-background text-foreground shadow-md transition hover:bg-foreground hover:text-background"
-              >
-                <Plus className="h-5 w-5" />
-              </button>
-            </div>
+        {products.map((p, i) => {
+          const card = (
+            <>
+              <div className="relative w-full flex-1 overflow-hidden">
+                <img
+                  src={p.img}
+                  alt={p.name}
+                  loading="lazy"
+                  className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+                {p.excluded && (
+                  <span className="absolute left-2 top-2 bg-foreground/80 px-2 py-0.5 text-[10px] font-semibold uppercase text-background">
+                    Undtaget af kampagnen
+                  </span>
+                )}
+                <button
+                  type="button"
+                  aria-label={`Læg ${p.name} i kurven`}
+                  onClick={(e) => {
+                    e.preventDefault();
+                    e.stopPropagation();
+                    cartStore.add(1);
+                  }}
+                  className="absolute bottom-2 right-2 flex h-10 w-10 items-center justify-center rounded-full bg-background text-foreground shadow-md transition hover:bg-foreground hover:text-background"
+                >
+                  <Plus className="h-5 w-5" />
+                </button>
+              </div>
 
-            <p className="mt-3 text-center text-[13px] font-semibold leading-tight">{p.name}</p>
-            <div className="mt-1 flex items-baseline justify-center gap-2">
-              <span className="text-base font-bold">{p.price}</span>
-              {p.oldPrice && (
-                <span className="text-xs text-muted-foreground line-through">{p.oldPrice}</span>
-              )}
-            </div>
-          </a>
-        ))}
+              <p className="mt-3 text-center text-[13px] font-semibold leading-tight">{p.name}</p>
+              <div className="mt-1 flex items-baseline justify-center gap-2">
+                <span className="text-base font-bold">{p.price}</span>
+                {p.oldPrice && (
+                  <span className="text-xs text-muted-foreground line-through">{p.oldPrice}</span>
+                )}
+              </div>
+            </>
+          );
+
+          if (p.slug) {
+            return (
+              <Link
+                key={i}
+                to="/produkt/$slug"
+                params={{ slug: p.slug }}
+                className="group flex h-[459px] w-[329px] shrink-0 snap-start flex-col"
+              >
+                {card}
+              </Link>
+            );
+          }
+
+          return (
+            <a
+              key={i}
+              href="#"
+              className="group flex h-[459px] w-[329px] shrink-0 snap-start flex-col"
+            >
+              {card}
+            </a>
+          );
+        })}
 
 
       </div>
