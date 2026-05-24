@@ -36,16 +36,16 @@ import pShorts from "@/assets/ach/p-shorts.webp";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "AC Horsens Shop | SPORT 24" },
+      { title: "SAH Shop | SPORT 24" },
       {
         name: "description",
         content:
-          "Køb officielt AC Horsens spillertøj og merchandise hos SPORT 24. Hjemmebanetrøjer, merchandise, fodbolde og fan-merch.",
+          "Køb officielt SAH spillertøj og merchandise hos SPORT 24. Hjemmebanetrøjer, merchandise, fodbolde og fan-merch.",
       },
-      { property: "og:title", content: "AC Horsens Shop | SPORT 24" },
+      { property: "og:title", content: "SAH Shop | SPORT 24" },
       {
         property: "og:description",
-        content: "Officielt AC Horsens spillertøj og merchandise hos SPORT 24.",
+        content: "Officielt SAH spillertøj og merchandise hos SPORT 24.",
       },
     ],
   }),
