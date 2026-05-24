@@ -14,9 +14,8 @@ export function CategoryTiles() {
     <section className="py-20 pl-6">
       <div className="flex flex-wrap justify-center gap-10 md:gap-20">
         {TILES.map((t) => (
-          <a key={t.label} href="#" className="group flex flex-col items-center text-center">
+          <Link key={t.label} to={t.to} className="group flex flex-col items-center text-center">
             <div className="flex h-[224px] w-[224px] items-center justify-center overflow-hidden rounded-full bg-muted">
-
               <img
                 src={t.src}
                 alt={t.label}
@@ -27,7 +26,7 @@ export function CategoryTiles() {
               />
             </div>
             <span className="mt-6 text-base font-semibold md:text-lg">{t.label}</span>
-          </a>
+          </Link>
         ))}
       </div>
     </section>
