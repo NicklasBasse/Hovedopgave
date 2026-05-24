@@ -53,7 +53,7 @@ export const Route = createFileRoute("/")({
 
 const focusProducts: Product[] = [
   { slug: "sah-udebanetroje-25", img: pAway, name: "SAH t-shirt", price: "150 kr." },
-  { slug: "sah-udebanetroje-25-born", img: pAwayKids, name: "​SAH hoodie", price: "​" },
+  { slug: "sah-udebanetroje-25-born", img: pAwayKids, name: "​SAH hoodie", price: "250 kr." },
   { slug: "sah-precision-training-fodbold", img: pBallBlue, name: "SAH bøllehat", price: "250 kr." },
   { slug: "sah-stovlepose", img: pBootbag, name: "AC Horsens Støvlepose", price: "100 kr.", oldPrice: "​", badge: "KLUBPRIS - SPAR 20%" },
   { slug: "sah-precision-training-fodbold-gron", img: pBallGreen, name: "SAH bøllehat", price: "175 kr.", oldPrice: "250 kr.", badge: "KLUBPRIS - SPAR 20%" },
