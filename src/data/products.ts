@@ -20,6 +20,7 @@ import pCap from "@/assets/ach/p-cap.jpg";
 export type Product = {
   slug: string;
   img: string;
+  img2?: string;
   name: string;
   price: string;
   oldPrice?: string;
