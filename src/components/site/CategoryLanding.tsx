@@ -72,7 +72,6 @@ export function CategoryLanding({
               key={f}
               className="flex items-center gap-1.5 rounded-full border border-border px-4 py-2 text-sm hover:bg-muted"
             >
-              <Plus className="h-3.5 w-3.5" />
               {f}
             </button>
           ))}
