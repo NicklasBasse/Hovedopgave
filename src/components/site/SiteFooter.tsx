@@ -150,6 +150,13 @@ export function SiteFooter() {
           </ul>
         </div>
       </div>
+
+      {/* Disclaimer */}
+      <div className="border-t border-border bg-background py-6 text-center">
+        <p className="text-xs text-muted-foreground">
+          Denne hjemmeside er udelukkende til skolebrug og repræsentere ikke SPORT24
+        </p>
+      </div>
     </footer>
   );
 }
