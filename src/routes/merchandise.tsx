@@ -7,13 +7,7 @@ import { CategoryLanding, type CategoryProduct, type SubCategory } from "@/compo
 import logo from "@/assets/ach/tile-logo-v2.webp";
 import tileMerch from "@/assets/ach/tile-merch-v2.webp";
 import pBallBlue from "@/assets/ach/p-ball-blue-new.webp";
-import pBallGreen from "@/assets/ach/p-ball-green-new.webp";
-import pBallYellow from "@/assets/ach/p-ball-yellow-new.webp";
-import pBootbag from "@/assets/ach/p-bootbag-new.webp";
-import pBlanket from "@/assets/ach/p-blanket-new.webp";
-import pSweatshirt from "@/assets/ach/p-sweatshirt.jpg";
-import pUmbrella from "@/assets/ach/p-umbrella.jpg";
-
+import { getProductsByCategory } from "@/data/products";
 
 export const Route = createFileRoute("/merchandise")({
   head: () => ({
@@ -33,15 +27,7 @@ const subCategories: SubCategory[] = [
   { img: pBallBlue, label: "Fodbolde" },
 ];
 
-const products: CategoryProduct[] = [
-  { img: pBallBlue, name: "SAH Precision Training Fodbold", price: "200 kr.", oldPrice: "250 kr." },
-  { img: pBallGreen, name: "SAH Precision Training Fodbold Grøn", price: "200 kr.", oldPrice: "250 kr." },
-  { img: pBallYellow, name: "SAH Fodbold Gul", price: "72,80 kr.", oldPrice: "130 kr." },
-  { img: pBootbag, name: "SAH Støvlepose", price: "100 kr.", oldPrice: "125 kr." },
-  { img: pBlanket, name: "SAH 130x160 Fleecetæppe", price: "200 kr." },
-  { img: pSweatshirt, name: "SAH Sweatshirt", price: "350 kr." },
-  { img: pUmbrella, name: "SAH Paraply", price: "180 kr." },
-];
+const products: CategoryProduct[] = getProductsByCategory("merchandise").slice(0, 7);
 
 function Page() {
   return (
