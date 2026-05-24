@@ -10,11 +10,17 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as SpillertojRouteImport } from './routes/spillertoj'
+import { Route as MerchandiseRouteImport } from './routes/merchandise'
 import { Route as IndexRouteImport } from './routes/index'
 
 const SpillertojRoute = SpillertojRouteImport.update({
   id: '/spillertoj',
   path: '/spillertoj',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MerchandiseRoute = MerchandiseRouteImport.update({
+  id: '/merchandise',
+  path: '/merchandise',
   getParentRoute: () => rootRouteImport,
 } as any)
 const IndexRoute = IndexRouteImport.update({
@@ -25,27 +31,31 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/merchandise': typeof MerchandiseRoute
   '/spillertoj': typeof SpillertojRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/merchandise': typeof MerchandiseRoute
   '/spillertoj': typeof SpillertojRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/merchandise': typeof MerchandiseRoute
   '/spillertoj': typeof SpillertojRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/spillertoj'
+  fullPaths: '/' | '/merchandise' | '/spillertoj'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/spillertoj'
-  id: '__root__' | '/' | '/spillertoj'
+  to: '/' | '/merchandise' | '/spillertoj'
+  id: '__root__' | '/' | '/merchandise' | '/spillertoj'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  MerchandiseRoute: typeof MerchandiseRoute
   SpillertojRoute: typeof SpillertojRoute
 }
 
@@ -56,6 +66,13 @@ declare module '@tanstack/react-router' {
       path: '/spillertoj'
       fullPath: '/spillertoj'
       preLoaderRoute: typeof SpillertojRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/merchandise': {
+      id: '/merchandise'
+      path: '/merchandise'
+      fullPath: '/merchandise'
+      preLoaderRoute: typeof MerchandiseRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/': {
@@ -70,6 +87,7 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  MerchandiseRoute: MerchandiseRoute,
   SpillertojRoute: SpillertojRoute,
 }
 export const routeTree = rootRouteImport
