@@ -1,5 +1,6 @@
 import pHome from "@/assets/ach/p-home-jersey.webp";
 import pAway from "@/assets/ach/p-away-sah.webp";
+import pAway2 from "@/assets/ach/p-away-sah-2.webp";
 import pAwayKids from "@/assets/ach/p-away-kids-sah.webp";
 import pShorts from "@/assets/ach/p-shorts.webp";
 import pShortsKids from "@/assets/ach/p-shorts-kids.webp";
@@ -19,6 +20,7 @@ import pCap from "@/assets/ach/p-cap.jpg";
 export type Product = {
   slug: string;
   img: string;
+  img2?: string;
   name: string;
   price: string;
   oldPrice?: string;
@@ -30,7 +32,7 @@ export type Product = {
 
 export const PRODUCTS: Product[] = [
   { slug: "sah-hjemmebanetroje-25-26", img: pHome, name: "SAH Hjemmebanetrøje 25/26", price: "455 kr.", excluded: true, brand: "adidas", hasSizes: true, category: "spillertoj" },
-  { slug: "sah-udebanetroje-25", img: pAway, name: "SAH t-shirt", price: "150 kr.", brand: "SAH", hasSizes: true, category: "merchandise" },
+  { slug: "sah-udebanetroje-25", img: pAway, img2: pAway2, name: "SAH t-shirt", price: "150 kr.", brand: "SAH", hasSizes: true, category: "merchandise" },
   { slug: "sah-udebanetroje-25-born", img: pAwayKids, name: "SAH hoodie", price: "250 kr.", brand: "SAH", hasSizes: true, category: "merchandise" },
   { slug: "sah-hjemmebaneshorts-25-26", img: pShorts, name: "SAH Hjemmebaneshorts 25/26", price: "300 kr.", excluded: true, brand: "adidas", hasSizes: true, category: "spillertoj" },
   { slug: "sah-hjemmebaneshorts-24-25-born", img: pShortsKids, name: "SAH Hjemmebaneshorts 24/25 Børn", price: "245 kr.", excluded: true, brand: "adidas", hasSizes: true, category: "spillertoj" },
