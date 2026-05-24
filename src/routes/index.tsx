@@ -82,7 +82,7 @@ function Index() {
         <CategoryTiles />
 
         <ProductCarousel
-          title="ACH-produkter i fokus"
+          title="SAH nye merchandise kollektion"
           count="7 produkter"
           subtitle="Stå bag klubben - med din støtte skaber vi store øjeblikke både på og uden for banen."
           products={focusProducts}
