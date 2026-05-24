@@ -1,5 +1,6 @@
 import pHome from "@/assets/ach/p-home-jersey.webp";
 import pAway from "@/assets/ach/p-away-sah.webp";
+import pAway2 from "@/assets/ach/p-away-sah-2.webp";
 import pAwayKids from "@/assets/ach/p-away-kids-sah.webp";
 import pShorts from "@/assets/ach/p-shorts.webp";
 import pShortsKids from "@/assets/ach/p-shorts-kids.webp";
