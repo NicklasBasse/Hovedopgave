@@ -13,7 +13,7 @@ import pBootbag from "@/assets/ach/p-bootbag-new.webp";
 import pBlanket from "@/assets/ach/p-blanket-new.webp";
 import pSweatshirt from "@/assets/ach/p-sweatshirt.jpg";
 import pUmbrella from "@/assets/ach/p-umbrella.jpg";
-import pCap from "@/assets/ach/p-cap.jpg";
+
 
 export const Route = createFileRoute("/merchandise")({
   head: () => ({
@@ -32,7 +32,7 @@ const subCategories: SubCategory[] = [
   { img: tileMerch, label: "Fan-tøj" },
   { img: pBallBlue, label: "Fodbolde" },
   { img: pBlanket, label: "Tæpper" },
-  { img: pCap, label: "Tilbehør" },
+  { img: pUmbrella, label: "Tilbehør" },
 ];
 
 const products: CategoryProduct[] = [
@@ -43,7 +43,6 @@ const products: CategoryProduct[] = [
   { img: pBlanket, name: "SAH 130x160 Fleecetæppe", price: "200 kr." },
   { img: pSweatshirt, name: "SAH Sweatshirt", price: "350 kr." },
   { img: pUmbrella, name: "SAH Paraply", price: "180 kr." },
-  { img: pCap, name: "SAH Cap", price: "150 kr." },
 ];
 
 function Page() {
