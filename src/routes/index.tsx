@@ -12,7 +12,7 @@ import { SiteFooter } from "@/components/site/SiteFooter";
 import sectionLeft from "@/assets/ach/section-left-new.webp";
 import sectionRight from "@/assets/ach/section-right-new.webp";
 import side1 from "@/assets/ach/carousel-side-sah.webp";
-import side2 from "@/assets/ach/carousel-side-2.jpg";
+import side2 from "@/assets/ach/carousel-side-2.webp";
 
 import pAway from "@/assets/ach/p-away-sah.webp";
 import pAwayKids from "@/assets/ach/p-away-kids-sah.webp";
