@@ -1,9 +1,11 @@
 import { Menu, Search, User, Heart, ShoppingBag } from "lucide-react";
 import sport24Logo from "@/assets/sport24-logo.webp";
+import { useCartCount } from "@/hooks/useCart";
 
 const NAV = ["Kvinder", "Mænd", "Børn", "Aktiviteter", "Gode priser"];
 
 export function SiteHeader() {
+  const cartCount = useCartCount();
   return (
     <header className="sticky top-0 z-40 w-full border-b border-border bg-background">
       <div className="mx-auto flex max-w-[1440px] items-center gap-6 px-6 py-5">
@@ -37,7 +39,19 @@ export function SiteHeader() {
         <div className="flex items-center gap-4">
           <button aria-label="Konto"><User className="h-6 w-6" /></button>
           <button aria-label="Ønskeliste"><Heart className="h-6 w-6" /></button>
-          <button aria-label="Indkøbskurv"><ShoppingBag className="h-6 w-6" /></button>
+          <div
+            aria-label="Indkøbskurv"
+            aria-disabled="true"
+            className="relative cursor-not-allowed select-none"
+            title="Kurven er ikke tilgængelig"
+          >
+            <ShoppingBag className="h-6 w-6" />
+            {cartCount > 0 && (
+              <span className="absolute -right-2 -top-2 flex h-5 min-w-5 items-center justify-center rounded-full bg-brand-red px-1 text-[11px] font-bold leading-none text-white">
+                {cartCount}
+              </span>
+            )}
+          </div>
         </div>
       </div>
     </header>
