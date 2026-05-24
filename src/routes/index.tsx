@@ -70,7 +70,7 @@ const jerseyProducts: Product[] = [
   { slug: "sah-udebanestromper-25", img: pSocksWhite, name: "SAH hjemmebane spillertrøje 25/26 Børn", price: "275 kr.", excluded: true },
   { slug: "sah-hjemmebanestromper-25-26", img: pSocksYellow, name: "SAH udebane spillertrøje 25/26 Børn", price: "275 kr.", excluded: true },
   { slug: "sah-hjemmebaneshorts-25-26-born", img: pShortsKids2526, name: "SAH Hjemmebaneshorts 25/26 Børn", price: "150 kr.", excluded: true },
-  { slug: "sah-hjemmebaneshorts-25-26", img: pShorts, name: "SAH Hjemmebaneshorts 25/26", price: "300 kr.", excluded: true },
+  { slug: "sah-hjemmebaneshorts-25-26", img: pShorts, name: "SAH Hjemmebaneshorts 25/26", price: "150 kr.", excluded: true },
 ];
 
 function Index() {
