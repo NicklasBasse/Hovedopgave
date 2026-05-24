@@ -39,7 +39,7 @@ export const Route = createFileRoute("/")({
       {
         name: "description",
         content:
-          "Køb officielt AC Horsens spillertøj og merchandise hos SPORT 24. Hjemmebanetrøjer, udebanetrøjer, fodbolde og fan-merch.",
+          "Køb officielt AC Horsens spillertøj og merchandise hos SPORT 24. Hjemmebanetrøjer, merchandise, fodbolde og fan-merch.",
       },
       { property: "og:title", content: "AC Horsens Shop | SPORT 24" },
       {

@@ -13,7 +13,7 @@ export const Route = createFileRoute("/spillertoj")({
   head: () => ({
     meta: [
       { title: "SAH Spillertøj | SPORT 24" },
-      { name: "description", content: "Køb officielt SAH spillertøj - hjemmebane, udebane, shorts og strømper." },
+      { name: "description", content: "Køb officielt SAH spillertøj - hjemmebane, merchandise, shorts og strømper." },
       { property: "og:title", content: "SAH Spillertøj | SPORT 24" },
       { property: "og:description", content: "Officielt SAH spillertøj hos SPORT 24." },
     ],
