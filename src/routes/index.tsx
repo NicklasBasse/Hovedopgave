@@ -86,7 +86,8 @@ function Index() {
           count="7 produkter"
           subtitle="Stå bag klubben - med din støtte skaber vi store øjeblikke både på og uden for banen."
           products={focusProducts}
-          ctaLabel="Se alt spillertøj"
+          ctaLabel="Se alt merchandise"
+          ctaHref="/merchandise"
           sideImage={side1}
           sideAlt="ACH produkter i fokus"
         />
@@ -99,6 +100,7 @@ function Index() {
           title="SAH merchandise til din hverdag"
           body="Vores nye streetwear-linje er skåret helt ind til benet, så du kan bære din stolthed med stil. Vi har skabt et rent og minimalistisk design, der passer perfekt ind i din hverdagsgarderobe – uanset om du er på studiet, caféen eller i hallen. Med en diskret hyldest til holdet kan du mærke fællesskabet og vise, hvem du holder med, uden at gå på kompromis med dit personlige udtryk."
           ctaLabel="Oplev hverdags-looket"
+          ctaHref="/merchandise"
         />
 
         <ProductCarousel
@@ -107,6 +109,7 @@ function Index() {
           subtitle="Skanderborg AGF Håndbold - klædt i blå og hvid, skabt til kamp og fællesskab!"
           products={jerseyProducts}
           ctaLabel="Find din trøje her"
+          ctaHref="/spillertoj"
           sideImage={side2}
           sideAlt="ACH Spillertøj"
         />
@@ -119,6 +122,7 @@ function Index() {
           title="Håndbold merchandise med stolthed"
           body="For dig, der elsker fællesskabet og stemningen på lægterne. Vi har designet en fan-linje med et helt unikt SAH-mønster, der binder fans, spillere og frivillige sammen i én stærk enhed. Det markante design gør det nemt at genkende andre fans ude i bybilledet, og det fungerer som den perfekte anledning til at falde i snak om holdet."
           ctaLabel="Bliv en del af holdet"
+          ctaHref="/se-alt-sah"
         />
 
         <ClosingHeading />
