@@ -9,8 +9,26 @@
 // Additionally, you should also exclude this file from your linter and/or formatter to prevent it from being checked or modified.
 
 import { Route as rootRouteImport } from './routes/__root'
+import { Route as SpillertojRouteImport } from './routes/spillertoj'
+import { Route as SeAltSahRouteImport } from './routes/se-alt-sah'
+import { Route as MerchandiseRouteImport } from './routes/merchandise'
 import { Route as IndexRouteImport } from './routes/index'
 
+const SpillertojRoute = SpillertojRouteImport.update({
+  id: '/spillertoj',
+  path: '/spillertoj',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SeAltSahRoute = SeAltSahRouteImport.update({
+  id: '/se-alt-sah',
+  path: '/se-alt-sah',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const MerchandiseRoute = MerchandiseRouteImport.update({
+  id: '/merchandise',
+  path: '/merchandise',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
@@ -19,28 +37,61 @@ const IndexRoute = IndexRouteImport.update({
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/merchandise': typeof MerchandiseRoute
+  '/se-alt-sah': typeof SeAltSahRoute
+  '/spillertoj': typeof SpillertojRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/merchandise': typeof MerchandiseRoute
+  '/se-alt-sah': typeof SeAltSahRoute
+  '/spillertoj': typeof SpillertojRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/merchandise': typeof MerchandiseRoute
+  '/se-alt-sah': typeof SeAltSahRoute
+  '/spillertoj': typeof SpillertojRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths: '/' | '/merchandise' | '/se-alt-sah' | '/spillertoj'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to: '/' | '/merchandise' | '/se-alt-sah' | '/spillertoj'
+  id: '__root__' | '/' | '/merchandise' | '/se-alt-sah' | '/spillertoj'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  MerchandiseRoute: typeof MerchandiseRoute
+  SeAltSahRoute: typeof SeAltSahRoute
+  SpillertojRoute: typeof SpillertojRoute
 }
 
 declare module '@tanstack/react-router' {
   interface FileRoutesByPath {
+    '/spillertoj': {
+      id: '/spillertoj'
+      path: '/spillertoj'
+      fullPath: '/spillertoj'
+      preLoaderRoute: typeof SpillertojRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/se-alt-sah': {
+      id: '/se-alt-sah'
+      path: '/se-alt-sah'
+      fullPath: '/se-alt-sah'
+      preLoaderRoute: typeof SeAltSahRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/merchandise': {
+      id: '/merchandise'
+      path: '/merchandise'
+      fullPath: '/merchandise'
+      preLoaderRoute: typeof MerchandiseRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/': {
       id: '/'
       path: '/'
@@ -53,6 +104,9 @@ declare module '@tanstack/react-router' {
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  MerchandiseRoute: MerchandiseRoute,
+  SeAltSahRoute: SeAltSahRoute,
+  SpillertojRoute: SpillertojRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
