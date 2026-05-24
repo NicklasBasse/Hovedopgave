@@ -1,4 +1,4 @@
-import { ChevronRight, Heart, Plus, ArrowUpDown } from "lucide-react";
+import { ChevronRight, Heart, ArrowUpDown } from "lucide-react";
 import { Link } from "@tanstack/react-router";
 
 export type CategoryProduct = {

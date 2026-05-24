@@ -1,7 +1,7 @@
-import { ChevronLeft, ChevronRight, Plus } from "lucide-react";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useRef } from "react";
 import { Link } from "@tanstack/react-router";
-import { cartStore } from "@/hooks/useCart";
+
 
 export type Product = {
   slug?: string;
