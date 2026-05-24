@@ -108,7 +108,7 @@ function Index() {
           count="8 produkter"
           subtitle="Skanderborg AGF Håndbold - klædt i blå og hvid, skabt til kamp og fællesskab!"
           products={jerseyProducts}
-          ctaLabel="Find din trøje her"
+          ctaLabel="Find din spillertrøje her"
           ctaHref="/spillertoj"
           sideImage={side2}
           sideAlt="ACH Spillertøj"
