@@ -86,7 +86,7 @@ function Index() {
           count="7 produkter"
           subtitle="Stå bag klubben - med din støtte skaber vi store øjeblikke både på og uden for banen."
           products={focusProducts}
-          ctaLabel="Se alt fra ACH"
+          ctaLabel="Se alt spillertøj"
           sideImage={side1}
           sideAlt="ACH produkter i fokus"
         />
