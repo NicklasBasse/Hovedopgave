@@ -52,7 +52,7 @@ export const Route = createFileRoute("/")({
 });
 
 const focusProducts: Product[] = [
-  { slug: "sah-udebanetroje-25", img: pAway, name: "AC Horsens Merchandise 25", price: "420 kr." },
+  { slug: "sah-udebanetroje-25", img: pAway, name: "150 kr.", price: "420 kr." },
   { slug: "sah-udebanetroje-25-born", img: pAwayKids, name: "AC Horsens Merchandise 25 Børn", price: "385 kr." },
   { slug: "sah-precision-training-fodbold", img: pBallBlue, name: "AC Horsens Precision Training Fodbold", price: "200 kr.", oldPrice: "250 kr.", badge: "KLUBPRIS - SPAR 20%" },
   { slug: "sah-stovlepose", img: pBootbag, name: "AC Horsens Støvlepose", price: "100 kr.", oldPrice: "125 kr.", badge: "KLUBPRIS - SPAR 20%" },
