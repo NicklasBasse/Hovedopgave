@@ -1,3 +1,5 @@
+import { Link } from "@tanstack/react-router";
+
 type Props = {
   image: string;
   imageAlt: string;
@@ -5,6 +7,7 @@ type Props = {
   title: string;
   body: string;
   ctaLabel: string;
+  ctaHref: string;
   imageSide: "left" | "right";
 };
 
@@ -15,6 +18,7 @@ export function SplitFeature({
   title,
   body,
   ctaLabel,
+  ctaHref,
   imageSide,
 }: Props) {
   return (
@@ -40,12 +44,12 @@ export function SplitFeature({
           </p>
           <h2 className="text-3xl font-black tracking-tight md:text-4xl">{title}</h2>
           <p className="mt-5 text-[15px] leading-relaxed text-foreground/80">{body}</p>
-          <a
-            href="#"
+          <Link
+            to={ctaHref}
             className="mt-7 inline-block rounded-full bg-foreground px-6 py-3 text-sm font-semibold text-background hover:bg-foreground/90"
           >
             {ctaLabel}
-          </a>
+          </Link>
         </div>
       </div>
     </section>
