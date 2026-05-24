@@ -1,6 +1,8 @@
 import { ChevronRight, Heart, Plus, ArrowUpDown } from "lucide-react";
+import { Link } from "@tanstack/react-router";
 
 export type CategoryProduct = {
+  slug?: string;
   img: string;
   name: string;
   price: string;
@@ -83,36 +85,54 @@ export function CategoryLanding({
 
       {/* Product grid */}
       <div className="mt-8 grid grid-cols-2 gap-x-4 gap-y-10 md:grid-cols-3 lg:grid-cols-4">
-        {products.map((p, i) => (
-          <a key={i} href="#" className="group flex flex-col">
-            <div className="relative aspect-[3/4] w-full overflow-hidden bg-muted">
-              {p.excluded && (
-                <span className="absolute left-3 top-3 z-10 bg-foreground/90 px-2 py-1 text-[10px] font-bold uppercase tracking-wide text-background">
-                  Undtaget af kampagnen
-                </span>
-              )}
-              <button
-                aria-label="Tilføj til favoritter"
-                className="absolute right-3 top-3 z-10 flex h-9 w-9 items-center justify-center rounded-full bg-background/80 backdrop-blur transition hover:bg-background"
-              >
-                <Heart className="h-4 w-4" />
-              </button>
-              <img
-                src={p.img}
-                alt={p.name}
-                loading="lazy"
-                className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
-              />
+        {products.map((p, i) => {
+          const cardInner = (
+            <>
+              <div className="relative aspect-[3/4] w-full overflow-hidden bg-muted">
+                {p.excluded && (
+                  <span className="absolute left-3 top-3 z-10 bg-foreground/90 px-2 py-1 text-[10px] font-bold uppercase tracking-wide text-background">
+                    Undtaget af kampagnen
+                  </span>
+                )}
+                <button
+                  aria-label="Tilføj til favoritter"
+                  onClick={(e) => e.preventDefault()}
+                  className="absolute right-3 top-3 z-10 flex h-9 w-9 items-center justify-center rounded-full bg-background/80 backdrop-blur transition hover:bg-background"
+                >
+                  <Heart className="h-4 w-4" />
+                </button>
+                <img
+                  src={p.img}
+                  alt={p.name}
+                  loading="lazy"
+                  className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                />
+              </div>
+              <p className="mt-3 text-center text-sm font-semibold leading-tight">{p.name}</p>
+              <div className="mt-1 flex items-baseline justify-center gap-2">
+                <span className="text-base font-bold">{p.price}</span>
+                {p.oldPrice && (
+                  <span className="text-xs text-muted-foreground line-through">{p.oldPrice}</span>
+                )}
+              </div>
+            </>
+          );
+
+          return p.slug ? (
+            <Link
+              key={i}
+              to="/produkt/$slug"
+              params={{ slug: p.slug }}
+              className="group flex flex-col"
+            >
+              {cardInner}
+            </Link>
+          ) : (
+            <div key={i} className="group flex flex-col">
+              {cardInner}
             </div>
-            <p className="mt-3 text-center text-sm font-semibold leading-tight">{p.name}</p>
-            <div className="mt-1 flex items-baseline justify-center gap-2">
-              <span className="text-base font-bold">{p.price}</span>
-              {p.oldPrice && (
-                <span className="text-xs text-muted-foreground line-through">{p.oldPrice}</span>
-              )}
-            </div>
-          </a>
-        ))}
+          );
+        })}
       </div>
     </section>
   );

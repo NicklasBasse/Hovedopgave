@@ -13,6 +13,7 @@ import { Route as SpillertojRouteImport } from './routes/spillertoj'
 import { Route as SeAltSahRouteImport } from './routes/se-alt-sah'
 import { Route as MerchandiseRouteImport } from './routes/merchandise'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as ProduktSlugRouteImport } from './routes/produkt.$slug'
 
 const SpillertojRoute = SpillertojRouteImport.update({
   id: '/spillertoj',
@@ -34,18 +35,25 @@ const IndexRoute = IndexRouteImport.update({
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const ProduktSlugRoute = ProduktSlugRouteImport.update({
+  id: '/produkt/$slug',
+  path: '/produkt/$slug',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
   '/merchandise': typeof MerchandiseRoute
   '/se-alt-sah': typeof SeAltSahRoute
   '/spillertoj': typeof SpillertojRoute
+  '/produkt/$slug': typeof ProduktSlugRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
   '/merchandise': typeof MerchandiseRoute
   '/se-alt-sah': typeof SeAltSahRoute
   '/spillertoj': typeof SpillertojRoute
+  '/produkt/$slug': typeof ProduktSlugRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
@@ -53,13 +61,25 @@ export interface FileRoutesById {
   '/merchandise': typeof MerchandiseRoute
   '/se-alt-sah': typeof SeAltSahRoute
   '/spillertoj': typeof SpillertojRoute
+  '/produkt/$slug': typeof ProduktSlugRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/' | '/merchandise' | '/se-alt-sah' | '/spillertoj'
+  fullPaths:
+    | '/'
+    | '/merchandise'
+    | '/se-alt-sah'
+    | '/spillertoj'
+    | '/produkt/$slug'
   fileRoutesByTo: FileRoutesByTo
-  to: '/' | '/merchandise' | '/se-alt-sah' | '/spillertoj'
-  id: '__root__' | '/' | '/merchandise' | '/se-alt-sah' | '/spillertoj'
+  to: '/' | '/merchandise' | '/se-alt-sah' | '/spillertoj' | '/produkt/$slug'
+  id:
+    | '__root__'
+    | '/'
+    | '/merchandise'
+    | '/se-alt-sah'
+    | '/spillertoj'
+    | '/produkt/$slug'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
@@ -67,6 +87,7 @@ export interface RootRouteChildren {
   MerchandiseRoute: typeof MerchandiseRoute
   SeAltSahRoute: typeof SeAltSahRoute
   SpillertojRoute: typeof SpillertojRoute
+  ProduktSlugRoute: typeof ProduktSlugRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -99,6 +120,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/produkt/$slug': {
+      id: '/produkt/$slug'
+      path: '/produkt/$slug'
+      fullPath: '/produkt/$slug'
+      preLoaderRoute: typeof ProduktSlugRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
@@ -107,6 +135,7 @@ const rootRouteChildren: RootRouteChildren = {
   MerchandiseRoute: MerchandiseRoute,
   SeAltSahRoute: SeAltSahRoute,
   SpillertojRoute: SpillertojRoute,
+  ProduktSlugRoute: ProduktSlugRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
