@@ -14,7 +14,7 @@ import pShortsKids from "@/assets/ach/p-shorts-kids.webp";
 import pShortsKids2526 from "@/assets/ach/p-shorts-kids-2526.webp";
 import pSocksBlack from "@/assets/ach/p-socks-black.webp";
 import pSocksWhite from "@/assets/ach/p-socks-white.webp";
-import pSocksYellow from "@/assets/ach/p-socks-yellow.webp";
+
 
 export const Route = createFileRoute("/spillertoj")({
   head: () => ({
@@ -45,7 +45,6 @@ const products: CategoryProduct[] = [
   { img: pShortsKids2526, name: "SAH Hjemmebaneshorts 25/26 Børn", price: "260 kr.", excluded: true },
   { img: pSocksBlack, name: "SAH Udebanestrømper 2024", price: "50 kr.", excluded: true },
   { img: pSocksWhite, name: "SAH Udebanestrømper 25", price: "65 kr.", excluded: true },
-  { img: pSocksYellow, name: "SAH Hjemmebanestrømper 25/26", price: "105 kr.", excluded: true },
 ];
 
 function Page() {
