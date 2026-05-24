@@ -24,7 +24,7 @@ export const Route = createFileRoute("/spillertoj")({
 const subCategories: SubCategory[] = [
   { img: logo, label: "SAH" },
   { img: tileJersey, label: "Hjemmebane" },
-  { img: pAway, label: "Udebane" },
+  { img: pAway, label: "Merchandise" },
 ];
 
 const products: CategoryProduct[] = getProductsByCategory("spillertoj");
