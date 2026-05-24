@@ -32,8 +32,6 @@ const subCategories: SubCategory[] = [
   { img: logo, label: "SAH" },
   { img: tileJersey, label: "Hjemmebane" },
   { img: pAway, label: "Udebane" },
-  { img: pShorts, label: "Shorts" },
-  { img: pSocksBlack, label: "Strømper" },
 ];
 
 const products: CategoryProduct[] = [
