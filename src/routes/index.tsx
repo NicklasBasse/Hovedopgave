@@ -104,7 +104,7 @@ function Index() {
         <ProductCarousel
           title="SAH Spillertøj"
           count="8 produkter"
-          subtitle="AC Horsens - ren gul stolthed, skabt til kamp og fællesskab!"
+          subtitle="Skanderborg AGF Håndbold - klædt i blå og hvid, skabt til kamp og fællesskab!"
           products={jerseyProducts}
           ctaLabel="Find din trøje her"
           sideImage={side2}
