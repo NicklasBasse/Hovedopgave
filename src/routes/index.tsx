@@ -102,7 +102,7 @@ function Index() {
         />
 
         <ProductCarousel
-          title="ACH Spillertøj"
+          title="SAH Spillertøj"
           count="8 produkter"
           subtitle="AC Horsens - ren gul stolthed, skabt til kamp og fællesskab!"
           products={jerseyProducts}
