@@ -8,7 +8,14 @@ const kundeservice = [
   "Chat: Start chat",
 ];
 
-const kundeserviceLinks = ["Kundeservice og info", "Køb gavekort", "Konkurrencer", "Job", "Bliv elev"];
+const kundeserviceLinks = [
+  { label: "Kundeservice og info", href: "#" },
+  { label: "Køb gavekort", href: "#" },
+  { label: "Konkurrencer", href: "#" },
+  { label: "Job", href: "#" },
+  { label: "Bliv elev", href: "#" },
+  { label: "Læs mere om siden", href: "/readme" },
+];
 
 const hjaelp = [
   "Levering & Tracking",
