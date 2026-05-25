@@ -78,9 +78,9 @@ export function CookieBanner() {
             <div className="space-y-3">
               {([
                 { key: "necessary", title: "Nødvendige", desc: "Kræves for at siden fungerer. Kan ikke fravælges.", disabled: true },
-                { key: "functional", title: "Funktionelle", desc: "Husker valg som varer i din kurv." },
-                { key: "analytics", title: "Statistik", desc: "Hjælper os med at forstå brug af siden." },
-                { key: "marketing", title: "Marketing", desc: "Bruges til personaliseret indhold og annoncer." },
+                { key: "functional", title: "Funktionelle", desc: "Husker valg som varer i din kurv.", disabled: false },
+                { key: "analytics", title: "Statistik", desc: "Hjælper os med at forstå brug af siden.", disabled: false },
+                { key: "marketing", title: "Marketing", desc: "Bruges til personaliseret indhold og annoncer.", disabled: false },
               ] as const).map((c) => (
                 <label key={c.key} className="flex items-start justify-between gap-4 rounded-md border border-border p-3">
                   <div>
