@@ -1,6 +1,25 @@
+/**
+ * CategoryLanding.tsx
+ * ----------------------------------------------------------------------------
+ * Genbrugelig kategori-landingsside. Bruges af:
+ *   - /spillertoj
+ *   - /merchandise
+ *   - /se-alt-sah
+ *
+ * Komponenten viser breadcrumb, titel, underkategori-cirkler, et række
+ * "filter-chips" og selve produkt-gridden. Filtrene er kun visuelle (de
+ * filtrerer ikke noget), fordi det er en demo-side.
+ *
+ * Hjerte-knappen (favorit) er bevidst placeret som SØSKENDE til produktets
+ * <Link>, ikke inden i den. Det er fordi HTML-standarden forbyder nestede
+ * interaktive elementer (knap inden i link). At have dem som søskende sikrer
+ * korrekt tab-rækkefølge og semantik for skærmlæsere.
+ */
 import { ChevronRight, Heart, ArrowUpDown } from "lucide-react";
 import { Link } from "@tanstack/react-router";
 
+// Type for produkterne der vises i gridden. Mindre end den fulde Product-type
+// — kun de felter, denne komponent har brug for.
 export type CategoryProduct = {
   slug?: string;
   img: string;
@@ -10,20 +29,22 @@ export type CategoryProduct = {
   excluded?: boolean;
 };
 
+// Underkategori-cirkel der vises i toppen (fx "Trøjer", "Shorts" osv.).
 export type SubCategory = {
   img: string;
   label: string;
-  to?: string;
+  to?: string; // valgfri rute – hvis tom, peger den på "#"
 };
 
 type Props = {
-  breadcrumb: string;
-  title: string;
-  count: number;
+  breadcrumb: string;     // Tekst i breadcrumb (fx "SPORT 24 SAH")
+  title: string;          // Stor h1-titel
+  count: number;          // Antal produkter (vises som tekst under titlen)
   subCategories: SubCategory[];
   products: CategoryProduct[];
 };
 
+// Filter-chips – pt. kun visuelle. Holdes som konstant så de er nemme at ændre.
 const FILTERS = ["Størrelser", "Køn", "Mærker", "Pris", "Pris Type", "Farver"];
 
 export function CategoryLanding({
@@ -35,7 +56,7 @@ export function CategoryLanding({
 }: Props) {
   return (
     <section className="mx-auto max-w-[1440px] px-6 py-8">
-      {/* Breadcrumb */}
+      {/* Breadcrumb – hjælper brugeren med at se hvor på siden de er */}
       <nav className="mb-6 flex items-center gap-2 text-xs">
         <a href="/" className="font-semibold uppercase tracking-wide text-foreground underline">
           {breadcrumb}
@@ -44,11 +65,11 @@ export function CategoryLanding({
         <span className="text-muted-foreground">{title}</span>
       </nav>
 
-      {/* Title */}
+      {/* Titel + antal produkter */}
       <h1 className="text-3xl font-black tracking-tight md:text-5xl">{title}</h1>
       <p className="mt-2 text-sm text-muted-foreground">{count} produkter</p>
 
-      {/* Subcategory circles */}
+      {/* Underkategori-cirkler */}
       <div className="mt-8 flex flex-wrap gap-8 md:gap-12">
         {subCategories.map((s) => (
           <Link
@@ -69,7 +90,7 @@ export function CategoryLanding({
         ))}
       </div>
 
-      {/* Filters */}
+      {/* Filter-rækken – kun visuel, klik gør ingenting */}
       <div className="mt-10 flex flex-wrap items-center justify-between gap-4 border-b border-border pb-4">
         <div className="flex flex-wrap gap-2">
           {FILTERS.map((f) => (
@@ -88,9 +109,11 @@ export function CategoryLanding({
         </button>
       </div>
 
-      {/* Product grid */}
+      {/* Selve produkt-gridden. 2 kolonner mobil, 3 tablet, 4 desktop. */}
       <ul className="mt-8 grid list-none grid-cols-2 gap-x-4 gap-y-10 md:grid-cols-3 lg:grid-cols-4">
         {products.map((p, i) => {
+          // `cardInner` er JSX'en der gentages i begge grene af if'en nedenfor.
+          // Vi udtrækker den for at undgå duplikering.
           const cardInner = (
             <>
               <div className="relative aspect-[3/4] w-full overflow-hidden bg-muted">
@@ -118,9 +141,9 @@ export function CategoryLanding({
 
           return (
             <li key={i} className="relative flex flex-col">
-              {/* Heart button is a sibling of the link to avoid nested interactive
-                  elements (invalid HTML, breaks tab order). It follows the link
-                  in DOM order so keyboard users hit the product link first. */}
+              {/* Hjerteknappen er en SØSKENDE til linket – ikke nested inde
+                  i det – for at undgå ugyldig HTML (knap-i-link) og bevare
+                  korrekt tab-rækkefølge for tastatur-brugere. */}
               {p.slug ? (
                 <Link
                   to="/produkt/$slug"

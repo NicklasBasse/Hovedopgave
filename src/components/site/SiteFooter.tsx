@@ -1,6 +1,20 @@
+/**
+ * SiteFooter.tsx
+ * ----------------------------------------------------------------------------
+ * Footer som vises i bunden af alle sider. Den består af tre dele:
+ *   1) Mørkt promo-bånd med et stort budskab + CTA-knap.
+ *   2) Fire kolonner: brand-info, kundeservice, hjælp og Klub SPORT 24.
+ *   3) Disclaimer der gør opmærksom på at siden er til skolebrug.
+ *
+ * Link-lister er definerede som konstanter i toppen af filen, så det er nemt
+ * at tilføje/redigere uden at rode i JSX. `kundeserviceLinks` indeholder bl.a.
+ * et reelt link til /readme – de øvrige peger på "#" da der ikke er rigtige
+ * undersider for dem i demoen.
+ */
 import { Facebook, Instagram, Youtube } from "lucide-react";
 import sport24Logo from "@/assets/sport24-logo.webp";
 
+// Tekstlinjer der vises i Kundeservice-blokken (kontakt-info).
 const kundeservice = [
   "Se butikker og åbningstider",
   "Mail: kundeservice@sport24.dk",
@@ -8,6 +22,8 @@ const kundeservice = [
   "Chat: Start chat",
 ];
 
+// Linkliste – objekter med både label og href, så vi kan lade enkelte
+// links pege på rigtige sider (fx /readme), mens andre er placeholdere.
 const kundeserviceLinks = [
   { label: "Kundeservice og info", href: "#" },
   { label: "Køb gavekort", href: "#" },
@@ -17,6 +33,7 @@ const kundeserviceLinks = [
   { label: "Læs mere om siden", href: "/readme" },
 ];
 
+// Hjælp-blokken – rene strenge da alle linker til "#".
 const hjaelp = [
   "Levering & Tracking",
   "Reklamation",
@@ -33,6 +50,8 @@ const hjaelp = [
   "Click & Collect",
 ];
 
+// Klub-blokken. `null`-elementet bruges som visuel afstand mellem
+// "Klub SPORT 24"-relaterede links og de generelle "Om"-links.
 const klub = [
   "Om Klub SPORT 24",
   "Bliv medlem af Klub SPORT 24",
@@ -51,7 +70,7 @@ const klub = [
 export function SiteFooter() {
   return (
     <footer className="bg-background text-foreground">
-      {/* Dark promo band */}
+      {/* ---------- Mørkt promo-bånd øverst i footeren ---------- */}
       <div className="bg-[#1a1a1a] text-white">
         <div className="mx-auto flex max-w-[1440px] flex-col items-start gap-8 px-6 py-16 md:flex-row md:items-center md:justify-between">
           <div className="max-w-2xl">
@@ -71,9 +90,9 @@ export function SiteFooter() {
         </div>
       </div>
 
-      {/* Footer columns */}
+      {/* ---------- Hovedindhold: 4 kolonner på desktop ---------- */}
       <div className="mx-auto grid max-w-[1440px] gap-10 px-6 py-16 md:grid-cols-4">
-        {/* Brand column */}
+        {/* Kolonne 1: brand, beskrivelse, sociale medier og e-mærke */}
         <div>
           <a href="/" className="inline-flex items-center" aria-label="SPORT 24">
             <img src={sport24Logo} alt="SPORT 24" className="h-12 w-auto" loading="lazy" />
@@ -94,6 +113,7 @@ export function SiteFooter() {
               <Youtube className="h-6 w-6" />
             </a>
           </div>
+          {/* e-mærket-badge – trustmark der vises som "kvalitetsstempel" */}
           <div className="mt-6 inline-flex items-center gap-2 rounded-md bg-[#1aa3d6] px-3 py-2 text-white">
             <span className="flex h-7 w-7 items-center justify-center rounded-full bg-white text-[#1aa3d6] font-bold">
               e
@@ -102,7 +122,7 @@ export function SiteFooter() {
           </div>
         </div>
 
-        {/* Kundeservice */}
+        {/* Kolonne 2: Kundeservice + telefon-åbningstider + link-liste */}
         <div>
           <h3 className="text-lg font-bold">Kundeservice</h3>
           <ul className="mt-5 space-y-3 text-sm">
@@ -129,7 +149,7 @@ export function SiteFooter() {
           </ul>
         </div>
 
-        {/* Hjælp */}
+        {/* Kolonne 3: Hjælp/FAQ-links */}
         <div>
           <h3 className="text-lg font-bold">Hjælp</h3>
           <ul className="mt-5 space-y-3 text-sm">
@@ -141,12 +161,13 @@ export function SiteFooter() {
           </ul>
         </div>
 
-        {/* Klub SPORT 24 */}
+        {/* Kolonne 4: Klub SPORT 24 + Om-links (adskilt af null-spacer) */}
         <div>
           <h3 className="text-lg font-bold">Klub SPORT 24</h3>
           <ul className="mt-5 space-y-3 text-sm">
             {klub.map((item, i) =>
               item === null ? (
+                // Tom li bruges som visuel afstand mellem to grupper af links
                 <li key={`gap-${i}`} className="h-4" aria-hidden="true" />
               ) : (
                 <li key={item}>
@@ -158,7 +179,7 @@ export function SiteFooter() {
         </div>
       </div>
 
-      {/* Disclaimer */}
+      {/* Disclaimer – nederst på siden, gør det klart at det er en demo */}
       <div className="border-t border-border bg-background py-6 text-center">
         <p className="text-xs text-muted-foreground">
           Denne hjemmeside er udelukkende til skolebrug og repræsentere ikke SPORT24

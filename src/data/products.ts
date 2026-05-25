@@ -1,3 +1,18 @@
+/**
+ * products.ts
+ * ----------------------------------------------------------------------------
+ * Central "database" over alle produkter på siden. Da projektet er en
+ * skole-/demo-side uden rigtig backend, er produktdata blot et statisk
+ * TypeScript-array. Det giver flere fordele:
+ *   - Lynhurtig opslag (ingen netværkskald)
+ *   - Type-sikkerhed via Product-typen
+ *   - Nem at vedligeholde: tilføj/redigér ét sted og hele siden opdateres
+ *
+ * Billederne importeres som ES-modules, så Vite kan optimere og hashe dem
+ * ved build (cache-busting + automatisk lazy load).
+ */
+
+// ---- Billede-imports (alle webp/jpg ligger i src/assets/ach/) ------------
 import pHome from "@/assets/ach/p-home-jersey.webp";
 import pAway from "@/assets/ach/p-away-sah.webp";
 import pAway2 from "@/assets/ach/p-away-sah-2.webp";
@@ -19,6 +34,15 @@ import pSweatshirt from "@/assets/ach/p-sweatshirt.jpg";
 import pUmbrella from "@/assets/ach/p-umbrella.jpg";
 import pCap from "@/assets/ach/p-cap.jpg";
 
+/**
+ * Type-definition for et produkt.
+ * - `slug`       = unikt URL-fragment til /produkt/$slug ruten
+ * - `img`/`img2` = hoved- og evt. sekundærbillede til galleriet
+ * - `oldPrice`   = bruges til at vise overstreget førpris
+ * - `excluded`   = produkter undtaget fra en kampagne (vises med badge)
+ * - `hasSizes`   = styrer om størrelsesvælger skal vises på produktsiden
+ * - `category`   = bruges til filtrering på underside-niveau
+ */
 export type Product = {
   slug: string;
   img: string;
@@ -32,6 +56,8 @@ export type Product = {
   category: "spillertoj" | "merchandise";
 };
 
+// Selve produktkataloget. Rækkefølgen er bevidst: merchandise først,
+// derefter spillertøj (følger ønsket layout på "Se alt SAH"-siden).
 export const PRODUCTS: Product[] = [
   { slug: "sah-hjemmebanetroje-25-26", img: pHome, name: "SAH hjemmebane spillershorts 25/26", price: "200 kr.", excluded: true, brand: "adidas", hasSizes: true, category: "spillertoj" },
   { slug: "sah-udebanetroje-25", img: pAway, img2: pAway2, name: "SAH t-shirt", price: "150 kr.", brand: "SAH", hasSizes: true, category: "merchandise" },
@@ -53,13 +79,24 @@ export const PRODUCTS: Product[] = [
   { slug: "sah-cap", img: pCap, name: "SAH Cap", price: "150 kr.", brand: "SAH", hasSizes: false, category: "merchandise" },
 ];
 
+/**
+ * Hjælper: find et produkt på dets slug.
+ * Bruges af /produkt/$slug ruten til at slå produktet op ud fra URL'en.
+ * Returnerer `undefined`, hvis slug'en ikke matcher — så vi kan vise 404.
+ */
 export function getProductBySlug(slug: string): Product | undefined {
   return PRODUCTS.find((p) => p.slug === slug);
 }
 
+/**
+ * Hjælper: hent alle produkter i en given kategori.
+ * Bruges på undersider som /spillertoj og /merchandise til at filtrere.
+ */
 export function getProductsByCategory(category: Product["category"]): Product[] {
   return PRODUCTS.filter((p) => p.category === category);
 }
 
+// Tilgængelige størrelser. `as const` gør at TypeScript ved at det
+// præcis er disse 6 strenge – derfor kan vi typedefinere Size som union.
 export const SIZES = ["XS", "S", "M", "L", "XL", "XXL"] as const;
 export type Size = (typeof SIZES)[number];

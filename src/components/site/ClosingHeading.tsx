@@ -1,3 +1,11 @@
+/**
+ * ClosingHeading.tsx
+ * ----------------------------------------------------------------------------
+ * Lille tekst-sektion der vises nederst på forsiden, lige før footeren.
+ * Fungerer som en "afsluttende værdiproposition" der gentager SPORT 24's
+ * løfter: gode priser, hurtig levering og fuld returret. Ren tekst-komponent
+ * uden interaktion.
+ */
 export function ClosingHeading() {
   return (
     <section className="mx-auto max-w-[1100px] px-6 py-16 text-center">
