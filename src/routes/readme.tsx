@@ -40,7 +40,7 @@ function ReadMePage() {
       <PromoBar />
       <SiteHeader />
 
-      <main className="mx-auto max-w-[1440px] px-6 py-16">
+      <main id="main-content" className="mx-auto max-w-[1440px] px-6 py-16">
         {/* Hero-overskrift med kort introduktion */}
         <div className="mx-auto max-w-3xl text-center">
           <h1 className="text-4xl font-black md:text-5xl">Læs mere om SAH Shop</h1>
