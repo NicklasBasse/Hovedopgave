@@ -122,8 +122,8 @@ export function SiteFooter() {
           </div>
           <ul className="mt-6 space-y-3 text-sm">
             {kundeserviceLinks.map((item) => (
-              <li key={item}>
-                <a href="#" className="hover:text-brand-red">{item}</a>
+              <li key={item.label}>
+                <a href={item.href} className="hover:text-brand-red">{item.label}</a>
               </li>
             ))}
           </ul>
