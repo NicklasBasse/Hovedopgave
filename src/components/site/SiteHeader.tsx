@@ -44,7 +44,17 @@ export function SiteHeader() {
 
         {/* Logo – `mx-auto` centrerer det i den tilbageværende plads */}
         <a href="/" className="mx-auto flex items-center" aria-label="SPORT 24 – forside">
-          <img src={sport24Logo} alt="" className="h-8 w-auto md:h-9" />
+          {/* Eksplicit width/height (samme aspect-ratio som filen 400x125)
+              reserverer plads og forhindrer Cumulative Layout Shift (CLS). */}
+          <img
+            src={sport24Logo}
+            alt=""
+            width={400}
+            height={125}
+            decoding="async"
+            fetchPriority="high"
+            className="h-8 w-auto md:h-9"
+          />
         </a>
 
         {/* Søgefelt – sr-only label er kun for skærmlæsere */}
