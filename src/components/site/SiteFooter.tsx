@@ -8,7 +8,14 @@ const kundeservice = [
   "Chat: Start chat",
 ];
 
-const kundeserviceLinks = ["Kundeservice og info", "Køb gavekort", "Konkurrencer", "Job", "Bliv elev"];
+const kundeserviceLinks = [
+  { label: "Kundeservice og info", href: "#" },
+  { label: "Køb gavekort", href: "#" },
+  { label: "Konkurrencer", href: "#" },
+  { label: "Job", href: "#" },
+  { label: "Bliv elev", href: "#" },
+  { label: "Læs mere om siden", href: "/readme" },
+];
 
 const hjaelp = [
   "Levering & Tracking",
@@ -115,8 +122,8 @@ export function SiteFooter() {
           </div>
           <ul className="mt-6 space-y-3 text-sm">
             {kundeserviceLinks.map((item) => (
-              <li key={item}>
-                <a href="#" className="hover:text-brand-red">{item}</a>
+              <li key={item.label}>
+                <a href={item.href} className="hover:text-brand-red">{item.label}</a>
               </li>
             ))}
           </ul>
