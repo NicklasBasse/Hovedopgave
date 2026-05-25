@@ -113,6 +113,8 @@ export function ProductCarousel({
             <img
               src={sideImage}
               alt={sideAlt}
+              width={800}
+              height={1116}
               loading="lazy"
               decoding="async"
               className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
@@ -133,6 +135,8 @@ export function ProductCarousel({
                 <img
                   src={p.img}
                   alt={p.name}
+                  width={800}
+                  height={800}
                   loading="lazy"
                   decoding="async"
                   className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
