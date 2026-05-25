@@ -1,13 +1,25 @@
+/**
+ * SplitFeature.tsx
+ * ----------------------------------------------------------------------------
+ * Genbrugelig "split"-sektion: et stort billede på den ene halvdel og
+ * tekst+CTA på den anden. Bruges på forsiden til at fremhæve historier eller
+ * udvalgte kategorier.
+ *
+ * `imageSide`-prop'en gør komponenten fleksibel: vi kan veksle mellem at
+ * billedet er til venstre eller højre, så flere SplitFeature-sektioner på
+ * stribe ikke ser ensformige ud. Dette opnås med Tailwinds order-utilities
+ * via en betinget className.
+ */
 import { Link } from "@tanstack/react-router";
 
 type Props = {
-  image: string;
-  imageAlt: string;
-  eyebrow: string;
-  title: string;
-  body: string;
-  ctaLabel: string;
-  ctaHref: string;
+  image: string;       // Billedets URL
+  imageAlt: string;    // Tilgængelighed: beskrivende alt-tekst
+  eyebrow: string;     // Lille label over titlen
+  title: string;       // Stor overskrift
+  body: string;        // Brødtekst
+  ctaLabel: string;    // Knaptekst
+  ctaHref: string;     // Rute knappen linker til
   imageSide: "left" | "right";
 };
 
@@ -23,6 +35,11 @@ export function SplitFeature({
 }: Props) {
   return (
     <section className="mx-auto max-w-[1440px] px-6 py-14">
+      {/*
+        Hvis billedet skal være til højre, bytter vi om på rækkefølgen af
+        børnene via Tailwinds [&>div:first-child]:order-1 og :last-child:order-2.
+        På den måde behøver vi ikke duplikere JSX'en.
+      */}
       <div
         className={`grid items-center gap-10 md:grid-cols-2 ${
           imageSide === "right" ? "md:[&>div:first-child]:order-1 md:[&>div:last-child]:order-2" : ""

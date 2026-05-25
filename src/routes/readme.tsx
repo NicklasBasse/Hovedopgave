@@ -1,9 +1,20 @@
+/**
+ * readme.tsx
+ * ----------------------------------------------------------------------------
+ * "Læs mere om SAH Shop"-siden (route: /readme). Forklarer formålet med
+ * webshoppen, at den er et skoleprojekt, hvordan cookies anvendes, og at
+ * der ikke foregår reelt salg. Linkes fra footeren.
+ *
+ * Siden er ren statisk indhold – ingen interaktivitet, ingen data-fetch.
+ * Den genbruger SiteHeader, PromoBar og SiteFooter for et konsistent layout.
+ */
 import { createFileRoute } from "@tanstack/react-router";
 import { SiteHeader } from "@/components/site/SiteHeader";
 import { SiteFooter } from "@/components/site/SiteFooter";
 import { PromoBar } from "@/components/site/PromoBar";
 import { Info, School, ShoppingBag, ShieldCheck, Cookie } from "lucide-react";
 
+// Definerer ruten /readme + dens meta-tags til SEO og social sharing.
 export const Route = createFileRoute("/readme")({
   head: () => ({
     meta: [
@@ -30,7 +41,7 @@ function ReadMePage() {
       <SiteHeader />
 
       <main className="mx-auto max-w-[1440px] px-6 py-16">
-        {/* Hero */}
+        {/* Hero-overskrift med kort introduktion */}
         <div className="mx-auto max-w-3xl text-center">
           <h1 className="text-4xl font-black md:text-5xl">Læs mere om SAH Shop</h1>
           <p className="mt-4 text-lg text-muted-foreground">
@@ -38,8 +49,13 @@ function ReadMePage() {
           </p>
         </div>
 
-        {/* Info cards */}
+        {/*
+          Info-kort i 2-kolonne grid. Hvert kort består af et farvet ikon,
+          en titel og en forklarende tekst. De fire emner er: Formål,
+          Produkter, Cookies/privatliv og Køb/betaling.
+        */}
         <div className="mx-auto mt-16 grid max-w-5xl gap-8 md:grid-cols-2">
+          {/* Kort 1: Formål */}
           <div className="rounded-xl border border-border bg-card p-8">
             <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-brand-red/10">
               <School className="h-6 w-6 text-brand-red" />
@@ -52,6 +68,7 @@ function ReadMePage() {
             </p>
           </div>
 
+          {/* Kort 2: Produkter */}
           <div className="rounded-xl border border-border bg-card p-8">
             <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-brand-red/10">
               <ShoppingBag className="h-6 w-6 text-brand-red" />
@@ -64,6 +81,7 @@ function ReadMePage() {
             </p>
           </div>
 
+          {/* Kort 3: Cookies og privatliv */}
           <div className="rounded-xl border border-border bg-card p-8">
             <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-brand-red/10">
               <Cookie className="h-6 w-6 text-brand-red" />
@@ -76,6 +94,7 @@ function ReadMePage() {
             </p>
           </div>
 
+          {/* Kort 4: Køb og betaling */}
           <div className="rounded-xl border border-border bg-card p-8">
             <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-brand-red/10">
               <ShieldCheck className="h-6 w-6 text-brand-red" />
@@ -89,7 +108,7 @@ function ReadMePage() {
           </div>
         </div>
 
-        {/* Disclaimer */}
+        {/* Disclaimer nederst – gør juridisk klart at siden er en demo */}
         <div className="mx-auto mt-16 max-w-3xl rounded-xl bg-muted p-8 text-center">
           <Info className="mx-auto h-8 w-8 text-muted-foreground" />
           <p className="mt-4 text-sm leading-relaxed text-muted-foreground">

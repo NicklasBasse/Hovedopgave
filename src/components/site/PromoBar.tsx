@@ -1,3 +1,10 @@
+/**
+ * PromoBar.tsx
+ * ----------------------------------------------------------------------------
+ * En smal gul stribe i toppen af alle sider (over SiteHeader) som viser et
+ * tilbud/markedsføringsbudskab. Holdt bevidst minimalistisk – kun en linje
+ * tekst – så den ikke skygger for resten af headeren.
+ */
 export function PromoBar() {
   return (
     <div className="w-full bg-brand-yellow text-foreground">
