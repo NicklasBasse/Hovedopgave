@@ -29,23 +29,39 @@ import { CookieBanner } from "@/components/site/CookieBanner";
 
 /**
  * 404-skærm. Vises hvis brugeren rammer en URL der ikke findes.
- * Bruger samme design-tokens som resten af sitet for konsistens.
+ * Designet er centreret, venligt og følger sitets visuelle identitet
+ * med mørkt tema, semantiske farve-tokens og en klar CTA tilbage til forsiden.
  */
 function NotFoundComponent() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-background px-4">
-      <div className="max-w-md text-center">
-        <h1 className="text-7xl font-bold text-foreground">404</h1>
-        <h2 className="mt-4 text-xl font-semibold text-foreground">Page not found</h2>
-        <p className="mt-2 text-sm text-muted-foreground">
-          The page you're looking for doesn't exist or has been moved.
+      <div className="max-w-lg text-center">
+        {/* Stort 404-tal — bruger accent-farven for at skabe visuel vægt */}
+        <h1
+          className="text-[10rem] font-black leading-none tracking-tighter text-primary"
+          style={{ fontFamily: "var(--font-heading)" }}
+        >
+          404
+        </h1>
+
+        {/* Underoverskrift på dansk */}
+        <h2 className="mt-2 text-2xl font-semibold text-foreground">
+          Siden blev ikke fundet
+        </h2>
+
+        {/* Forklarende tekst — guider brugeren videre */}
+        <p className="mx-auto mt-4 max-w-sm text-sm leading-relaxed text-muted-foreground">
+          Den side du leder efter, findes ikke eller er blevet flyttet.
+          Tjek URL'en, eller gå tilbage til forsiden.
         </p>
-        <div className="mt-6">
+
+        {/* CTA-knap til forsiden — samme styling som primære knapper på sitet */}
+        <div className="mt-8">
           <Link
             to="/"
-            className="inline-flex items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground transition-colors hover:bg-primary/90"
+            className="inline-flex items-center justify-center rounded-md bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground transition-colors hover:bg-primary/90"
           >
-            Go home
+            Gå til forsiden
           </Link>
         </div>
       </div>
