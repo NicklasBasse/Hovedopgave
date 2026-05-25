@@ -181,11 +181,14 @@ function RootComponent() {
   return (
     <QueryClientProvider client={queryClient}>
       {/* Skip-link: skjult indtil tastatur-fokus, så tastatur-brugere
-          kan springe forbi headeren og direkte til hovedindholdet. */}
+          kan springe forbi headeren direkte til hovedindholdet
+          (WCAG 2.4.1 Bypass Blocks). Peger på #main-content som
+          den enkelte underside selv eksponerer på sit <main>. */}
       <a href="#main-content" className="skip-link">Spring til indhold</a>
-      <main id="main-content">
-        <Outlet />
-      </main>
+      {/* Outlet er en logisk container – IKKE et <main>-element –
+          så hver side kan eje præcis ét <main>-landemærke uden
+          duplikering (WCAG 1.3.1 / ARIA landmark best practice). */}
+      <Outlet />
       <CookieBanner />
     </QueryClientProvider>
   );
