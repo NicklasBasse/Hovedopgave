@@ -33,6 +33,7 @@ export function CategoryTiles() {
                 width={600}
                 height={600}
                 loading="lazy"
+                decoding="async"
                 className="h-full w-full object-contain p-4 transition-transform duration-300 group-hover:scale-105"
               />
             </div>

@@ -104,13 +104,13 @@ export function SiteFooter() {
           </p>
           <div className="mt-6 flex items-center gap-4">
             <a href="#" aria-label="Facebook" className="text-foreground hover:text-brand-red">
-              <Facebook className="h-6 w-6" />
+              <Facebook className="h-6 w-6" aria-hidden="true" />
             </a>
             <a href="#" aria-label="Instagram" className="text-foreground hover:text-brand-red">
-              <Instagram className="h-6 w-6" />
+              <Instagram className="h-6 w-6" aria-hidden="true" />
             </a>
             <a href="#" aria-label="YouTube" className="text-foreground hover:text-brand-red">
-              <Youtube className="h-6 w-6" />
+              <Youtube className="h-6 w-6" aria-hidden="true" />
             </a>
           </div>
           {/* e-mærket-badge – trustmark der vises som "kvalitetsstempel" */}

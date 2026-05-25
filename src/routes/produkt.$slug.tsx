@@ -105,7 +105,7 @@ function ProductPage() {
     <div className="min-h-screen bg-background text-foreground antialiased">
       <PromoBar />
       <SiteHeader />
-      <main className="mx-auto max-w-[1440px] px-6 py-6">
+      <main id="main-content" className="mx-auto max-w-[1440px] px-6 py-6">
         {/* Breadcrumb-navigation: forside → kategori → produkt */}
         <nav className="mb-6 flex items-center justify-between gap-2 text-xs">
           <div className="flex items-center gap-2">
@@ -129,7 +129,16 @@ function ProductPage() {
           {/* Billede-galleri – viser to billeder side om side */}
           <div className="grid grid-cols-1 gap-2 md:grid-cols-2">
             <div className="aspect-square w-full overflow-hidden bg-muted">
-              <img src={product.img} alt={product.name} className="h-full w-full object-cover" />
+              <img
+                src={product.img}
+                alt={product.name}
+                width={1000}
+                height={1000}
+                loading="eager"
+                fetchPriority="high"
+                decoding="async"
+                className="h-full w-full object-cover"
+              />
             </div>
             <div className="aspect-square w-full overflow-hidden bg-muted">
               {/*
@@ -137,7 +146,17 @@ function ProductPage() {
                 men spejlvendt (scaleX(-1)) for at simulere et "andet vinkel"-billede
                 uden at have et reelt sekundærbillede.
               */}
-              <img src={product.img2 ?? product.img} alt={product.name} className="h-full w-full object-cover" style={product.img2 ? undefined : { transform: "scaleX(-1)" }} />
+              <img
+                src={product.img2 ?? product.img}
+                alt={product.img2 ? `${product.name} – ekstra billede` : ""}
+                aria-hidden={product.img2 ? undefined : true}
+                width={1000}
+                height={1000}
+                loading="lazy"
+                decoding="async"
+                className="h-full w-full object-cover"
+                style={product.img2 ? undefined : { transform: "scaleX(-1)" }}
+              />
             </div>
           </div>
 
@@ -154,7 +173,9 @@ function ProductPage() {
 
             {/* Stjerne-rating – pt. blot 5 tomme stjerner og "(0)" anmeldelser */}
             <div className="mt-3 flex items-center gap-2 text-xs">
-              <div className="flex text-muted-foreground">{"★★★★★".split("").map((s, i) => <span key={i}>☆</span>)}</div>
+              <div className="flex text-muted-foreground" role="img" aria-label="0 ud af 5 stjerner">
+                {Array.from({ length: 5 }).map((_, i) => <span key={i} aria-hidden="true">☆</span>)}
+              </div>
               <span className="text-muted-foreground underline">(0)</span>
             </div>
 
@@ -209,22 +230,22 @@ function ProductPage() {
                 aria-label="Tilføj til favoritter"
                 className="flex h-14 w-14 items-center justify-center rounded-full border border-border hover:bg-muted"
               >
-                <Heart className="h-5 w-5" />
+                <Heart className="h-5 w-5" aria-hidden="true" />
               </button>
             </div>
 
             {/* "USP"-liste nederst i sidebaren: fragt, click&collect, returret */}
             <ul className="mt-6 space-y-3 border-t border-border pt-6 text-sm">
               <li className="flex items-start gap-3">
-                <Truck className="mt-0.5 h-5 w-5 shrink-0" />
+                <Truck className="mt-0.5 h-5 w-5 shrink-0" aria-hidden="true" />
                 <span>Gratis fragt ved køb over 499 kr.</span>
               </li>
               <li className="flex items-start gap-3">
-                <Store className="mt-0.5 h-5 w-5 shrink-0" />
+                <Store className="mt-0.5 h-5 w-5 shrink-0" aria-hidden="true" />
                 <span>Reserver og afhent i butik.</span>
               </li>
               <li className="flex items-start gap-3">
-                <Shield className="mt-0.5 h-5 w-5 shrink-0" />
+                <Shield className="mt-0.5 h-5 w-5 shrink-0" aria-hidden="true" />
                 <span>100 dages returret.</span>
               </li>
             </ul>

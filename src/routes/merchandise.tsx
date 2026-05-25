@@ -50,7 +50,7 @@ function Page() {
     <div className="min-h-screen bg-background text-foreground antialiased">
       <PromoBar />
       <SiteHeader />
-      <main>
+      <main id="main-content">
         <CategoryLanding
           breadcrumb="SAH OFFICIEL MERCHANDISE SHOP"
           title="SAH - Merchandise"

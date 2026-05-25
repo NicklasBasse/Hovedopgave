@@ -57,12 +57,12 @@ export function CategoryLanding({
   return (
     <section className="mx-auto max-w-[1440px] px-6 py-8">
       {/* Breadcrumb – hjælper brugeren med at se hvor på siden de er */}
-      <nav className="mb-6 flex items-center gap-2 text-xs">
+      <nav aria-label="Brødkrumme" className="mb-6 flex items-center gap-2 text-xs">
         <a href="/" className="font-semibold uppercase tracking-wide text-foreground underline">
           {breadcrumb}
         </a>
-        <ChevronRight className="h-3 w-3 text-muted-foreground" />
-        <span className="text-muted-foreground">{title}</span>
+        <ChevronRight className="h-3 w-3 text-muted-foreground" aria-hidden="true" />
+        <span aria-current="page" className="text-muted-foreground">{title}</span>
       </nav>
 
       {/* Titel + antal produkter */}
@@ -82,6 +82,7 @@ export function CategoryLanding({
                 src={s.img}
                 alt={s.label}
                 loading="lazy"
+                decoding="async"
                 className="h-full w-full object-contain p-3 transition-transform duration-300 group-hover:scale-105"
               />
             </div>
@@ -126,6 +127,7 @@ export function CategoryLanding({
                   src={p.img}
                   alt={p.name}
                   loading="lazy"
+                  decoding="async"
                   className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
                 />
               </div>
