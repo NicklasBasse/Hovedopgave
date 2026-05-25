@@ -237,15 +237,15 @@ function ProductPage() {
             {/* "USP"-liste nederst i sidebaren: fragt, click&collect, returret */}
             <ul className="mt-6 space-y-3 border-t border-border pt-6 text-sm">
               <li className="flex items-start gap-3">
-                <Truck className="mt-0.5 h-5 w-5 shrink-0" />
+                <Truck className="mt-0.5 h-5 w-5 shrink-0" aria-hidden="true" />
                 <span>Gratis fragt ved køb over 499 kr.</span>
               </li>
               <li className="flex items-start gap-3">
-                <Store className="mt-0.5 h-5 w-5 shrink-0" />
+                <Store className="mt-0.5 h-5 w-5 shrink-0" aria-hidden="true" />
                 <span>Reserver og afhent i butik.</span>
               </li>
               <li className="flex items-start gap-3">
-                <Shield className="mt-0.5 h-5 w-5 shrink-0" />
+                <Shield className="mt-0.5 h-5 w-5 shrink-0" aria-hidden="true" />
                 <span>100 dages returret.</span>
               </li>
             </ul>
