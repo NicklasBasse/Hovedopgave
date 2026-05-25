@@ -33,6 +33,8 @@ import pSocksWhite from "@/assets/ach/p-socks-white.webp";
 import pSocksYellow from "@/assets/ach/p-socks-yellow.webp";
 import pShorts from "@/assets/ach/p-shorts.webp";
 
+import heroImg from "@/assets/ach/hero-sah-studio.webp";
+
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
@@ -47,6 +49,12 @@ export const Route = createFileRoute("/")({
         property: "og:description",
         content: "Officielt SAH spillertøj og merchandise hos SPORT 24.",
       },
+    ],
+    // Preload af hero-billedet → forbedrer LCP (Largest Contentful Paint)
+    // i Lighthouse. fetchpriority="high" beder browseren prioritere det
+    // før andre lazy-loadede billeder.
+    links: [
+      { rel: "preload", as: "image", href: heroImg, fetchpriority: "high" },
     ],
   }),
   component: Index,
@@ -78,7 +86,7 @@ function Index() {
     <div className="min-h-screen bg-background text-foreground antialiased">
       <PromoBar />
       <SiteHeader />
-      <main>
+      <main id="main-content">
         <Hero />
         <CategoryTiles />
 

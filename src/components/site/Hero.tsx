@@ -18,11 +18,21 @@ export function Hero() {
       {/* sr-only h1 – skjult visuelt, men hjælper SEO og skærmlæsere */}
       <h1 className="sr-only">AC Horsens forside</h1>
       <div className="relative aspect-[21/9] w-full overflow-hidden md:aspect-[21/8]">
+        {/*
+          LCP-billedet (Largest Contentful Paint):
+          - loading="eager"     → indlæs straks, ikke lazy
+          - fetchpriority="high"→ browseren prioriterer download
+          - decoding="async"    → blokerer ikke main thread under dekodning
+          Disse tre attributter forbedrer Lighthouse-performance markant.
+        */}
         <img
           src={heroImg}
           alt="AC Horsens topbillede 2025"
           width={1920}
           height={1080}
+          loading="eager"
+          fetchPriority="high"
+          decoding="async"
           className="h-full w-full object-cover"
         />
         {/* Mørk overlay-gradient – forbedrer kontrast på tekst nederst til venstre */}

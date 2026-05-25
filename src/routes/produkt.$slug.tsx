@@ -105,7 +105,7 @@ function ProductPage() {
     <div className="min-h-screen bg-background text-foreground antialiased">
       <PromoBar />
       <SiteHeader />
-      <main className="mx-auto max-w-[1440px] px-6 py-6">
+      <main id="main-content" className="mx-auto max-w-[1440px] px-6 py-6">
         {/* Breadcrumb-navigation: forside → kategori → produkt */}
         <nav className="mb-6 flex items-center justify-between gap-2 text-xs">
           <div className="flex items-center gap-2">
