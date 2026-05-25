@@ -114,6 +114,7 @@ export function ProductCarousel({
               src={sideImage}
               alt={sideAlt}
               loading="lazy"
+              decoding="async"
               className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
             />
             <span className="absolute bottom-4 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full bg-background px-6 py-3 text-sm font-semibold text-foreground shadow-md">
@@ -133,6 +134,7 @@ export function ProductCarousel({
                   src={p.img}
                   alt={p.name}
                   loading="lazy"
+                  decoding="async"
                   className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
                 />
                 {/* Badge vises kun hvis produktet er undtaget kampagnen */}
@@ -154,7 +156,9 @@ export function ProductCarousel({
           );
 
           // Hvis produktet har en slug → renderes som type-safe TanStack <Link>
-          // til produktsiden. Ellers et "dummy" <a href="#"> (kun visuelt).
+          // til produktsiden. Ellers renderes som ikke-interaktiv <div>, så vi
+          // undgår "tomme" links (href="#") som forvirrer skærmlæsere og giver
+          // dårligere Lighthouse Best-Practices score.
           if (p.slug) {
             return (
               <Link
@@ -169,13 +173,12 @@ export function ProductCarousel({
           }
 
           return (
-            <a
+            <div
               key={i}
-              href="#"
               className="group flex h-[459px] w-[329px] shrink-0 snap-start flex-col"
             >
               {card}
-            </a>
+            </div>
           );
         })}
 
