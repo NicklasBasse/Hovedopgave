@@ -23,6 +23,9 @@ import { Link } from "@tanstack/react-router";
 export type CategoryProduct = {
   slug?: string;
   img: string;
+  /** Valgfri srcset-streng (genereret af vite-imagetools) for responsive billeder.
+   *  Når sat, henter mobil-browsere en mindre variant → markant mindre data. */
+  srcset?: string;
   name: string;
   price: string;
   oldPrice?: string;
@@ -127,6 +130,11 @@ export function CategoryLanding({
                 )}
                 <img
                   src={p.img}
+                  srcSet={p.srcset}
+                  // På mobil fylder kortet ca. halv viewport (2-kolonne grid),
+                  // på tablet 1/3, og på desktop 1/4. Browseren bruger dette
+                  // til at vælge mindste passende billed-variant fra srcset.
+                  sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
                   alt={p.name}
                   width={600}
                   height={800}
