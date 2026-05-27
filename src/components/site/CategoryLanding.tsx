@@ -23,9 +23,10 @@ import { Link } from "@tanstack/react-router";
 export type CategoryProduct = {
   slug?: string;
   img: string;
-  /** Valgfri srcset-streng (genereret af vite-imagetools) for responsive billeder.
-   *  Når sat, henter mobil-browsere en mindre variant → markant mindre data. */
+  /** Valgfri WebP-srcset for responsive billeder. */
   srcset?: string;
+  /** Valgfri AVIF-srcset – moderne browsere får ~40% mindre payload. */
+  avifSrcset?: string;
   name: string;
   price: string;
   oldPrice?: string;
