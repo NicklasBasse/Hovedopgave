@@ -12,19 +12,20 @@ import { SplitFeature } from "@/components/site/SplitFeature";
 import { ClosingHeading } from "@/components/site/ClosingHeading";
 import { SiteFooter } from "@/components/site/SiteFooter";
 
-// SplitFeature-baggrundsbilleder: vises i halv viewport bredde på desktop,
-// fuld bredde på mobil. Vi importerer både en lille fallback og et srcset
-// så mobil-browsere kun henter ~640-960px-versionen.
+// SplitFeature-baggrundsbilleder. AVIF + WebP for ~40% mindre payload.
 import sectionLeft from "@/assets/ach/section-left-new.webp?w=960&format=webp";
-import sectionLeftSet from "@/assets/ach/section-left-new.webp?w=640;960;1280;1600&format=webp&as=srcset";
+import sectionLeftSetWebp from "@/assets/ach/section-left-new.webp?w=640;960;1280&format=webp&as=srcset";
+import sectionLeftSetAvif from "@/assets/ach/section-left-new.webp?w=640;960;1280&format=avif&as=srcset";
 import sectionRight from "@/assets/ach/section-right-new.webp?w=960&format=webp";
-import sectionRightSet from "@/assets/ach/section-right-new.webp?w=640;960;1280;1600&format=webp&as=srcset";
-// Karrusel "lead card"-billeder. Vises i en fast 329px bred container,
-// så 600px-varianten dækker selv på Retina-skærme.
+import sectionRightSetWebp from "@/assets/ach/section-right-new.webp?w=640;960;1280&format=webp&as=srcset";
+import sectionRightSetAvif from "@/assets/ach/section-right-new.webp?w=640;960;1280&format=avif&as=srcset";
+// Karrusel lead-card billeder
 import side1 from "@/assets/ach/carousel-side-sah.webp?w=600&format=webp";
-import side1Set from "@/assets/ach/carousel-side-sah.webp?w=400;600;900&format=webp&as=srcset";
+import side1SetWebp from "@/assets/ach/carousel-side-sah.webp?w=400;600;900&format=webp&as=srcset";
+import side1SetAvif from "@/assets/ach/carousel-side-sah.webp?w=400;600;900&format=avif&as=srcset";
 import side2 from "@/assets/ach/carousel-side-2.webp?w=600&format=webp";
-import side2Set from "@/assets/ach/carousel-side-2.webp?w=400;600;900&format=webp&as=srcset";
+import side2SetWebp from "@/assets/ach/carousel-side-2.webp?w=400;600;900&format=webp&as=srcset";
+import side2SetAvif from "@/assets/ach/carousel-side-2.webp?w=400;600;900&format=avif&as=srcset";
 
 // Produktbilleder til karrusellerne — small fallback + responsive srcset.
 import pAway from "@/assets/ach/p-away-sah.webp?w=400&format=webp";
