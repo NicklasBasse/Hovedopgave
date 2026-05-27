@@ -137,7 +137,7 @@ function Page() {
           subCategories={subCategories}
           products={products}
         />
-        <CategoryNavSections showNavigation={false} />
+        <CategoryNavSections showNavigation={false} activeKey="sah" />
       </main>
       <SiteFooter />
     </div>
