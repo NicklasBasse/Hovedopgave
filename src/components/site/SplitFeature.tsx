@@ -13,7 +13,8 @@
 import { Link } from "@tanstack/react-router";
 
 type Props = {
-  image: string;       // Billedets URL
+  image: string;       // Billedets URL (fallback)
+  imageSrcset?: string; // Responsive srcset (vite-imagetools)
   imageAlt: string;    // Tilgængelighed: beskrivende alt-tekst
   eyebrow: string;     // Lille label over titlen
   title: string;       // Stor overskrift
@@ -25,6 +26,7 @@ type Props = {
 
 export function SplitFeature({
   image,
+  imageSrcset,
   imageAlt,
   eyebrow,
   title,
@@ -48,6 +50,9 @@ export function SplitFeature({
         <div className="aspect-[16/10] w-full overflow-hidden bg-muted">
           <img
             src={image}
+            srcSet={imageSrcset}
+            // Fuld bredde på mobil, halv på desktop (2-kolonne grid).
+            sizes="(max-width: 768px) 100vw, 50vw"
             alt={imageAlt}
             width={1920}
             height={1080}

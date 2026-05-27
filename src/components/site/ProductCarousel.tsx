@@ -24,6 +24,9 @@ import { Link } from "@tanstack/react-router";
 export type Product = {
   slug?: string;
   img: string;
+  /** Responsive srcset fra vite-imagetools — giver mobil-browsere mulighed
+   *  for at hente en mindre billed-variant. */
+  srcset?: string;
   name: string;
   price: string;
   oldPrice?: string;
@@ -41,6 +44,7 @@ type Props = {
   ctaLabel: string;    // Tekst på lead card-knappen
   ctaHref: string;     // Hvor lead card linker hen
   sideImage: string;   // Billede på lead card
+  sideImageSrcset?: string; // Responsive srcset til lead card-billedet
   sideAlt: string;     // Alt-tekst på lead card-billedet
 };
 
@@ -52,6 +56,7 @@ export function ProductCarousel({
   ctaLabel,
   ctaHref,
   sideImage,
+  sideImageSrcset,
   sideAlt,
 }: Props) {
   // useRef bruges til at få fat i selve scroll-containeren, så vi kan
@@ -112,6 +117,8 @@ export function ProductCarousel({
           <div className="relative h-full w-full overflow-hidden">
             <img
               src={sideImage}
+              srcSet={sideImageSrcset}
+              sizes="329px"
               alt={sideAlt}
               width={800}
               height={1116}
@@ -134,6 +141,8 @@ export function ProductCarousel({
               <div className="relative w-full flex-1 overflow-hidden">
                 <img
                   src={p.img}
+                  srcSet={p.srcset}
+                  sizes="329px"
                   alt={p.name}
                   width={800}
                   height={800}
