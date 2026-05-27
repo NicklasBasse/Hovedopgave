@@ -14,19 +14,21 @@ import { Link } from "@tanstack/react-router";
 
 type Props = {
   image: string;       // Billedets URL (fallback)
-  imageSrcset?: string; // Responsive srcset (vite-imagetools)
-  imageAlt: string;    // Tilgængelighed: beskrivende alt-tekst
-  eyebrow: string;     // Lille label over titlen
-  title: string;       // Stor overskrift
-  body: string;        // Brødtekst
-  ctaLabel: string;    // Knaptekst
-  ctaHref: string;     // Rute knappen linker til
+  imageSrcset?: string; // Responsive WebP srcset
+  imageAvifSrcset?: string; // Responsive AVIF srcset (~40% mindre end WebP)
+  imageAlt: string;
+  eyebrow: string;
+  title: string;
+  body: string;
+  ctaLabel: string;
+  ctaHref: string;
   imageSide: "left" | "right";
 };
 
 export function SplitFeature({
   image,
   imageSrcset,
+  imageAvifSrcset,
   imageAlt,
   eyebrow,
   title,
@@ -37,29 +39,29 @@ export function SplitFeature({
 }: Props) {
   return (
     <section className="mx-auto max-w-[1440px] px-6 py-14">
-      {/*
-        Hvis billedet skal være til højre, bytter vi om på rækkefølgen af
-        børnene via Tailwinds [&>div:first-child]:order-1 og :last-child:order-2.
-        På den måde behøver vi ikke duplikere JSX'en.
-      */}
       <div
         className={`grid items-center gap-10 md:grid-cols-2 ${
           imageSide === "right" ? "md:[&>div:first-child]:order-1 md:[&>div:last-child]:order-2" : ""
         }`}
       >
         <div className="aspect-[16/10] w-full overflow-hidden bg-muted">
-          <img
-            src={image}
-            srcSet={imageSrcset}
-            // Fuld bredde på mobil, halv på desktop (2-kolonne grid).
-            sizes="(max-width: 768px) 100vw, 50vw"
-            alt={imageAlt}
-            width={1920}
-            height={1080}
-            loading="lazy"
-            decoding="async"
-            className="h-full w-full object-cover"
-          />
+          <picture className="contents">
+            {imageAvifSrcset && (
+              <source type="image/avif" srcSet={imageAvifSrcset} sizes="(max-width: 768px) 100vw, 50vw" />
+            )}
+            {imageSrcset && (
+              <source type="image/webp" srcSet={imageSrcset} sizes="(max-width: 768px) 100vw, 50vw" />
+            )}
+            <img
+              src={image}
+              alt={imageAlt}
+              width={1920}
+              height={1080}
+              loading="lazy"
+              decoding="async"
+              className="h-full w-full object-cover"
+            />
+          </picture>
         </div>
         <div className="md:px-8">
           <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground">
