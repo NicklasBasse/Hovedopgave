@@ -69,7 +69,11 @@ import pCapSet from "@/assets/ach/p-cap.jpg?w=400;800;1200&format=webp&as=srcset
 export type Product = {
   slug: string;
   img: string;
+  /** Responsive srcset (vite-imagetools) til hoved-billedet. */
+  imgSrcset?: string;
   img2?: string;
+  /** Responsive srcset til sekundærbilledet. */
+  img2Srcset?: string;
   name: string;
   price: string;
   oldPrice?: string;
@@ -82,24 +86,24 @@ export type Product = {
 // Selve produktkataloget. Rækkefølgen er bevidst: merchandise først,
 // derefter spillertøj (følger ønsket layout på "Se alt SAH"-siden).
 export const PRODUCTS: Product[] = [
-  { slug: "sah-hjemmebanetroje-25-26", img: pHome, name: "SAH hjemmebane spillershorts 25/26", price: "200 kr.", excluded: true, brand: "adidas", hasSizes: true, category: "spillertoj" },
-  { slug: "sah-udebanetroje-25", img: pAway, img2: pAway2, name: "SAH t-shirt", price: "150 kr.", brand: "SAH", hasSizes: true, category: "merchandise" },
-  { slug: "sah-udebanetroje-25-born", img: pAwayKids, img2: pAwayKids2, name: "SAH hoodie", price: "250 kr.", brand: "SAH", hasSizes: true, category: "merchandise" },
-  { slug: "sah-udebane-spillertroje-25-26", img: pAwayKidsJersey, name: "SAH udebane spillertrøje 25/26", price: "375 kr.", excluded: true, brand: "adidas", hasSizes: true, category: "spillertoj" },
-  { slug: "sah-hjemmebaneshorts-25-26", img: pShorts, name: "SAH udebane spillershorts 25/26 Børn", price: "150 kr.", excluded: true, brand: "adidas", hasSizes: true, category: "spillertoj" },
-  { slug: "sah-hjemmebaneshorts-24-25-born", img: pShortsKids, name: "SAH hjemmebane spillertrøje 25/26", price: "375 kr.", excluded: true, brand: "adidas", hasSizes: true, category: "spillertoj" },
-  { slug: "sah-hjemmebaneshorts-25-26-born", img: pShortsKids2526, name: "SAH hjemmebane spillershorts 25/26 Børn", price: "150 kr.", excluded: true, brand: "adidas", hasSizes: true, category: "spillertoj" },
-  { slug: "sah-udebanestromper-2024", img: pSocksBlack, name: "SAH udebane spillershorts 25/26", price: "200 kr.", excluded: true, brand: "adidas", hasSizes: true, category: "spillertoj" },
-  { slug: "sah-udebanestromper-25", img: pSocksWhite, name: "SAH hjemmebane spillertrøje 25/26 Børn", price: "275 kr.", excluded: true, brand: "adidas", hasSizes: true, category: "spillertoj" },
-  { slug: "sah-hjemmebanestromper-25-26", img: pSocksYellow, name: "SAH udebane spillertrøje 25/26 Børn", price: "275 kr.", excluded: true, brand: "adidas", hasSizes: true, category: "spillertoj" },
-  { slug: "sah-precision-training-fodbold", img: pBallBlue, name: "SAH bøllehat", price: "250 kr.", brand: "SAH", hasSizes: false, category: "merchandise" },
-  { slug: "sah-precision-training-fodbold-gron", img: pBallGreen, name: "SAH halstørklæde", price: "175 kr.", brand: "SAH", hasSizes: false, category: "merchandise" },
-  { slug: "sah-fodbold-gul", img: pBallYellow, name: "SAH håndklæde", price: "250 kr.", brand: "SAH", hasSizes: false, category: "merchandise" },
-  { slug: "sah-stovlepose", img: pBootbag, name: "SAH cap", price: "175 kr.", brand: "SAH", hasSizes: false, category: "merchandise" },
-  { slug: "sah-130x160-fleecetaeppe", img: pBlanket, name: "SAH flag", price: "175 kr.", brand: "SAH", hasSizes: false, category: "merchandise" },
-  { slug: "sah-sweatshirt", img: pSweatshirt, name: "SAH Sweatshirt", price: "350 kr.", brand: "SAH", hasSizes: true, category: "merchandise" },
-  { slug: "sah-paraply", img: pUmbrella, name: "SAH Paraply", price: "180 kr.", brand: "SAH", hasSizes: false, category: "merchandise" },
-  { slug: "sah-cap", img: pCap, name: "SAH Cap", price: "150 kr.", brand: "SAH", hasSizes: false, category: "merchandise" },
+  { slug: "sah-hjemmebanetroje-25-26", img: pHome, imgSrcset: pHomeSet, name: "SAH hjemmebane spillershorts 25/26", price: "200 kr.", excluded: true, brand: "adidas", hasSizes: true, category: "spillertoj" },
+  { slug: "sah-udebanetroje-25", img: pAway, imgSrcset: pAwaySet, img2: pAway2, img2Srcset: pAway2Set, name: "SAH t-shirt", price: "150 kr.", brand: "SAH", hasSizes: true, category: "merchandise" },
+  { slug: "sah-udebanetroje-25-born", img: pAwayKids, imgSrcset: pAwayKidsSet, img2: pAwayKids2, img2Srcset: pAwayKids2Set, name: "SAH hoodie", price: "250 kr.", brand: "SAH", hasSizes: true, category: "merchandise" },
+  { slug: "sah-udebane-spillertroje-25-26", img: pAwayKidsJersey, imgSrcset: pAwayKidsJerseySet, name: "SAH udebane spillertrøje 25/26", price: "375 kr.", excluded: true, brand: "adidas", hasSizes: true, category: "spillertoj" },
+  { slug: "sah-hjemmebaneshorts-25-26", img: pShorts, imgSrcset: pShortsSet, name: "SAH udebane spillershorts 25/26 Børn", price: "150 kr.", excluded: true, brand: "adidas", hasSizes: true, category: "spillertoj" },
+  { slug: "sah-hjemmebaneshorts-24-25-born", img: pShortsKids, imgSrcset: pShortsKidsSet, name: "SAH hjemmebane spillertrøje 25/26", price: "375 kr.", excluded: true, brand: "adidas", hasSizes: true, category: "spillertoj" },
+  { slug: "sah-hjemmebaneshorts-25-26-born", img: pShortsKids2526, imgSrcset: pShortsKids2526Set, name: "SAH hjemmebane spillershorts 25/26 Børn", price: "150 kr.", excluded: true, brand: "adidas", hasSizes: true, category: "spillertoj" },
+  { slug: "sah-udebanestromper-2024", img: pSocksBlack, imgSrcset: pSocksBlackSet, name: "SAH udebane spillershorts 25/26", price: "200 kr.", excluded: true, brand: "adidas", hasSizes: true, category: "spillertoj" },
+  { slug: "sah-udebanestromper-25", img: pSocksWhite, imgSrcset: pSocksWhiteSet, name: "SAH hjemmebane spillertrøje 25/26 Børn", price: "275 kr.", excluded: true, brand: "adidas", hasSizes: true, category: "spillertoj" },
+  { slug: "sah-hjemmebanestromper-25-26", img: pSocksYellow, imgSrcset: pSocksYellowSet, name: "SAH udebane spillertrøje 25/26 Børn", price: "275 kr.", excluded: true, brand: "adidas", hasSizes: true, category: "spillertoj" },
+  { slug: "sah-precision-training-fodbold", img: pBallBlue, imgSrcset: pBallBlueSet, name: "SAH bøllehat", price: "250 kr.", brand: "SAH", hasSizes: false, category: "merchandise" },
+  { slug: "sah-precision-training-fodbold-gron", img: pBallGreen, imgSrcset: pBallGreenSet, name: "SAH halstørklæde", price: "175 kr.", brand: "SAH", hasSizes: false, category: "merchandise" },
+  { slug: "sah-fodbold-gul", img: pBallYellow, imgSrcset: pBallYellowSet, name: "SAH håndklæde", price: "250 kr.", brand: "SAH", hasSizes: false, category: "merchandise" },
+  { slug: "sah-stovlepose", img: pBootbag, imgSrcset: pBootbagSet, name: "SAH cap", price: "175 kr.", brand: "SAH", hasSizes: false, category: "merchandise" },
+  { slug: "sah-130x160-fleecetaeppe", img: pBlanket, imgSrcset: pBlanketSet, name: "SAH flag", price: "175 kr.", brand: "SAH", hasSizes: false, category: "merchandise" },
+  { slug: "sah-sweatshirt", img: pSweatshirt, imgSrcset: pSweatshirtSet, name: "SAH Sweatshirt", price: "350 kr.", brand: "SAH", hasSizes: true, category: "merchandise" },
+  { slug: "sah-paraply", img: pUmbrella, imgSrcset: pUmbrellaSet, name: "SAH Paraply", price: "180 kr.", brand: "SAH", hasSizes: false, category: "merchandise" },
+  { slug: "sah-cap", img: pCap, imgSrcset: pCapSet, name: "SAH Cap", price: "150 kr.", brand: "SAH", hasSizes: false, category: "merchandise" },
 ];
 
 /**
