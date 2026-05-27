@@ -122,8 +122,8 @@ export function SiteFooter() {
             </a>
           </div>
           {/* e-mærket-badge – trustmark der vises som "kvalitetsstempel" */}
-          <div className="mt-6 inline-flex items-center gap-2 rounded-md bg-[#1aa3d6] px-3 py-2 text-white">
-            <span className="flex h-7 w-7 items-center justify-center rounded-full bg-white text-[#1aa3d6] font-bold">
+          <div className="mt-6 inline-flex items-center gap-2 rounded-md bg-[#0b5d7a] px-3 py-2 text-white">
+            <span className="flex h-7 w-7 items-center justify-center rounded-full bg-white text-[#0b5d7a] font-bold">
               e
             </span>
             <span className="text-sm font-semibold">e-mærket</span>
