@@ -117,17 +117,23 @@ export function ProductCarousel({
           className="group block h-[459px] w-[329px] shrink-0 snap-start"
         >
           <div className="relative h-full w-full overflow-hidden">
-            <img
-              src={sideImage}
-              srcSet={sideImageSrcset}
-              sizes="329px"
-              alt={sideAlt}
-              width={800}
-              height={1116}
-              loading="lazy"
-              decoding="async"
-              className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
-            />
+            <picture className="contents">
+              {sideImageAvifSrcset && (
+                <source type="image/avif" srcSet={sideImageAvifSrcset} sizes="329px" />
+              )}
+              {sideImageSrcset && (
+                <source type="image/webp" srcSet={sideImageSrcset} sizes="329px" />
+              )}
+              <img
+                src={sideImage}
+                alt={sideAlt}
+                width={800}
+                height={1116}
+                loading="lazy"
+                decoding="async"
+                className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </picture>
             <span className="absolute bottom-4 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full bg-background px-6 py-3 text-sm font-semibold text-foreground shadow-md">
               {ctaLabel}
             </span>
