@@ -99,7 +99,9 @@ const jerseyProducts: Product[] = [
 export default function HomeBelowFold() {
   return (
     <>
+      <CategoryNavSections />
       <CategoryTiles />
+
 
       <ProductCarousel
         title="SAH nye merchandise kollektion"
