@@ -32,30 +32,30 @@ import tileMerch from "@/assets/ach/tile-merch-v2.webp";
 
 // Produktbilleder — alle spillertøj-varianter. Importeres som lille fallback
 // + responsive srcset, så mobil ikke henter fuld-størrelse 1000px-billeder.
-import pHome from "@/assets/ach/p-home-jersey.webp?w=400&format=webp";
-import pHomeSet from "@/assets/ach/p-home-jersey.webp?w=300;600;900&format=webp&as=srcset";
-import pHomeSetAvif from "@/assets/ach/p-home-jersey.webp?w=300;600;900&format=avif&as=srcset";
-import pAwayKidsJersey from "@/assets/ach/p-away-kids-sah-jersey.webp?w=400&format=webp";
-import pAwayKidsJerseySet from "@/assets/ach/p-away-kids-sah-jersey.webp?w=300;600;900&format=webp&as=srcset";
-import pAwayKidsJerseySetAvif from "@/assets/ach/p-away-kids-sah-jersey.webp?w=300;600;900&format=avif&as=srcset";
-import pShorts from "@/assets/ach/p-shorts.webp?w=400&format=webp";
-import pShortsSet from "@/assets/ach/p-shorts.webp?w=300;600;900&format=webp&as=srcset";
-import pShortsSetAvif from "@/assets/ach/p-shorts.webp?w=300;600;900&format=avif&as=srcset";
-import pShortsKids from "@/assets/ach/p-shorts-kids.webp?w=400&format=webp";
-import pShortsKidsSet from "@/assets/ach/p-shorts-kids.webp?w=300;600;900&format=webp&as=srcset";
-import pShortsKidsSetAvif from "@/assets/ach/p-shorts-kids.webp?w=300;600;900&format=avif&as=srcset";
-import pShortsKids2526 from "@/assets/ach/p-shorts-kids-2526.webp?w=400&format=webp";
-import pShortsKids2526Set from "@/assets/ach/p-shorts-kids-2526.webp?w=300;600;900&format=webp&as=srcset";
-import pShortsKids2526SetAvif from "@/assets/ach/p-shorts-kids-2526.webp?w=300;600;900&format=avif&as=srcset";
-import pSocksBlack from "@/assets/ach/p-socks-black.webp?w=400&format=webp";
-import pSocksBlackSet from "@/assets/ach/p-socks-black.webp?w=300;600;900&format=webp&as=srcset";
-import pSocksBlackSetAvif from "@/assets/ach/p-socks-black.webp?w=300;600;900&format=avif&as=srcset";
-import pSocksWhite from "@/assets/ach/p-socks-white.webp?w=400&format=webp";
-import pSocksWhiteSet from "@/assets/ach/p-socks-white.webp?w=300;600;900&format=webp&as=srcset";
-import pSocksWhiteSetAvif from "@/assets/ach/p-socks-white.webp?w=300;600;900&format=avif&as=srcset";
-import pSocksYellow from "@/assets/ach/p-socks-yellow.webp?w=400&format=webp";
-import pSocksYellowSet from "@/assets/ach/p-socks-yellow.webp?w=300;600;900&format=webp&as=srcset";
-import pSocksYellowSetAvif from "@/assets/ach/p-socks-yellow.webp?w=300;600;900&format=avif&as=srcset";
+import pHome from "@/assets/ach/p-home-jersey.webp?w=320&format=webp";
+import pHomeSet from "@/assets/ach/p-home-jersey.webp?w=240;480&format=webp&as=srcset";
+import pHomeSetAvif from "@/assets/ach/p-home-jersey.webp?w=240;480&format=avif&as=srcset";
+import pAwayKidsJersey from "@/assets/ach/p-away-kids-sah-jersey.webp?w=320&format=webp";
+import pAwayKidsJerseySet from "@/assets/ach/p-away-kids-sah-jersey.webp?w=240;480&format=webp&as=srcset";
+import pAwayKidsJerseySetAvif from "@/assets/ach/p-away-kids-sah-jersey.webp?w=240;480&format=avif&as=srcset";
+import pShorts from "@/assets/ach/p-shorts.webp?w=320&format=webp";
+import pShortsSet from "@/assets/ach/p-shorts.webp?w=240;480&format=webp&as=srcset";
+import pShortsSetAvif from "@/assets/ach/p-shorts.webp?w=240;480&format=avif&as=srcset";
+import pShortsKids from "@/assets/ach/p-shorts-kids.webp?w=320&format=webp";
+import pShortsKidsSet from "@/assets/ach/p-shorts-kids.webp?w=240;480&format=webp&as=srcset";
+import pShortsKidsSetAvif from "@/assets/ach/p-shorts-kids.webp?w=240;480&format=avif&as=srcset";
+import pShortsKids2526 from "@/assets/ach/p-shorts-kids-2526.webp?w=320&format=webp";
+import pShortsKids2526Set from "@/assets/ach/p-shorts-kids-2526.webp?w=240;480&format=webp&as=srcset";
+import pShortsKids2526SetAvif from "@/assets/ach/p-shorts-kids-2526.webp?w=240;480&format=avif&as=srcset";
+import pSocksBlack from "@/assets/ach/p-socks-black.webp?w=320&format=webp";
+import pSocksBlackSet from "@/assets/ach/p-socks-black.webp?w=240;480&format=webp&as=srcset";
+import pSocksBlackSetAvif from "@/assets/ach/p-socks-black.webp?w=240;480&format=avif&as=srcset";
+import pSocksWhite from "@/assets/ach/p-socks-white.webp?w=320&format=webp";
+import pSocksWhiteSet from "@/assets/ach/p-socks-white.webp?w=240;480&format=webp&as=srcset";
+import pSocksWhiteSetAvif from "@/assets/ach/p-socks-white.webp?w=240;480&format=avif&as=srcset";
+import pSocksYellow from "@/assets/ach/p-socks-yellow.webp?w=320&format=webp";
+import pSocksYellowSet from "@/assets/ach/p-socks-yellow.webp?w=240;480&format=webp&as=srcset";
+import pSocksYellowSetAvif from "@/assets/ach/p-socks-yellow.webp?w=240;480&format=avif&as=srcset";
 
 // Rutedefinition + SEO/OG-tags pr. side.
 export const Route = createFileRoute("/spillertoj")({

@@ -18,8 +18,8 @@
 import { Link } from "@tanstack/react-router";
 // vite-imagetools genererer flere størrelser + formater.
 // AVIF er ~30-50% mindre end WebP ved samme visuelle kvalitet → bedre Website Carbon.
-import heroAvifSet from "@/assets/ach/hero-sah-studio.webp?w=640;960;1280;1920&format=avif&as=srcset";
-import heroWebpSet from "@/assets/ach/hero-sah-studio.webp?w=640;960;1280;1920&format=webp&as=srcset";
+import heroAvifSet from "@/assets/ach/hero-sah-studio.webp?w=480;800;1920&format=avif&as=srcset";
+import heroWebpSet from "@/assets/ach/hero-sah-studio.webp?w=480;800;1920&format=webp&as=srcset";
 import heroImg from "@/assets/ach/hero-sah-studio.webp?w=1280&format=webp";
 
 export function Hero() {
