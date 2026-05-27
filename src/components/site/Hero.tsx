@@ -8,9 +8,19 @@
  * Vi bruger `aspect-[21/9]` for at billedet altid har samme proportioner
  * uanset skærmstørrelse — det forhindrer at sidens layout "hopper" når
  * billedet loader (Cumulative Layout Shift / CLS).
+ *
+ * For at undgå at mobil-brugere downloader 1920px-versionen (Lighthouse:
+ * "Improve image delivery", 146 KiB savings) bruger vi `vite-imagetools`
+ * til at generere flere størrelser ved build-time. Browseren vælger
+ * automatisk den mindste billed-størrelse der dækker dens viewport via
+ * `srcset` + `sizes`.
  */
 import { Link } from "@tanstack/react-router";
-import heroImg from "@/assets/ach/hero-sah-studio.webp";
+// ?w=640;960;1280;1920&format=webp&as=srcset → vite-imagetools genererer
+// fire varianter af samme billede og returnerer en færdig srcset-streng.
+import heroSrcset from "@/assets/ach/hero-sah-studio.webp?w=640;960;1280;1920&format=webp&as=srcset";
+// Fallback `src` for browsere uden srcset-support (også den vi preloader).
+import heroImg from "@/assets/ach/hero-sah-studio.webp?w=1280&format=webp";
 
 export function Hero() {
   return (
@@ -20,13 +30,16 @@ export function Hero() {
       <div className="relative aspect-[21/9] w-full overflow-hidden md:aspect-[21/8]">
         {/*
           LCP-billedet (Largest Contentful Paint):
+          - srcSet + sizes      → browser henter mindste passende variant
           - loading="eager"     → indlæs straks, ikke lazy
           - fetchpriority="high"→ browseren prioriterer download
           - decoding="async"    → blokerer ikke main thread under dekodning
-          Disse tre attributter forbedrer Lighthouse-performance markant.
+          Disse forbedrer Lighthouse-performance markant.
         */}
         <img
           src={heroImg}
+          srcSet={heroSrcset}
+          sizes="(max-width: 768px) 100vw, (max-width: 1280px) 100vw, 1280px"
           alt="AC Horsens topbillede 2025"
           width={1920}
           height={1080}
