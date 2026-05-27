@@ -33,7 +33,8 @@ export function Hero() {
         det panorama-agtige 21/8 format.
       */}
       <div className="relative aspect-[4/5] w-full overflow-hidden sm:aspect-[16/10] md:aspect-[21/8]">
-        <picture>
+        <picture className="contents">
+        {/* display:contents → picture forsvinder fra layout, img udfylder forælder */}
           <source type="image/avif" srcSet={heroAvifSet} sizes="100vw" />
           <source type="image/webp" srcSet={heroWebpSet} sizes="100vw" />
           <img
