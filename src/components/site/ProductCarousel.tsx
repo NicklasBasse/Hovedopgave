@@ -148,17 +148,19 @@ export function ProductCarousel({
           const card = (
             <>
               <div className="relative w-full flex-1 overflow-hidden">
-                <img
-                  src={p.img}
-                  srcSet={p.srcset}
-                  sizes="329px"
-                  alt={p.name}
-                  width={800}
-                  height={800}
-                  loading="lazy"
-                  decoding="async"
-                  className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
-                />
+                <picture className="contents">
+                  {p.avifSrcset && <source type="image/avif" srcSet={p.avifSrcset} sizes="329px" />}
+                  {p.srcset && <source type="image/webp" srcSet={p.srcset} sizes="329px" />}
+                  <img
+                    src={p.img}
+                    alt={p.name}
+                    width={800}
+                    height={800}
+                    loading="lazy"
+                    decoding="async"
+                    className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                  />
+                </picture>
                 {/* Badge vises kun hvis produktet er undtaget kampagnen */}
                 {p.excluded && (
                   <span className="absolute left-2 top-2 bg-foreground/80 px-2 py-0.5 text-[10px] font-semibold uppercase text-background">
