@@ -37,15 +37,16 @@ export type Product = {
 // Props til komponenten – alt der gør at samme karrusel kan genbruges
 // med forskellig tekst, billeder og produkter.
 type Props = {
-  title: string;       // Stor overskrift over karrusellen
-  count: string;       // Antal produkter, vises i parentes
-  subtitle: string;    // Lille undertekst
-  products: Product[]; // Selve produkterne
-  ctaLabel: string;    // Tekst på lead card-knappen
-  ctaHref: string;     // Hvor lead card linker hen
-  sideImage: string;   // Billede på lead card
-  sideImageSrcset?: string; // Responsive srcset til lead card-billedet
-  sideAlt: string;     // Alt-tekst på lead card-billedet
+  title: string;
+  count: string;
+  subtitle: string;
+  products: Product[];
+  ctaLabel: string;
+  ctaHref: string;
+  sideImage: string;
+  sideImageSrcset?: string;
+  sideImageAvifSrcset?: string;
+  sideAlt: string;
 };
 
 export function ProductCarousel({
@@ -57,6 +58,7 @@ export function ProductCarousel({
   ctaHref,
   sideImage,
   sideImageSrcset,
+  sideImageAvifSrcset,
   sideAlt,
 }: Props) {
   // useRef bruges til at få fat i selve scroll-containeren, så vi kan
