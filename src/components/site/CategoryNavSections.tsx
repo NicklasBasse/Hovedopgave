@@ -19,9 +19,9 @@ const SECTIONS: {
 }[] = [
   {
     key: "spillertoj",
-    heading: "HELE KOLLEKTIONEN ER LANDET",
+    heading: "DEN OFFICIELLE SPILLERDRAGT",
     text:
-      "Ventetiden er endelig ovre! Vi er stolte af at præsentere et helt nyt og lokalt udvalg af SAH-merchandise. Uanset om du er til det rene, minimalistiske hverdagslook eller bærer vores nye fan-mønster med stolthed, har vi designet noget, der samler os som klub.",
+      "Her finder du holdets officielle kamptøj. Men stoltheden over SAH rækker meget længere end de 60 minutter på banen. Derfor har vi skabt et helt nyt, dedikeret merchandise-kollektion til dig som fan. Vi har skåret larmen væk og designet et univers, der lader dig vise dit tilhørsforhold i hverdagen. Udforsk vores nye fan-mønster eller det moderne streetwear-look herunder.",
     links: [
       { label: "Gå til Merchandise", to: "/merchandise" },
       { label: "Gå til Alt fra SAH", to: "/se-alt-sah" },
@@ -29,9 +29,9 @@ const SECTIONS: {
   },
   {
     key: "merchandise",
-    heading: "BÆR FÆLLESSKABET I HVERDAGEN",
+    heading: "HELE KOLLEKTIONEN ER LANDET",
     text:
-      "Stoltheden rækker meget længere end de 60 minutter på banen. Vores nye, unikke fan-mønster er bygget af halve cirkler, der smelter sammen og bliver hele. Det symboliserer, at vi altid løfter i flok. Det markante design gør det nemt at genkende andre fans i bybilledet, og fungerer som den perfekte anledning til at falde i snak.",
+      "Ventetiden er endelig ovre! Vi er stolte af at præsentere et helt nyt og lokalt udvalg af SAH-merchandise. Uanset om du er til det rene, minimalistiske hverdagslook eller bærer vores nye fan-mønster med stolthed, har vi designet noget, der samler os som klub.",
     links: [
       { label: "Gå til Spillertøj", to: "/spillertoj" },
       { label: "Gå til Alt fra SAH", to: "/se-alt-sah" },
@@ -39,9 +39,9 @@ const SECTIONS: {
   },
   {
     key: "sah",
-    heading: "MODERNE STREETWEAR TIL DIN HVERDAG",
+    heading: "FRA HALLEN TIL HVERDAGEN",
     text:
-      "Til dig, der ønsker at vise dit tilhørsforhold med et mere diskret og stilrent udtryk, har vi skabt en dedikeret streetwear-linje. Det er moderne hverdagsdesign, der nemt integreres i din almindelige garderobe. Gode stunder, gode venner og god stil – tag holdet med dig overalt.",
+      "Som en forlængelse af vores nye fan-mønster, byder kollektionen også på en rendyrket streetwear-linje. Vi ved nemlig, at vores fans er forskellige. Til dig, der ønsker et mere diskret og stilrent udtryk, har vi skabt moderne hverdagsdesign, der nemt integreres i din almindelige garderobe. Gode stunder, gode venner og god stil – uanset hvilket look du vælger, bærer du fællesskabet med dig overalt.",
     links: [
       { label: "Gå til Spillertøj", to: "/spillertoj" },
       { label: "Gå til Merchandise", to: "/merchandise" },
