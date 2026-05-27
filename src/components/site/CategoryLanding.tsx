@@ -81,6 +81,8 @@ export function CategoryLanding({
               <img
                 src={s.img}
                 alt={s.label}
+                width={140}
+                height={140}
                 loading="lazy"
                 decoding="async"
                 className="h-full w-full object-contain p-3 transition-transform duration-300 group-hover:scale-105"
@@ -126,6 +128,8 @@ export function CategoryLanding({
                 <img
                   src={p.img}
                   alt={p.name}
+                  width={600}
+                  height={800}
                   loading="lazy"
                   decoding="async"
                   className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
