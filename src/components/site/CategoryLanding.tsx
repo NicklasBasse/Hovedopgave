@@ -51,6 +51,16 @@ type Props = {
 // Filter-chips – pt. kun visuelle. Holdes som konstant så de er nemme at ændre.
 const FILTERS = ["Størrelser", "Køn", "Mærker", "Pris", "Pris Type", "Farver"];
 
+const PLUS_ICON = (
+  <span
+    aria-hidden="true"
+    className="relative inline-flex h-5 w-5 shrink-0 items-center justify-center rounded-full border border-foreground/45"
+  >
+    <span className="absolute h-px w-2 bg-current" />
+    <span className="absolute h-2 w-px bg-current" />
+  </span>
+);
+
 export function CategoryLanding({
   breadcrumb,
   title,
@@ -74,14 +84,14 @@ export function CategoryLanding({
       <p className="mt-2 text-sm text-muted-foreground">{count} produkter</p>
 
       {/* Underkategori-cirkler */}
-      <div className="mt-8 flex flex-wrap gap-8 md:gap-12">
+      <div className="mt-8 flex gap-5 md:gap-10 lg:gap-12">
         {subCategories.map((s) => (
           <Link
             key={s.label}
             to={s.to ?? "#"}
-            className="group flex flex-col items-center text-center"
+            className="group flex w-[92px] shrink-0 flex-col items-center text-center md:w-[124px] lg:w-[140px]"
           >
-            <div className="flex h-[120px] w-[120px] items-center justify-center overflow-hidden rounded-full bg-muted md:h-[140px] md:w-[140px]">
+            <div className="flex h-[92px] w-[92px] items-center justify-center overflow-hidden rounded-full bg-muted md:h-[124px] md:w-[124px] lg:h-[140px] lg:w-[140px]">
               <img
                 src={s.img}
                 alt={s.label}
@@ -92,20 +102,21 @@ export function CategoryLanding({
                 className="h-full w-full object-contain p-3 transition-transform duration-300 group-hover:scale-105"
               />
             </div>
-            <span className="mt-3 text-sm font-semibold">{s.label}</span>
+            <span className="mt-3 text-sm font-bold">{s.label}</span>
           </Link>
         ))}
       </div>
 
       {/* Filter-rækken – kun visuel, klik gør ingenting */}
-      <div className="mt-10 flex flex-wrap items-center justify-between gap-4 border-b border-border pb-4">
-        <div className="flex flex-wrap gap-2">
+      <div className="mt-10 flex flex-wrap items-center justify-between gap-4 border-b border-border pb-5">
+        <div className="flex flex-wrap gap-x-8 gap-y-3 md:gap-x-10">
           {FILTERS.map((f) => (
             <button
               key={f}
               type="button"
-              className="flex items-center gap-1.5 rounded-full border border-border px-4 py-2 text-sm hover:bg-muted"
+              className="flex items-center gap-2 py-2 text-sm transition hover:text-foreground/65"
             >
+              {PLUS_ICON}
               {f}
             </button>
           ))}

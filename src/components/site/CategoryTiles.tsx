@@ -16,7 +16,7 @@ import logo from "@/assets/ach/tile-logo-v2.webp";
 const TILES = [
   { src: jersey, label: "Spillertøj", to: "/spillertoj" },
   { src: merch, label: "Merchandise", to: "/merchandise" },
-  { src: logo, label: "Se alt SAH", to: "/se-alt-sah" },
+  { src: logo, label: "Alt fra SAH", to: "/se-alt-sah" },
 ] as const;
 
 export function CategoryTiles() {

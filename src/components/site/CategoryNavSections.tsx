@@ -1,18 +1,14 @@
-/**
- * CategoryNavSections.tsx
- * ----------------------------------------------------------------------------
- * Navigation med 3 kategorier (Spillertøj, Merchandise, Alt fra SAH) efterfulgt
- * af 3 tekstsektioner — bygget efter strukturen på
- * https://www.sport24.dk/kategori/silkeborg-if-shop/merchandise
- */
 import { Link } from "@tanstack/react-router";
+import jersey from "@/assets/ach/tile-sah-v3.webp";
+import merch from "@/assets/ach/tile-merch-v2.webp";
+import logo from "@/assets/ach/tile-logo-v2.webp";
 
 type CatKey = "spillertoj" | "merchandise" | "sah";
 
-const NAV: { key: CatKey; label: string; to: string }[] = [
-  { key: "spillertoj", label: "Spillertøj", to: "/spillertoj" },
-  { key: "merchandise", label: "Merchandise", to: "/merchandise" },
-  { key: "sah", label: "Alt fra SAH", to: "/se-alt-sah" },
+const NAV: { key: CatKey; label: string; to: string; img: string }[] = [
+  { key: "spillertoj", label: "Spillertøj", to: "/spillertoj", img: jersey },
+  { key: "merchandise", label: "Merchandise", to: "/merchandise", img: merch },
+  { key: "sah", label: "Alt fra SAH", to: "/se-alt-sah", img: logo },
 ];
 
 const SECTIONS: {
@@ -53,51 +49,62 @@ const SECTIONS: {
   },
 ];
 
-export function CategoryNavSections() {
-  return (
-    <section className="bg-white text-[#1A202A]">
-      {/* Navigation – sporty, ALL CAPS, navy underline on hover */}
-      <nav
-        aria-label="SAH kategorier"
-        className="border-b border-neutral-200"
-      >
-        <ul className="mx-auto flex max-w-6xl flex-wrap items-center justify-center gap-2 px-4 py-4 sm:gap-8 sm:py-6">
-          {NAV.map((n) => (
-            <li key={n.key}>
-              <Link
-                to={n.to}
-                className="inline-block px-3 py-2 text-sm font-extrabold uppercase tracking-wider text-[#1A202A] transition hover:text-[#1A202A] hover:underline underline-offset-8 sm:text-base"
-              >
-                {n.label}
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </nav>
+type Props = {
+  showNavigation?: boolean;
+};
 
-      {/* Tre sub-sektioner */}
-      <div className="mx-auto max-w-3xl px-4 py-12 sm:py-16">
+export function CategoryNavSections({ showNavigation = true }: Props) {
+  return (
+    <section className="bg-background text-sah-navy">
+      <div className="mx-auto max-w-[1440px] px-6 pb-14 pt-10 md:pb-20 md:pt-14">
+        {showNavigation && (
+          <nav aria-label="SAH kategorier" className="mb-12 md:mb-16">
+            <ul className="flex gap-5 md:gap-10 lg:gap-12">
+              {NAV.map((n) => (
+                <li key={n.key}>
+                  <Link to={n.to} className="group flex w-[92px] shrink-0 flex-col items-center text-center md:w-[124px] lg:w-[140px]">
+                    <span className="flex h-[92px] w-[92px] items-center justify-center overflow-hidden rounded-full bg-muted md:h-[124px] md:w-[124px] lg:h-[140px] lg:w-[140px]">
+                      <img
+                        src={n.img}
+                        alt=""
+                        aria-hidden="true"
+                        width={140}
+                        height={140}
+                        loading="lazy"
+                        decoding="async"
+                        className="h-full w-full object-contain p-3 transition-transform duration-300 group-hover:scale-105"
+                      />
+                    </span>
+                    <span className="mt-3 text-sm font-bold text-foreground">{n.label}</span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        )}
+
+        <div className="max-w-[760px]">
         {SECTIONS.map((s, i) => (
           <article
             key={s.key}
             id={s.key}
             className={
-              "text-center " +
-              (i > 0 ? "mt-12 border-t border-neutral-200 pt-12 sm:mt-16 sm:pt-16" : "")
+              "text-left " +
+              (i > 0 ? "mt-9 pt-1 md:mt-11" : "")
             }
           >
-            <h2 className="text-2xl font-extrabold uppercase tracking-wide text-[#1A202A] sm:text-3xl md:text-4xl">
+            <h2 className="font-sans text-[22px] font-black uppercase leading-tight text-sah-navy md:text-[28px]">
               {s.heading}
             </h2>
-            <p className="mx-auto mt-4 max-w-2xl font-[Noto_Sans,sans-serif] text-base leading-relaxed text-neutral-700 sm:text-lg">
+            <p className="mt-3 max-w-[720px] font-sans text-[15px] leading-7 text-foreground/75 md:text-base md:leading-8">
               {s.text}
             </p>
-            <div className="mt-5 flex flex-wrap items-center justify-center gap-x-6 gap-y-2">
+            <div className="mt-3 flex flex-wrap items-center gap-x-6 gap-y-2">
               {s.links.map((l) => (
                 <Link
                   key={l.to}
                   to={l.to}
-                  className="text-sm font-semibold text-[#1A202A] underline underline-offset-4 transition hover:text-[#1A202A]/70 sm:text-base"
+                  className="text-sm font-semibold text-sah-navy underline underline-offset-4 transition hover:text-sah-navy/70 md:text-[15px]"
                 >
                   {l.label}
                 </Link>
@@ -105,6 +112,7 @@ export function CategoryNavSections() {
             </div>
           </article>
         ))}
+        </div>
       </div>
     </section>
   );
