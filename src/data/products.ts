@@ -89,11 +89,11 @@ import pCapSetAvif from "@/assets/ach/p-cap.jpg?w=400;800;1200&format=avif&as=sr
 export type Product = {
   slug: string;
   img: string;
-  /** Responsive srcset (vite-imagetools) til hoved-billedet. */
   imgSrcset?: string;
+  imgAvifSrcset?: string;
   img2?: string;
-  /** Responsive srcset til sekundærbilledet. */
   img2Srcset?: string;
+  img2AvifSrcset?: string;
   name: string;
   price: string;
   oldPrice?: string;
