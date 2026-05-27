@@ -1,13 +1,17 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { lazy, Suspense } from "react";
 import { PromoBar } from "@/components/site/PromoBar";
 import { SiteHeader } from "@/components/site/SiteHeader";
 import { Hero } from "@/components/site/Hero";
-import { IntroBlock } from "@/components/site/IntroBlock";
-import { CategoryTiles } from "@/components/site/CategoryTiles";
-import { ProductCarousel, type Product } from "@/components/site/ProductCarousel";
-import { SplitFeature } from "@/components/site/SplitFeature";
-import { ClosingHeading } from "@/components/site/ClosingHeading";
-import { SiteFooter } from "@/components/site/SiteFooter";
+import type { Product } from "@/components/site/ProductCarousel";
+
+// Below-the-fold komponenter lazy-loades for at reducere initial JS-bundle
+// (Lighthouse: "Reduce unused JavaScript" + "Network dependency tree").
+const CategoryTiles = lazy(() => import("@/components/site/CategoryTiles").then(m => ({ default: m.CategoryTiles })));
+const ProductCarousel = lazy(() => import("@/components/site/ProductCarousel").then(m => ({ default: m.ProductCarousel })));
+const SplitFeature = lazy(() => import("@/components/site/SplitFeature").then(m => ({ default: m.SplitFeature })));
+const ClosingHeading = lazy(() => import("@/components/site/ClosingHeading").then(m => ({ default: m.ClosingHeading })));
+const SiteFooter = lazy(() => import("@/components/site/SiteFooter").then(m => ({ default: m.SiteFooter })));
 
 import sectionLeft from "@/assets/ach/section-left-new.webp";
 import sectionRight from "@/assets/ach/section-right-new.webp";
