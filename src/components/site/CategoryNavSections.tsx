@@ -51,9 +51,14 @@ const SECTIONS: {
 
 type Props = {
   showNavigation?: boolean;
+  activeKey?: CatKey;
 };
 
-export function CategoryNavSections({ showNavigation = true }: Props) {
+export function CategoryNavSections({ showNavigation = true, activeKey }: Props) {
+  const sections = activeKey
+    ? SECTIONS.filter((section) => section.key === activeKey)
+    : SECTIONS;
+
   return (
     <section className="bg-background text-sah-navy">
       <div className="mx-auto max-w-[1440px] px-6 pb-14 pt-10 md:pb-20 md:pt-14">
@@ -84,7 +89,7 @@ export function CategoryNavSections({ showNavigation = true }: Props) {
         )}
 
         <div className="max-w-[760px]">
-        {SECTIONS.map((s, i) => (
+        {sections.map((s, i) => (
           <article
             key={s.key}
             id={s.key}
