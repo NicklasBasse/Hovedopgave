@@ -194,7 +194,9 @@ function RootComponent() {
           så hver side kan eje præcis ét <main>-landemærke uden
           duplikering (WCAG 1.3.1 / ARIA landmark best practice). */}
       <Outlet />
-      <CookieBanner />
+      <Suspense fallback={null}>
+        <CookieBanner />
+      </Suspense>
     </QueryClientProvider>
   );
 }
