@@ -69,7 +69,7 @@ export const PRODUCTS: Product[] = [
   { slug: "sah-udebanestromper-2024", img: pSocksBlack, name: "SAH udebane spillershorts 25/26", price: "200 kr.", excluded: true, brand: "adidas", hasSizes: true, category: "spillertoj" },
   { slug: "sah-udebanestromper-25", img: pSocksWhite, name: "SAH hjemmebane spillertrøje 25/26 Børn", price: "275 kr.", excluded: true, brand: "adidas", hasSizes: true, category: "spillertoj" },
   { slug: "sah-hjemmebanestromper-25-26", img: pSocksYellow, name: "SAH udebane spillertrøje 25/26 Børn", price: "275 kr.", excluded: true, brand: "adidas", hasSizes: true, category: "spillertoj" },
-  { slug: "sah-precision-training-fodbold", img: pBallBlue, name: "SAH halstørklæde", price: "250 kr.", brand: "SAH", hasSizes: false, category: "merchandise" },
+  { slug: "sah-precision-training-fodbold", img: pBallBlue, name: "SAH bøllehat", price: "250 kr.", brand: "SAH", hasSizes: false, category: "merchandise" },
   { slug: "sah-precision-training-fodbold-gron", img: pBallGreen, name: "SAH halstørklæde", price: "175 kr.", brand: "SAH", hasSizes: false, category: "merchandise" },
   { slug: "sah-fodbold-gul", img: pBallYellow, name: "SAH håndklæde", price: "250 kr.", brand: "SAH", hasSizes: false, category: "merchandise" },
   { slug: "sah-stovlepose", img: pBootbag, name: "SAH cap", price: "175 kr.", brand: "SAH", hasSizes: false, category: "merchandise" },
