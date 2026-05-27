@@ -59,11 +59,11 @@ export function CategoryNavSections({ showNavigation = true }: Props) {
       <div className="mx-auto max-w-[1440px] px-6 pb-14 pt-10 md:pb-20 md:pt-14">
         {showNavigation && (
           <nav aria-label="SAH kategorier" className="mb-12 md:mb-16">
-            <ul className="-mx-6 flex snap-x gap-7 overflow-x-auto px-6 pb-2 md:mx-0 md:gap-10 md:px-0 lg:gap-12">
+            <ul className="flex gap-5 md:gap-10 lg:gap-12">
               {NAV.map((n) => (
                 <li key={n.key}>
-                  <Link to={n.to} className="group flex w-[104px] shrink-0 snap-start flex-col items-center text-center md:w-[124px] lg:w-[140px]">
-                    <span className="flex h-[104px] w-[104px] items-center justify-center overflow-hidden rounded-full bg-muted md:h-[124px] md:w-[124px] lg:h-[140px] lg:w-[140px]">
+                  <Link to={n.to} className="group flex w-[92px] shrink-0 flex-col items-center text-center md:w-[124px] lg:w-[140px]">
+                    <span className="flex h-[92px] w-[92px] items-center justify-center overflow-hidden rounded-full bg-muted md:h-[124px] md:w-[124px] lg:h-[140px] lg:w-[140px]">
                       <img
                         src={n.img}
                         alt=""
