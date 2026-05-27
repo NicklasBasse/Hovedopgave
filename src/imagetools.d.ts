@@ -1,26 +1,22 @@
 /**
  * imagetools.d.ts
  * ----------------------------------------------------------------------------
- * TypeScript-deklaration der lærer TS at forstå Vite-imagetools' query-syntaks
- * (fx `?w=640;1280&format=webp&as=srcset`). Uden denne fil ville import-stier
- * med querystrings fejle ved typecheck.
+ * TypeScript-deklaration så TS forstår Vite-imagetools' query-syntaks
+ * (fx `...webp?w=640;1280&format=webp&as=srcset`).
  *
- * Vi dækker både relative stier og `@/...`-alias ved at deklarere flere
- * varianter — TS's `paths`-resolver omskriver `@/` før module-pattern matching.
+ * TS tillader kun ÉT `*` per module-pattern, så vi bruger query-strengens
+ * sidste segment som "anker". Alle imagetools-returns er strings, så det er
+ * sikkert at returnere `string`.
  */
-declare module "*?w=*" {
-  const value: string;
-  export default value;
-}
-declare module "*?format=*" {
-  const value: string;
-  export default value;
-}
 declare module "*&as=srcset" {
   const value: string;
   export default value;
 }
-declare module "*&as=metadata" {
-  const value: Record<string, unknown>;
+declare module "*&format=webp" {
+  const value: string;
+  export default value;
+}
+declare module "*&format=avif" {
+  const value: string;
   export default value;
 }
