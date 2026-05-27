@@ -25,10 +25,8 @@ import { Hero } from "@/components/site/Hero";
 // er færdig med at male hero-sektionen.
 const HomeBelowFold = lazy(() => import("@/components/site/HomeBelowFold"));
 
-// Hero-billedet importeres separat så vi kan PRELOADE det (se links nedenfor).
-// Samme transformerede variant som <Hero> bruger som fallback `src` —
-// dermed peger preload-hintet på præcis den fil browseren faktisk henter.
-import heroImg from "@/assets/ach/hero-sah-studio.webp?w=1280&format=webp";
+// Hero AVIF (~40% mindre end WebP) – modern browsers (96%+) preloader denne.
+import heroImg from "@/assets/ach/hero-sah-studio.webp?w=1280&format=avif";
 
 export const Route = createFileRoute("/")({
   // head(): sætter <title> og meta-tags der vises i fanen og ved deling.
