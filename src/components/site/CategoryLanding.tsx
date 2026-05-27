@@ -84,14 +84,14 @@ export function CategoryLanding({
       <p className="mt-2 text-sm text-muted-foreground">{count} produkter</p>
 
       {/* Underkategori-cirkler */}
-      <div className="-mx-6 mt-8 flex snap-x gap-7 overflow-x-auto px-6 pb-2 md:mx-0 md:gap-10 md:px-0 lg:gap-12">
+      <div className="mt-8 flex gap-5 md:gap-10 lg:gap-12">
         {subCategories.map((s) => (
           <Link
             key={s.label}
             to={s.to ?? "#"}
-            className="group flex w-[104px] shrink-0 snap-start flex-col items-center text-center md:w-[124px] lg:w-[140px]"
+            className="group flex w-[92px] shrink-0 flex-col items-center text-center md:w-[124px] lg:w-[140px]"
           >
-            <div className="flex h-[104px] w-[104px] items-center justify-center overflow-hidden rounded-full bg-muted md:h-[124px] md:w-[124px] lg:h-[140px] lg:w-[140px]">
+            <div className="flex h-[92px] w-[92px] items-center justify-center overflow-hidden rounded-full bg-muted md:h-[124px] md:w-[124px] lg:h-[140px] lg:w-[140px]">
               <img
                 src={s.img}
                 alt={s.label}
