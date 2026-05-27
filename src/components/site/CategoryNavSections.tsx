@@ -1,11 +1,14 @@
 import { Link } from "@tanstack/react-router";
+import jersey from "@/assets/ach/tile-sah-v3.webp";
+import merch from "@/assets/ach/tile-merch-v2.webp";
+import logo from "@/assets/ach/tile-logo-v2.webp";
 
 type CatKey = "spillertoj" | "merchandise" | "sah";
 
-const NAV: { key: CatKey; label: string; to: string }[] = [
-  { key: "spillertoj", label: "Spillertøj", to: "/spillertoj" },
-  { key: "merchandise", label: "Merchandise", to: "/merchandise" },
-  { key: "sah", label: "Alt fra SAH", to: "/se-alt-sah" },
+const NAV: { key: CatKey; label: string; to: string; img: string }[] = [
+  { key: "spillertoj", label: "Spillertøj", to: "/spillertoj", img: jersey },
+  { key: "merchandise", label: "Merchandise", to: "/merchandise", img: merch },
+  { key: "sah", label: "Alt fra SAH", to: "/se-alt-sah", img: logo },
 ];
 
 const SECTIONS: {
@@ -46,24 +49,39 @@ const SECTIONS: {
   },
 ];
 
-export function CategoryNavSections() {
+type Props = {
+  showNavigation?: boolean;
+};
+
+export function CategoryNavSections({ showNavigation = true }: Props) {
   return (
     <section className="bg-background text-sah-navy">
       <div className="mx-auto max-w-[1440px] px-6 pb-14 pt-10 md:pb-20 md:pt-14">
-        <nav aria-label="SAH kategorier" className="mb-10 md:mb-14">
-          <ul className="flex flex-wrap items-center gap-x-8 gap-y-3 md:gap-x-12">
-            {NAV.map((n) => (
-              <li key={n.key}>
-                <Link
-                  to={n.to}
-                  className="inline-flex min-h-9 items-center border-b border-sah-navy/35 text-sm font-black uppercase text-sah-navy transition hover:border-sah-navy hover:text-sah-navy/75 md:text-base"
-                >
-                  {n.label}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </nav>
+        {showNavigation && (
+          <nav aria-label="SAH kategorier" className="mb-12 md:mb-16">
+            <ul className="flex flex-wrap gap-7 md:gap-10 lg:gap-12">
+              {NAV.map((n) => (
+                <li key={n.key}>
+                  <Link to={n.to} className="group flex flex-col items-center text-center">
+                    <span className="flex h-[104px] w-[104px] items-center justify-center overflow-hidden rounded-full bg-muted md:h-[124px] md:w-[124px] lg:h-[140px] lg:w-[140px]">
+                      <img
+                        src={n.img}
+                        alt=""
+                        aria-hidden="true"
+                        width={140}
+                        height={140}
+                        loading="lazy"
+                        decoding="async"
+                        className="h-full w-full object-contain p-3 transition-transform duration-300 group-hover:scale-105"
+                      />
+                    </span>
+                    <span className="mt-3 text-sm font-bold text-foreground">{n.label}</span>
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </nav>
+        )}
 
         <div className="max-w-[760px]">
         {SECTIONS.map((s, i) => (
