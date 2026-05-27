@@ -27,15 +27,12 @@ export function Hero() {
     <section className="relative w-full">
       {/* sr-only h1 – skjult visuelt, men hjælper SEO og skærmlæsere */}
       <h1 className="sr-only">AC Horsens forside</h1>
-      <div className="relative aspect-[21/9] w-full overflow-hidden md:aspect-[21/8]">
-        {/*
-          LCP-billedet (Largest Contentful Paint):
-          - srcSet + sizes      → browser henter mindste passende variant
-          - loading="eager"     → indlæs straks, ikke lazy
-          - fetchpriority="high"→ browseren prioriterer download
-          - decoding="async"    → blokerer ikke main thread under dekodning
-          Disse forbedrer Lighthouse-performance markant.
-        */}
+      {/*
+        Højde: På mobil bruger vi et højere format (4/5) så billedet fylder mere
+        og der er plads til hele tekstblokken nederst. På desktop holder vi
+        det panorama-agtige 21/8 format.
+      */}
+      <div className="relative aspect-[4/5] w-full overflow-hidden sm:aspect-[16/10] md:aspect-[21/8]">
         <img
           src={heroImg}
           srcSet={heroSrcset}
@@ -46,39 +43,38 @@ export function Hero() {
           loading="eager"
           fetchPriority="high"
           decoding="async"
-          className="h-full w-full object-cover"
+          className="h-full w-full object-cover object-center"
         />
-        {/* Mørk overlay-gradient – forbedrer kontrast på tekst nederst til venstre */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black/40 via-transparent to-transparent" />
+        {/* Mørk gradient nedefra på mobil (læsbarhed), fra venstre på desktop */}
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/10 md:bg-gradient-to-r md:from-black/50 md:via-transparent md:to-transparent" />
 
-        {/* Tekstblok placeret absolut over billedet */}
-        <div className="absolute bottom-8 left-4 max-w-[640px] text-white md:bottom-16 md:left-16">
-          <p className="text-xs font-bold uppercase tracking-wider md:text-sm">
+        {/* Tekstblok – fuld bredde på mobil, venstre-justeret på desktop */}
+        <div className="absolute bottom-5 left-4 right-4 max-w-[640px] text-white md:bottom-16 md:left-16 md:right-auto">
+          <p className="text-[10px] font-bold uppercase tracking-wider md:text-sm">
             Skanderborg agf håndbold
           </p>
-          <h2 className="mt-3 text-3xl font-extrabold leading-[1.05] md:text-5xl lg:text-4xl">
+          <h2 className="mt-2 text-xl font-extrabold leading-[1.1] sm:text-2xl md:mt-3 md:text-5xl lg:text-4xl">
             BYENS BEDSTE<br />SAH's nye merchandise kollektion
           </h2>
-          <p className="mt-4 text-sm md:text-base">
+          <p className="mt-2 text-xs md:mt-4 md:text-base">
             Ny merchandise kollektion til at skabe lokal stolthed og fællesskab
           </p>
-          {/* Tre CTA-knapper der linker til hver af de tre kategori-undersider */}
-          <div className="mt-6 flex flex-wrap gap-3">
+          <div className="mt-3 flex flex-wrap gap-2 md:mt-6 md:gap-3">
             <Link
               to="/spillertoj"
-              className="rounded-full bg-white px-6 py-3 text-sm font-semibold text-foreground transition hover:bg-white/90"
+              className="rounded-full bg-white px-4 py-2 text-xs font-semibold text-foreground transition hover:bg-white/90 md:px-6 md:py-3 md:text-sm"
             >
               Spillertøj
             </Link>
             <Link
               to="/merchandise"
-              className="rounded-full bg-white px-6 py-3 text-sm font-semibold text-foreground transition hover:bg-white/90"
+              className="rounded-full bg-white px-4 py-2 text-xs font-semibold text-foreground transition hover:bg-white/90 md:px-6 md:py-3 md:text-sm"
             >
               Merch
             </Link>
             <Link
               to="/se-alt-sah"
-              className="rounded-full bg-white px-6 py-3 text-sm font-semibold text-foreground transition hover:bg-white/90"
+              className="rounded-full bg-white px-4 py-2 text-xs font-semibold text-foreground transition hover:bg-white/90 md:px-6 md:py-3 md:text-sm"
             >
               Se alt SAH
             </Link>
