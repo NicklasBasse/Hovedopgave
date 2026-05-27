@@ -29,7 +29,8 @@ export function CategoryTiles() {
             <div className="flex h-[224px] w-[224px] items-center justify-center overflow-hidden rounded-full bg-muted">
               <img
                 src={t.src}
-                alt={t.label}
+                alt=""
+                aria-hidden="true"
                 width={600}
                 height={600}
                 loading="lazy"
