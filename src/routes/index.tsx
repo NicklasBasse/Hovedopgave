@@ -1,13 +1,17 @@
 import { createFileRoute } from "@tanstack/react-router";
+import { lazy, Suspense } from "react";
 import { PromoBar } from "@/components/site/PromoBar";
 import { SiteHeader } from "@/components/site/SiteHeader";
 import { Hero } from "@/components/site/Hero";
-import { IntroBlock } from "@/components/site/IntroBlock";
-import { CategoryTiles } from "@/components/site/CategoryTiles";
-import { ProductCarousel, type Product } from "@/components/site/ProductCarousel";
-import { SplitFeature } from "@/components/site/SplitFeature";
-import { ClosingHeading } from "@/components/site/ClosingHeading";
-import { SiteFooter } from "@/components/site/SiteFooter";
+import type { Product } from "@/components/site/ProductCarousel";
+
+// Below-the-fold komponenter lazy-loades for at reducere initial JS-bundle
+// (Lighthouse: "Reduce unused JavaScript" + "Network dependency tree").
+const CategoryTiles = lazy(() => import("@/components/site/CategoryTiles").then(m => ({ default: m.CategoryTiles })));
+const ProductCarousel = lazy(() => import("@/components/site/ProductCarousel").then(m => ({ default: m.ProductCarousel })));
+const SplitFeature = lazy(() => import("@/components/site/SplitFeature").then(m => ({ default: m.SplitFeature })));
+const ClosingHeading = lazy(() => import("@/components/site/ClosingHeading").then(m => ({ default: m.ClosingHeading })));
+const SiteFooter = lazy(() => import("@/components/site/SiteFooter").then(m => ({ default: m.SiteFooter })));
 
 import sectionLeft from "@/assets/ach/section-left-new.webp";
 import sectionRight from "@/assets/ach/section-right-new.webp";
@@ -88,55 +92,59 @@ function Index() {
       <SiteHeader />
       <main id="main-content">
         <Hero />
-        <CategoryTiles />
+        <Suspense fallback={null}>
+          <CategoryTiles />
 
-        <ProductCarousel
-          title="SAH nye merchandise kollektion"
-          count="7 produkter"
-          subtitle="Stå bag klubben - med din støtte skaber vi store øjeblikke både på og uden for banen."
-          products={focusProducts}
-          ctaLabel="Se alt merchandise"
-          ctaHref="/merchandise"
-          sideImage={side1}
-          sideAlt="ACH produkter i fokus"
-        />
+          <ProductCarousel
+            title="SAH nye merchandise kollektion"
+            count="7 produkter"
+            subtitle="Stå bag klubben - med din støtte skaber vi store øjeblikke både på og uden for banen."
+            products={focusProducts}
+            ctaLabel="Se alt merchandise"
+            ctaHref="/merchandise"
+            sideImage={side1}
+            sideAlt="ACH produkter i fokus"
+          />
 
-        <SplitFeature
-          imageSide="left"
-          image={sectionLeft}
-          imageAlt="Merchandise"
-          eyebrow="Merchandise"
-          title="SAH merchandise til din hverdag"
-          body="Vores nye streetwear-linje er skåret helt ind til benet, så du kan bære din stolthed med stil. Vi har skabt et rent og minimalistisk design, der passer perfekt ind i din hverdagsgarderobe – uanset om du er på studiet, caféen eller i hallen. Med en diskret hyldest til holdet kan du mærke fællesskabet og vise, hvem du holder med, uden at gå på kompromis med dit personlige udtryk."
-          ctaLabel="Oplev hverdags-looket"
-          ctaHref="/merchandise"
-        />
+          <SplitFeature
+            imageSide="left"
+            image={sectionLeft}
+            imageAlt="Merchandise"
+            eyebrow="Merchandise"
+            title="SAH merchandise til din hverdag"
+            body="Vores nye streetwear-linje er skåret helt ind til benet, så du kan bære din stolthed med stil. Vi har skabt et rent og minimalistisk design, der passer perfekt ind i din hverdagsgarderobe – uanset om du er på studiet, caféen eller i hallen. Med en diskret hyldest til holdet kan du mærke fællesskabet og vise, hvem du holder med, uden at gå på kompromis med dit personlige udtryk."
+            ctaLabel="Oplev hverdags-looket"
+            ctaHref="/merchandise"
+          />
 
-        <ProductCarousel
-          title="SAH Spillertøj"
-          count="8 produkter"
-          subtitle="Skanderborg AGF Håndbold - klædt i blå og hvid, skabt til kamp og fællesskab!"
-          products={jerseyProducts}
-          ctaLabel="Find din spillertrøje her"
-          ctaHref="/spillertoj"
-          sideImage={side2}
-          sideAlt="ACH Spillertøj"
-        />
+          <ProductCarousel
+            title="SAH Spillertøj"
+            count="8 produkter"
+            subtitle="Skanderborg AGF Håndbold - klædt i blå og hvid, skabt til kamp og fællesskab!"
+            products={jerseyProducts}
+            ctaLabel="Find din spillertrøje her"
+            ctaHref="/spillertoj"
+            sideImage={side2}
+            sideAlt="ACH Spillertøj"
+          />
 
-        <SplitFeature
-          imageSide="right"
-          image={sectionRight}
-          imageAlt="ACH Merchandise"
-          eyebrow="sah MERCHANDISE"
-          title="Håndbold merchandise med stolthed"
-          body="For dig, der elsker fællesskabet og stemningen på lægterne. Vi har designet en fan-linje med et helt unikt SAH-mønster, der binder fans, spillere og frivillige sammen i én stærk enhed. Det markante design gør det nemt at genkende andre fans ude i bybilledet, og det fungerer som den perfekte anledning til at falde i snak om holdet."
-          ctaLabel="Bliv en del af holdet"
-          ctaHref="/se-alt-sah"
-        />
+          <SplitFeature
+            imageSide="right"
+            image={sectionRight}
+            imageAlt="ACH Merchandise"
+            eyebrow="sah MERCHANDISE"
+            title="Håndbold merchandise med stolthed"
+            body="For dig, der elsker fællesskabet og stemningen på lægterne. Vi har designet en fan-linje med et helt unikt SAH-mønster, der binder fans, spillere og frivillige sammen i én stærk enhed. Det markante design gør det nemt at genkende andre fans ude i bybilledet, og det fungerer som den perfekte anledning til at falde i snak om holdet."
+            ctaLabel="Bliv en del af holdet"
+            ctaHref="/se-alt-sah"
+          />
 
-        <ClosingHeading />
+          <ClosingHeading />
+        </Suspense>
       </main>
-      <SiteFooter />
+      <Suspense fallback={null}>
+        <SiteFooter />
+      </Suspense>
     </div>
   );
 }
