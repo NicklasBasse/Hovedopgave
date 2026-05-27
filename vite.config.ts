@@ -16,10 +16,23 @@ export default defineConfig({
   vite: {
     plugins: [
       // Build-time generation af responsive billeder via ?w=...&format=...
-      // Bruges på hero + carousel-side billeder for at undgå at mobile-brugere
-      // downloader 1920px-versionen når de kun viser 515px (Lighthouse-fix:
-      // "Improve image delivery" / 146 KiB savings på mobil).
-      imagetools(),
+      // Globale defaults: lavere kvalitet → markant mindre filer → bedre
+      // Website Carbon score (mål: A). Visuelt næsten identisk pga. AVIF/WebP's
+      // perceptuelle koder ved q=55-70.
+      imagetools({
+        defaultDirectives: (url) => {
+          const params = new URLSearchParams(url.search);
+          const fmt = params.get("format");
+          if (fmt === "avif" && !params.has("quality")) {
+            params.set("quality", "50");
+            params.set("effort", "6");
+          } else if (fmt === "webp" && !params.has("quality")) {
+            params.set("quality", "65");
+            params.set("effort", "6");
+          }
+          return params;
+        },
+      }),
     ],
   },
 });
