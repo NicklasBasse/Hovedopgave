@@ -7,7 +7,6 @@
  * netværk og CPU er svagere (Lighthouse mobil: "Reduce unused JavaScript").
  */
 import { CategoryTiles } from "@/components/site/CategoryTiles";
-import { CategoryNavSections } from "@/components/site/CategoryNavSections";
 import { ProductCarousel, type Product } from "@/components/site/ProductCarousel";
 import { SplitFeature } from "@/components/site/SplitFeature";
 import { ClosingHeading } from "@/components/site/ClosingHeading";
@@ -157,7 +156,6 @@ export default function HomeBelowFold() {
       />
 
       <ClosingHeading />
-      <CategoryNavSections />
       <SiteFooter />
     </>
   );
