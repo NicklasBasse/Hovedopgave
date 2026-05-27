@@ -33,18 +33,20 @@ export function Hero() {
         det panorama-agtige 21/8 format.
       */}
       <div className="relative aspect-[4/5] w-full overflow-hidden sm:aspect-[16/10] md:aspect-[21/8]">
-        <img
-          src={heroImg}
-          srcSet={heroSrcset}
-          sizes="(max-width: 768px) 100vw, (max-width: 1280px) 100vw, 1280px"
-          alt="AC Horsens topbillede 2025"
-          width={1920}
-          height={1080}
-          loading="eager"
-          fetchPriority="high"
-          decoding="async"
-          className="h-full w-full object-cover object-center"
-        />
+        <picture>
+          <source type="image/avif" srcSet={heroAvifSet} sizes="100vw" />
+          <source type="image/webp" srcSet={heroWebpSet} sizes="100vw" />
+          <img
+            src={heroImg}
+            alt="AC Horsens topbillede 2025"
+            width={1920}
+            height={1080}
+            loading="eager"
+            fetchPriority="high"
+            decoding="async"
+            className="h-full w-full object-cover object-center"
+          />
+        </picture>
         {/* Mørk gradient nedefra på mobil (læsbarhed), fra venstre på desktop */}
         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-black/10 md:bg-gradient-to-r md:from-black/50 md:via-transparent md:to-transparent" />
 
