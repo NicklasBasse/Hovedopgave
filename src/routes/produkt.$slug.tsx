@@ -129,39 +129,45 @@ function ProductPage() {
           {/* Billede-galleri – viser to billeder side om side */}
           <div className="grid grid-cols-1 gap-2 md:grid-cols-2">
             <div className="aspect-square w-full overflow-hidden bg-muted">
-              <img
-                src={product.img}
-                srcSet={product.imgSrcset}
-                // På mobil fylder billedet ~100vw, på desktop ~500px.
-                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 500px"
-                alt={product.name}
-                width={1000}
-                height={1000}
-                loading="eager"
-                fetchPriority="high"
-                decoding="async"
-                className="h-full w-full object-cover"
-              />
+              <picture className="contents">
+                {product.imgAvifSrcset && (
+                  <source type="image/avif" srcSet={product.imgAvifSrcset} sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 500px" />
+                )}
+                {product.imgSrcset && (
+                  <source type="image/webp" srcSet={product.imgSrcset} sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 500px" />
+                )}
+                <img
+                  src={product.img}
+                  alt={product.name}
+                  width={1000}
+                  height={1000}
+                  loading="eager"
+                  fetchPriority="high"
+                  decoding="async"
+                  className="h-full w-full object-cover"
+                />
+              </picture>
             </div>
             <div className="aspect-square w-full overflow-hidden bg-muted">
-              {/*
-                Hvis produktet har et img2 → vis det. Ellers bruges img igen
-                men spejlvendt (scaleX(-1)) for at simulere et "andet vinkel"-billede
-                uden at have et reelt sekundærbillede.
-              */}
-              <img
-                src={product.img2 ?? product.img}
-                srcSet={product.img2 ? product.img2Srcset : product.imgSrcset}
-                sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 500px"
-                alt={product.img2 ? `${product.name} – ekstra billede` : ""}
-                aria-hidden={product.img2 ? undefined : true}
-                width={1000}
-                height={1000}
-                loading="lazy"
-                decoding="async"
-                className="h-full w-full object-cover"
-                style={product.img2 ? undefined : { transform: "scaleX(-1)" }}
-              />
+              <picture className="contents">
+                {(product.img2 ? product.img2AvifSrcset : product.imgAvifSrcset) && (
+                  <source type="image/avif" srcSet={product.img2 ? product.img2AvifSrcset : product.imgAvifSrcset} sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 500px" />
+                )}
+                {(product.img2 ? product.img2Srcset : product.imgSrcset) && (
+                  <source type="image/webp" srcSet={product.img2 ? product.img2Srcset : product.imgSrcset} sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 500px" />
+                )}
+                <img
+                  src={product.img2 ?? product.img}
+                  alt={product.img2 ? `${product.name} – ekstra billede` : ""}
+                  aria-hidden={product.img2 ? undefined : true}
+                  width={1000}
+                  height={1000}
+                  loading="lazy"
+                  decoding="async"
+                  className="h-full w-full object-cover"
+                  style={product.img2 ? undefined : { transform: "scaleX(-1)" }}
+                />
+              </picture>
             </div>
           </div>
 
