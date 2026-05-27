@@ -23,9 +23,14 @@ import {
   HeadContent,
   Scripts,
 } from "@tanstack/react-router";
+import { lazy, Suspense } from "react";
 
 import appCss from "../styles.css?url";
-import { CookieBanner } from "@/components/site/CookieBanner";
+// CookieBanner lazy-loades så den ikke blokerer initial JS (Lighthouse:
+// "Reduce unused JavaScript"). Banneret er under-the-fold og ikke kritisk.
+const CookieBanner = lazy(() =>
+  import("@/components/site/CookieBanner").then((m) => ({ default: m.CookieBanner })),
+);
 
 /**
  * 404-skærm. Vises hvis brugeren rammer en URL der ikke findes.
