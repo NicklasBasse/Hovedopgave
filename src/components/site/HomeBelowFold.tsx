@@ -93,14 +93,16 @@ export default function HomeBelowFold() {
         ctaLabel="Se alt merchandise"
         ctaHref="/merchandise"
         sideImage={side1}
-        sideImageSrcset={side1Set}
+        sideImageSrcset={side1SetWebp}
+        sideImageAvifSrcset={side1SetAvif}
         sideAlt="ACH produkter i fokus"
       />
 
       <SplitFeature
         imageSide="left"
         image={sectionLeft}
-        imageSrcset={sectionLeftSet}
+        imageSrcset={sectionLeftSetWebp}
+        imageAvifSrcset={sectionLeftSetAvif}
         imageAlt="Merchandise"
         eyebrow="Merchandise"
         title="SAH merchandise til din hverdag"
@@ -117,14 +119,16 @@ export default function HomeBelowFold() {
         ctaLabel="Find din spillertrøje her"
         ctaHref="/spillertoj"
         sideImage={side2}
-        sideImageSrcset={side2Set}
+        sideImageSrcset={side2SetWebp}
+        sideImageAvifSrcset={side2SetAvif}
         sideAlt="ACH Spillertøj"
       />
 
       <SplitFeature
         imageSide="right"
         image={sectionRight}
-        imageSrcset={sectionRightSet}
+        imageSrcset={sectionRightSetWebp}
+        imageAvifSrcset={sectionRightSetAvif}
         imageAlt="ACH Merchandise"
         eyebrow="sah MERCHANDISE"
         title="Håndbold merchandise med stolthed"
