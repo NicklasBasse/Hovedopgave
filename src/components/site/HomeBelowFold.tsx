@@ -99,8 +99,9 @@ const jerseyProducts: Product[] = [
 export default function HomeBelowFold() {
   return (
     <>
-      <CategoryNavSections />
       <CategoryTiles />
+
+
 
 
       <ProductCarousel
@@ -156,6 +157,7 @@ export default function HomeBelowFold() {
       />
 
       <ClosingHeading />
+      <CategoryNavSections />
       <SiteFooter />
     </>
   );

@@ -19,6 +19,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { PromoBar } from "@/components/site/PromoBar";
 import { SiteHeader } from "@/components/site/SiteHeader";
 import { SiteFooter } from "@/components/site/SiteFooter";
+import { CategoryNavSections } from "@/components/site/CategoryNavSections";
 import {
   CategoryLanding,
   type CategoryProduct,
@@ -109,6 +110,7 @@ function Page() {
           subCategories={subCategories}
           products={products}
         />
+        <CategoryNavSections />
       </main>
       <SiteFooter />
     </div>
