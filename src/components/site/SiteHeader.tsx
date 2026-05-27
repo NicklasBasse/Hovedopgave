@@ -9,26 +9,22 @@
  *   - Konto/ønskeliste/kurv-ikoner i højre side
  *
  * Kurv-ikonet er bevidst deaktiveret (disabled), fordi der ikke er et reelt
- * checkout-flow i demo-siden. Selve badge-tallet (antal varer) lazy-loades
- * via `CartBadge`-komponenten — det holder `useCart`-hooket og cookie-
- * koden ude af den kritiske JS-bundle (Lighthouse mobil: "Reduce unused
- * JavaScript").
+ * checkout-flow i demo-siden. Antallet af varer kommer fra `useCartCount()`
+ * hooket, som læser fra vores cookie-baserede cart-store.
  *
  * `sticky top-0` gør at headeren bliver hængende i toppen ved scroll.
  */
-import { lazy, Suspense } from "react";
 import { Menu, Search, User, Heart, ShoppingBag } from "lucide-react";
 import sport24Logo from "@/assets/sport24-logo.webp";
-
-// Lazy-loaded badge: hentes først efter LCP, så cookies.ts + useCart.ts
-// ikke skal parses for at vise above-the-fold indhold.
-const CartBadge = lazy(() => import("@/components/site/CartBadge"));
+import { useCartCount } from "@/hooks/useCart";
 
 // Menu-punkterne defineres som en simpel konstant, så de er nemme at
 // vedligeholde og kan loopes igennem med .map() længere nede.
 const NAV = ["Kvinder", "Mænd", "Børn", "Aktiviteter", "Gode priser"];
 
 export function SiteHeader() {
+  // Antal varer i kurven – komponenten re-renderer automatisk hvis tallet ændres.
+  const cartCount = useCartCount();
   return (
     <header className="sticky top-0 z-40 w-full border-b border-border bg-background">
       <div className="mx-auto flex max-w-[1440px] items-center gap-6 px-6 py-5">
@@ -83,19 +79,20 @@ export function SiteHeader() {
             Kurv-knap. Den er disabled (kurv-flow eksisterer ikke i demoen),
             men viser stadig en badge med antal varer brugeren har "lagt i kurv"
             via produktsiderne. `relative` + absolut positioneret span = badge.
-            Badge'en lazy-loades for at holde initial JS-bundle minimal.
           */}
           <button
             type="button"
             disabled
-            aria-label="Indkøbskurv – ikke tilgængelig"
+            aria-label={`Indkøbskurv (${cartCount} ${cartCount === 1 ? "vare" : "varer"}) – ikke tilgængelig`}
             title="Kurven er ikke tilgængelig"
             className="relative cursor-not-allowed select-none disabled:opacity-100"
           >
             <ShoppingBag className="h-6 w-6" aria-hidden="true" />
-            <Suspense fallback={null}>
-              <CartBadge />
-            </Suspense>
+            {cartCount > 0 && (
+              <span aria-hidden="true" className="absolute -right-2 -top-2 flex h-5 min-w-5 items-center justify-center rounded-full bg-brand-red px-1 text-[11px] font-bold leading-none text-white">
+                {cartCount}
+              </span>
+            )}
           </button>
         </div>
       </div>
