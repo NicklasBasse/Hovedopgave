@@ -129,20 +129,31 @@ export function CategoryLanding({
                     Undtaget af kampagnen
                   </span>
                 )}
-                <img
-                  src={p.img}
-                  srcSet={p.srcset}
-                  // På mobil fylder kortet ca. halv viewport (2-kolonne grid),
-                  // på tablet 1/3, og på desktop 1/4. Browseren bruger dette
-                  // til at vælge mindste passende billed-variant fra srcset.
-                  sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
-                  alt={p.name}
-                  width={600}
-                  height={800}
-                  loading="lazy"
-                  decoding="async"
-                  className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
-                />
+                <picture className="contents">
+                  {p.avifSrcset && (
+                    <source
+                      type="image/avif"
+                      srcSet={p.avifSrcset}
+                      sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                    />
+                  )}
+                  {p.srcset && (
+                    <source
+                      type="image/webp"
+                      srcSet={p.srcset}
+                      sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                    />
+                  )}
+                  <img
+                    src={p.img}
+                    alt={p.name}
+                    width={600}
+                    height={800}
+                    loading="lazy"
+                    decoding="async"
+                    className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                  />
+                </picture>
               </div>
               <p className="mt-3 text-center text-sm font-semibold leading-tight">{p.name}</p>
               <div className="mt-1 flex items-baseline justify-center gap-2">
