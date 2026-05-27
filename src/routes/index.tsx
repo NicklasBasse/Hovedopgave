@@ -50,7 +50,7 @@ export const Route = createFileRoute("/")({
     // Preload-hint til browseren: "Begynd at hente hero-billedet NU,
     // før HTML-parsing rammer <img>-tagget". Forbedrer LCP markant.
     links: [
-      { rel: "preload", as: "image", href: heroImg, fetchpriority: "high" },
+      { rel: "preload", as: "image", href: heroImg, type: "image/avif", fetchpriority: "high" },
     ],
   }),
   // Hvilken React-komponent ruten skal rendre.
