@@ -18,44 +18,64 @@
 // mulighed for at hente en ~80 KB-variant i stedet for 600 KB-originalen.
 import pHome from "@/assets/ach/p-home-jersey.webp?w=500&format=webp";
 import pHomeSet from "@/assets/ach/p-home-jersey.webp?w=400;800;1200&format=webp&as=srcset";
+import pHomeSetAvif from "@/assets/ach/p-home-jersey.webp?w=400;800;1200&format=avif&as=srcset";
 import pAway from "@/assets/ach/p-away-sah.webp?w=500&format=webp";
 import pAwaySet from "@/assets/ach/p-away-sah.webp?w=400;800;1200&format=webp&as=srcset";
+import pAwaySetAvif from "@/assets/ach/p-away-sah.webp?w=400;800;1200&format=avif&as=srcset";
 import pAway2 from "@/assets/ach/p-away-sah-2.webp?w=500&format=webp";
 import pAway2Set from "@/assets/ach/p-away-sah-2.webp?w=400;800;1200&format=webp&as=srcset";
+import pAway2SetAvif from "@/assets/ach/p-away-sah-2.webp?w=400;800;1200&format=avif&as=srcset";
 import pAwayKids from "@/assets/ach/p-away-kids-sah.webp?w=500&format=webp";
 import pAwayKidsSet from "@/assets/ach/p-away-kids-sah.webp?w=400;800;1200&format=webp&as=srcset";
+import pAwayKidsSetAvif from "@/assets/ach/p-away-kids-sah.webp?w=400;800;1200&format=avif&as=srcset";
 import pAwayKids2 from "@/assets/ach/p-away-kids-sah-2.webp?w=500&format=webp";
 import pAwayKids2Set from "@/assets/ach/p-away-kids-sah-2.webp?w=400;800;1200&format=webp&as=srcset";
+import pAwayKids2SetAvif from "@/assets/ach/p-away-kids-sah-2.webp?w=400;800;1200&format=avif&as=srcset";
 import pAwayKidsJersey from "@/assets/ach/p-away-kids-sah-jersey.webp?w=500&format=webp";
 import pAwayKidsJerseySet from "@/assets/ach/p-away-kids-sah-jersey.webp?w=400;800;1200&format=webp&as=srcset";
+import pAwayKidsJerseySetAvif from "@/assets/ach/p-away-kids-sah-jersey.webp?w=400;800;1200&format=avif&as=srcset";
 import pShorts from "@/assets/ach/p-shorts.webp?w=500&format=webp";
 import pShortsSet from "@/assets/ach/p-shorts.webp?w=400;800;1200&format=webp&as=srcset";
+import pShortsSetAvif from "@/assets/ach/p-shorts.webp?w=400;800;1200&format=avif&as=srcset";
 import pShortsKids from "@/assets/ach/p-shorts-kids.webp?w=500&format=webp";
 import pShortsKidsSet from "@/assets/ach/p-shorts-kids.webp?w=400;800;1200&format=webp&as=srcset";
+import pShortsKidsSetAvif from "@/assets/ach/p-shorts-kids.webp?w=400;800;1200&format=avif&as=srcset";
 import pShortsKids2526 from "@/assets/ach/p-shorts-kids-2526.webp?w=500&format=webp";
 import pShortsKids2526Set from "@/assets/ach/p-shorts-kids-2526.webp?w=400;800;1200&format=webp&as=srcset";
+import pShortsKids2526SetAvif from "@/assets/ach/p-shorts-kids-2526.webp?w=400;800;1200&format=avif&as=srcset";
 import pSocksBlack from "@/assets/ach/p-socks-black.webp?w=500&format=webp";
 import pSocksBlackSet from "@/assets/ach/p-socks-black.webp?w=400;800;1200&format=webp&as=srcset";
+import pSocksBlackSetAvif from "@/assets/ach/p-socks-black.webp?w=400;800;1200&format=avif&as=srcset";
 import pSocksWhite from "@/assets/ach/p-socks-white.webp?w=500&format=webp";
 import pSocksWhiteSet from "@/assets/ach/p-socks-white.webp?w=400;800;1200&format=webp&as=srcset";
+import pSocksWhiteSetAvif from "@/assets/ach/p-socks-white.webp?w=400;800;1200&format=avif&as=srcset";
 import pSocksYellow from "@/assets/ach/p-socks-yellow.webp?w=500&format=webp";
 import pSocksYellowSet from "@/assets/ach/p-socks-yellow.webp?w=400;800;1200&format=webp&as=srcset";
+import pSocksYellowSetAvif from "@/assets/ach/p-socks-yellow.webp?w=400;800;1200&format=avif&as=srcset";
 import pBallBlue from "@/assets/ach/p-ball-blue-new.webp?w=500&format=webp";
 import pBallBlueSet from "@/assets/ach/p-ball-blue-new.webp?w=400;800;1200&format=webp&as=srcset";
+import pBallBlueSetAvif from "@/assets/ach/p-ball-blue-new.webp?w=400;800;1200&format=avif&as=srcset";
 import pBallGreen from "@/assets/ach/p-ball-green-new.webp?w=500&format=webp";
 import pBallGreenSet from "@/assets/ach/p-ball-green-new.webp?w=400;800;1200&format=webp&as=srcset";
+import pBallGreenSetAvif from "@/assets/ach/p-ball-green-new.webp?w=400;800;1200&format=avif&as=srcset";
 import pBallYellow from "@/assets/ach/p-ball-yellow-new.webp?w=500&format=webp";
 import pBallYellowSet from "@/assets/ach/p-ball-yellow-new.webp?w=400;800;1200&format=webp&as=srcset";
+import pBallYellowSetAvif from "@/assets/ach/p-ball-yellow-new.webp?w=400;800;1200&format=avif&as=srcset";
 import pBootbag from "@/assets/ach/p-bootbag-new.webp?w=500&format=webp";
 import pBootbagSet from "@/assets/ach/p-bootbag-new.webp?w=400;800;1200&format=webp&as=srcset";
+import pBootbagSetAvif from "@/assets/ach/p-bootbag-new.webp?w=400;800;1200&format=avif&as=srcset";
 import pBlanket from "@/assets/ach/p-blanket-new.webp?w=500&format=webp";
 import pBlanketSet from "@/assets/ach/p-blanket-new.webp?w=400;800;1200&format=webp&as=srcset";
+import pBlanketSetAvif from "@/assets/ach/p-blanket-new.webp?w=400;800;1200&format=avif&as=srcset";
 import pSweatshirt from "@/assets/ach/p-sweatshirt.jpg?w=500&format=webp";
 import pSweatshirtSet from "@/assets/ach/p-sweatshirt.jpg?w=400;800;1200&format=webp&as=srcset";
+import pSweatshirtSetAvif from "@/assets/ach/p-sweatshirt.jpg?w=400;800;1200&format=avif&as=srcset";
 import pUmbrella from "@/assets/ach/p-umbrella.jpg?w=500&format=webp";
 import pUmbrellaSet from "@/assets/ach/p-umbrella.jpg?w=400;800;1200&format=webp&as=srcset";
+import pUmbrellaSetAvif from "@/assets/ach/p-umbrella.jpg?w=400;800;1200&format=avif&as=srcset";
 import pCap from "@/assets/ach/p-cap.jpg?w=500&format=webp";
 import pCapSet from "@/assets/ach/p-cap.jpg?w=400;800;1200&format=webp&as=srcset";
+import pCapSetAvif from "@/assets/ach/p-cap.jpg?w=400;800;1200&format=avif&as=srcset";
 
 /**
  * Type-definition for et produkt.
@@ -86,24 +106,24 @@ export type Product = {
 // Selve produktkataloget. Rækkefølgen er bevidst: merchandise først,
 // derefter spillertøj (følger ønsket layout på "Se alt SAH"-siden).
 export const PRODUCTS: Product[] = [
-  { slug: "sah-hjemmebanetroje-25-26", img: pHome, imgSrcset: pHomeSet, name: "SAH hjemmebane spillershorts 25/26", price: "200 kr.", excluded: true, brand: "adidas", hasSizes: true, category: "spillertoj" },
-  { slug: "sah-udebanetroje-25", img: pAway, imgSrcset: pAwaySet, img2: pAway2, img2Srcset: pAway2Set, name: "SAH t-shirt", price: "150 kr.", brand: "SAH", hasSizes: true, category: "merchandise" },
-  { slug: "sah-udebanetroje-25-born", img: pAwayKids, imgSrcset: pAwayKidsSet, img2: pAwayKids2, img2Srcset: pAwayKids2Set, name: "SAH hoodie", price: "250 kr.", brand: "SAH", hasSizes: true, category: "merchandise" },
-  { slug: "sah-udebane-spillertroje-25-26", img: pAwayKidsJersey, imgSrcset: pAwayKidsJerseySet, name: "SAH udebane spillertrøje 25/26", price: "375 kr.", excluded: true, brand: "adidas", hasSizes: true, category: "spillertoj" },
-  { slug: "sah-hjemmebaneshorts-25-26", img: pShorts, imgSrcset: pShortsSet, name: "SAH udebane spillershorts 25/26 Børn", price: "150 kr.", excluded: true, brand: "adidas", hasSizes: true, category: "spillertoj" },
-  { slug: "sah-hjemmebaneshorts-24-25-born", img: pShortsKids, imgSrcset: pShortsKidsSet, name: "SAH hjemmebane spillertrøje 25/26", price: "375 kr.", excluded: true, brand: "adidas", hasSizes: true, category: "spillertoj" },
-  { slug: "sah-hjemmebaneshorts-25-26-born", img: pShortsKids2526, imgSrcset: pShortsKids2526Set, name: "SAH hjemmebane spillershorts 25/26 Børn", price: "150 kr.", excluded: true, brand: "adidas", hasSizes: true, category: "spillertoj" },
-  { slug: "sah-udebanestromper-2024", img: pSocksBlack, imgSrcset: pSocksBlackSet, name: "SAH udebane spillershorts 25/26", price: "200 kr.", excluded: true, brand: "adidas", hasSizes: true, category: "spillertoj" },
-  { slug: "sah-udebanestromper-25", img: pSocksWhite, imgSrcset: pSocksWhiteSet, name: "SAH hjemmebane spillertrøje 25/26 Børn", price: "275 kr.", excluded: true, brand: "adidas", hasSizes: true, category: "spillertoj" },
-  { slug: "sah-hjemmebanestromper-25-26", img: pSocksYellow, imgSrcset: pSocksYellowSet, name: "SAH udebane spillertrøje 25/26 Børn", price: "275 kr.", excluded: true, brand: "adidas", hasSizes: true, category: "spillertoj" },
-  { slug: "sah-precision-training-fodbold", img: pBallBlue, imgSrcset: pBallBlueSet, name: "SAH bøllehat", price: "250 kr.", brand: "SAH", hasSizes: false, category: "merchandise" },
-  { slug: "sah-precision-training-fodbold-gron", img: pBallGreen, imgSrcset: pBallGreenSet, name: "SAH halstørklæde", price: "175 kr.", brand: "SAH", hasSizes: false, category: "merchandise" },
-  { slug: "sah-fodbold-gul", img: pBallYellow, imgSrcset: pBallYellowSet, name: "SAH håndklæde", price: "250 kr.", brand: "SAH", hasSizes: false, category: "merchandise" },
-  { slug: "sah-stovlepose", img: pBootbag, imgSrcset: pBootbagSet, name: "SAH cap", price: "175 kr.", brand: "SAH", hasSizes: false, category: "merchandise" },
-  { slug: "sah-130x160-fleecetaeppe", img: pBlanket, imgSrcset: pBlanketSet, name: "SAH flag", price: "175 kr.", brand: "SAH", hasSizes: false, category: "merchandise" },
-  { slug: "sah-sweatshirt", img: pSweatshirt, imgSrcset: pSweatshirtSet, name: "SAH Sweatshirt", price: "350 kr.", brand: "SAH", hasSizes: true, category: "merchandise" },
-  { slug: "sah-paraply", img: pUmbrella, imgSrcset: pUmbrellaSet, name: "SAH Paraply", price: "180 kr.", brand: "SAH", hasSizes: false, category: "merchandise" },
-  { slug: "sah-cap", img: pCap, imgSrcset: pCapSet, name: "SAH Cap", price: "150 kr.", brand: "SAH", hasSizes: false, category: "merchandise" },
+  { slug: "sah-hjemmebanetroje-25-26", img: pHome, imgSrcset: pHomeSet, imgAvifSrcset: pHomeSetAvif, name: "SAH hjemmebane spillershorts 25/26", price: "200 kr.", excluded: true, brand: "adidas", hasSizes: true, category: "spillertoj" },
+  { slug: "sah-udebanetroje-25", img: pAway, imgSrcset: pAwaySet, imgAvifSrcset: pAwaySetAvif, img2: pAway2, img2Srcset: pAway2Set, img2AvifSrcset: pAway2SetAvif, name: "SAH t-shirt", price: "150 kr.", brand: "SAH", hasSizes: true, category: "merchandise" },
+  { slug: "sah-udebanetroje-25-born", img: pAwayKids, imgSrcset: pAwayKidsSet, imgAvifSrcset: pAwayKidsSetAvif, img2: pAwayKids2, img2Srcset: pAwayKids2Set, img2AvifSrcset: pAwayKids2SetAvif, name: "SAH hoodie", price: "250 kr.", brand: "SAH", hasSizes: true, category: "merchandise" },
+  { slug: "sah-udebane-spillertroje-25-26", img: pAwayKidsJersey, imgSrcset: pAwayKidsJerseySet, imgAvifSrcset: pAwayKidsJerseySetAvif, name: "SAH udebane spillertrøje 25/26", price: "375 kr.", excluded: true, brand: "adidas", hasSizes: true, category: "spillertoj" },
+  { slug: "sah-hjemmebaneshorts-25-26", img: pShorts, imgSrcset: pShortsSet, imgAvifSrcset: pShortsSetAvif, name: "SAH udebane spillershorts 25/26 Børn", price: "150 kr.", excluded: true, brand: "adidas", hasSizes: true, category: "spillertoj" },
+  { slug: "sah-hjemmebaneshorts-24-25-born", img: pShortsKids, imgSrcset: pShortsKidsSet, imgAvifSrcset: pShortsKidsSetAvif, name: "SAH hjemmebane spillertrøje 25/26", price: "375 kr.", excluded: true, brand: "adidas", hasSizes: true, category: "spillertoj" },
+  { slug: "sah-hjemmebaneshorts-25-26-born", img: pShortsKids2526, imgSrcset: pShortsKids2526Set, imgAvifSrcset: pShortsKids2526SetAvif, name: "SAH hjemmebane spillershorts 25/26 Børn", price: "150 kr.", excluded: true, brand: "adidas", hasSizes: true, category: "spillertoj" },
+  { slug: "sah-udebanestromper-2024", img: pSocksBlack, imgSrcset: pSocksBlackSet, imgAvifSrcset: pSocksBlackSetAvif, name: "SAH udebane spillershorts 25/26", price: "200 kr.", excluded: true, brand: "adidas", hasSizes: true, category: "spillertoj" },
+  { slug: "sah-udebanestromper-25", img: pSocksWhite, imgSrcset: pSocksWhiteSet, imgAvifSrcset: pSocksWhiteSetAvif, name: "SAH hjemmebane spillertrøje 25/26 Børn", price: "275 kr.", excluded: true, brand: "adidas", hasSizes: true, category: "spillertoj" },
+  { slug: "sah-hjemmebanestromper-25-26", img: pSocksYellow, imgSrcset: pSocksYellowSet, imgAvifSrcset: pSocksYellowSetAvif, name: "SAH udebane spillertrøje 25/26 Børn", price: "275 kr.", excluded: true, brand: "adidas", hasSizes: true, category: "spillertoj" },
+  { slug: "sah-precision-training-fodbold", img: pBallBlue, imgSrcset: pBallBlueSet, imgAvifSrcset: pBallBlueSetAvif, name: "SAH bøllehat", price: "250 kr.", brand: "SAH", hasSizes: false, category: "merchandise" },
+  { slug: "sah-precision-training-fodbold-gron", img: pBallGreen, imgSrcset: pBallGreenSet, imgAvifSrcset: pBallGreenSetAvif, name: "SAH halstørklæde", price: "175 kr.", brand: "SAH", hasSizes: false, category: "merchandise" },
+  { slug: "sah-fodbold-gul", img: pBallYellow, imgSrcset: pBallYellowSet, imgAvifSrcset: pBallYellowSetAvif, name: "SAH håndklæde", price: "250 kr.", brand: "SAH", hasSizes: false, category: "merchandise" },
+  { slug: "sah-stovlepose", img: pBootbag, imgSrcset: pBootbagSet, imgAvifSrcset: pBootbagSetAvif, name: "SAH cap", price: "175 kr.", brand: "SAH", hasSizes: false, category: "merchandise" },
+  { slug: "sah-130x160-fleecetaeppe", img: pBlanket, imgSrcset: pBlanketSet, imgAvifSrcset: pBlanketSetAvif, name: "SAH flag", price: "175 kr.", brand: "SAH", hasSizes: false, category: "merchandise" },
+  { slug: "sah-sweatshirt", img: pSweatshirt, imgSrcset: pSweatshirtSet, imgAvifSrcset: pSweatshirtSetAvif, name: "SAH Sweatshirt", price: "350 kr.", brand: "SAH", hasSizes: true, category: "merchandise" },
+  { slug: "sah-paraply", img: pUmbrella, imgSrcset: pUmbrellaSet, imgAvifSrcset: pUmbrellaSetAvif, name: "SAH Paraply", price: "180 kr.", brand: "SAH", hasSizes: false, category: "merchandise" },
+  { slug: "sah-cap", img: pCap, imgSrcset: pCapSet, imgAvifSrcset: pCapSetAvif, name: "SAH Cap", price: "150 kr.", brand: "SAH", hasSizes: false, category: "merchandise" },
 ];
 
 /**
