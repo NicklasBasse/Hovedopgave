@@ -24,9 +24,10 @@ import { Link } from "@tanstack/react-router";
 export type Product = {
   slug?: string;
   img: string;
-  /** Responsive srcset fra vite-imagetools — giver mobil-browsere mulighed
-   *  for at hente en mindre billed-variant. */
+  /** WebP srcset (vite-imagetools) */
   srcset?: string;
+  /** AVIF srcset – ~40% mindre end WebP */
+  avifSrcset?: string;
   name: string;
   price: string;
   oldPrice?: string;
