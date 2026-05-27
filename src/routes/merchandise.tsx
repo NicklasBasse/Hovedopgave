@@ -41,18 +41,25 @@ import tileJersey from "@/assets/ach/tile-sah-v3.webp";
 //      det typisk 60-80 % data pr. billede sammenlignet med en fuld 1000px.
 import pAway from "@/assets/ach/p-away-sah.webp?w=400&format=webp";
 import pAwaySet from "@/assets/ach/p-away-sah.webp?w=300;600;900&format=webp&as=srcset";
+import pAwaySetAvif from "@/assets/ach/p-away-sah.webp?w=300;600;900&format=avif&as=srcset";
 import pAwayKids from "@/assets/ach/p-away-kids-sah.webp?w=400&format=webp";
 import pAwayKidsSet from "@/assets/ach/p-away-kids-sah.webp?w=300;600;900&format=webp&as=srcset";
+import pAwayKidsSetAvif from "@/assets/ach/p-away-kids-sah.webp?w=300;600;900&format=avif&as=srcset";
 import pBallBlue from "@/assets/ach/p-ball-blue-new.webp?w=400&format=webp";
 import pBallBlueSet from "@/assets/ach/p-ball-blue-new.webp?w=300;600;900&format=webp&as=srcset";
+import pBallBlueSetAvif from "@/assets/ach/p-ball-blue-new.webp?w=300;600;900&format=avif&as=srcset";
 import pBallGreen from "@/assets/ach/p-ball-green-new.webp?w=400&format=webp";
 import pBallGreenSet from "@/assets/ach/p-ball-green-new.webp?w=300;600;900&format=webp&as=srcset";
+import pBallGreenSetAvif from "@/assets/ach/p-ball-green-new.webp?w=300;600;900&format=avif&as=srcset";
 import pBallYellow from "@/assets/ach/p-ball-yellow-new.webp?w=400&format=webp";
 import pBallYellowSet from "@/assets/ach/p-ball-yellow-new.webp?w=300;600;900&format=webp&as=srcset";
+import pBallYellowSetAvif from "@/assets/ach/p-ball-yellow-new.webp?w=300;600;900&format=avif&as=srcset";
 import pBootbag from "@/assets/ach/p-bootbag-new.webp?w=400&format=webp";
 import pBootbagSet from "@/assets/ach/p-bootbag-new.webp?w=300;600;900&format=webp&as=srcset";
+import pBootbagSetAvif from "@/assets/ach/p-bootbag-new.webp?w=300;600;900&format=avif&as=srcset";
 import pBlanket from "@/assets/ach/p-blanket-new.webp?w=400&format=webp";
 import pBlanketSet from "@/assets/ach/p-blanket-new.webp?w=300;600;900&format=webp&as=srcset";
+import pBlanketSetAvif from "@/assets/ach/p-blanket-new.webp?w=300;600;900&format=avif&as=srcset";
 
 // Definerer selve ruten + dens meta-tags til SEO og social sharing.
 export const Route = createFileRoute("/merchandise")({
@@ -84,13 +91,13 @@ const subCategories: SubCategory[] = [
 // Produktlisten der vises i griddet. Hvert produkt har et `slug` der gør
 // kortet klikbart og linker videre til /produkt/$slug.
 const products: CategoryProduct[] = [
-  { slug: "sah-udebanetroje-25", img: pAway, srcset: pAwaySet, name: "SAH t-shirt", price: "150 kr." },
-  { slug: "sah-udebanetroje-25-born", img: pAwayKids, srcset: pAwayKidsSet, name: "SAH hoodie", price: "250 kr." },
-  { slug: "sah-precision-training-fodbold", img: pBallBlue, srcset: pBallBlueSet, name: "SAH bøllehat", price: "250 kr." },
-  { slug: "sah-stovlepose", img: pBootbag, srcset: pBootbagSet, name: "SAH cap", price: "175 kr." },
-  { slug: "sah-precision-training-fodbold-gron", img: pBallGreen, srcset: pBallGreenSet, name: "SAH halstørklæde", price: "175 kr." },
-  { slug: "sah-fodbold-gul", img: pBallYellow, srcset: pBallYellowSet, name: "SAH håndklæde", price: "250 kr." },
-  { slug: "sah-130x160-fleecetaeppe", img: pBlanket, srcset: pBlanketSet, name: "SAH flag", price: "175 kr." },
+  { slug: "sah-udebanetroje-25", img: pAway, srcset: pAwaySet, avifSrcset: pAwaySetAvif, name: "SAH t-shirt", price: "150 kr." },
+  { slug: "sah-udebanetroje-25-born", img: pAwayKids, srcset: pAwayKidsSet, avifSrcset: pAwayKidsSetAvif, name: "SAH hoodie", price: "250 kr." },
+  { slug: "sah-precision-training-fodbold", img: pBallBlue, srcset: pBallBlueSet, avifSrcset: pBallBlueSetAvif, name: "SAH bøllehat", price: "250 kr." },
+  { slug: "sah-stovlepose", img: pBootbag, srcset: pBootbagSet, avifSrcset: pBootbagSetAvif, name: "SAH cap", price: "175 kr." },
+  { slug: "sah-precision-training-fodbold-gron", img: pBallGreen, srcset: pBallGreenSet, avifSrcset: pBallGreenSetAvif, name: "SAH halstørklæde", price: "175 kr." },
+  { slug: "sah-fodbold-gul", img: pBallYellow, srcset: pBallYellowSet, avifSrcset: pBallYellowSetAvif, name: "SAH håndklæde", price: "250 kr." },
+  { slug: "sah-130x160-fleecetaeppe", img: pBlanket, srcset: pBlanketSet, avifSrcset: pBlanketSetAvif, name: "SAH flag", price: "175 kr." },
 ];
 
 // Selve sidekomponenten — minimal fordi alt heavy lifting sker i

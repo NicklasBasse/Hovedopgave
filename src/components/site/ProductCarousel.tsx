@@ -24,9 +24,10 @@ import { Link } from "@tanstack/react-router";
 export type Product = {
   slug?: string;
   img: string;
-  /** Responsive srcset fra vite-imagetools — giver mobil-browsere mulighed
-   *  for at hente en mindre billed-variant. */
+  /** WebP srcset (vite-imagetools) */
   srcset?: string;
+  /** AVIF srcset – ~40% mindre end WebP */
+  avifSrcset?: string;
   name: string;
   price: string;
   oldPrice?: string;
@@ -37,15 +38,16 @@ export type Product = {
 // Props til komponenten – alt der gør at samme karrusel kan genbruges
 // med forskellig tekst, billeder og produkter.
 type Props = {
-  title: string;       // Stor overskrift over karrusellen
-  count: string;       // Antal produkter, vises i parentes
-  subtitle: string;    // Lille undertekst
-  products: Product[]; // Selve produkterne
-  ctaLabel: string;    // Tekst på lead card-knappen
-  ctaHref: string;     // Hvor lead card linker hen
-  sideImage: string;   // Billede på lead card
-  sideImageSrcset?: string; // Responsive srcset til lead card-billedet
-  sideAlt: string;     // Alt-tekst på lead card-billedet
+  title: string;
+  count: string;
+  subtitle: string;
+  products: Product[];
+  ctaLabel: string;
+  ctaHref: string;
+  sideImage: string;
+  sideImageSrcset?: string;
+  sideImageAvifSrcset?: string;
+  sideAlt: string;
 };
 
 export function ProductCarousel({
@@ -57,6 +59,7 @@ export function ProductCarousel({
   ctaHref,
   sideImage,
   sideImageSrcset,
+  sideImageAvifSrcset,
   sideAlt,
 }: Props) {
   // useRef bruges til at få fat i selve scroll-containeren, så vi kan
@@ -115,17 +118,23 @@ export function ProductCarousel({
           className="group block h-[459px] w-[329px] shrink-0 snap-start"
         >
           <div className="relative h-full w-full overflow-hidden">
-            <img
-              src={sideImage}
-              srcSet={sideImageSrcset}
-              sizes="329px"
-              alt={sideAlt}
-              width={800}
-              height={1116}
-              loading="lazy"
-              decoding="async"
-              className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
-            />
+            <picture className="contents">
+              {sideImageAvifSrcset && (
+                <source type="image/avif" srcSet={sideImageAvifSrcset} sizes="329px" />
+              )}
+              {sideImageSrcset && (
+                <source type="image/webp" srcSet={sideImageSrcset} sizes="329px" />
+              )}
+              <img
+                src={sideImage}
+                alt={sideAlt}
+                width={800}
+                height={1116}
+                loading="lazy"
+                decoding="async"
+                className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+              />
+            </picture>
             <span className="absolute bottom-4 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-full bg-background px-6 py-3 text-sm font-semibold text-foreground shadow-md">
               {ctaLabel}
             </span>
@@ -139,17 +148,19 @@ export function ProductCarousel({
           const card = (
             <>
               <div className="relative w-full flex-1 overflow-hidden">
-                <img
-                  src={p.img}
-                  srcSet={p.srcset}
-                  sizes="329px"
-                  alt={p.name}
-                  width={800}
-                  height={800}
-                  loading="lazy"
-                  decoding="async"
-                  className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
-                />
+                <picture className="contents">
+                  {p.avifSrcset && <source type="image/avif" srcSet={p.avifSrcset} sizes="329px" />}
+                  {p.srcset && <source type="image/webp" srcSet={p.srcset} sizes="329px" />}
+                  <img
+                    src={p.img}
+                    alt={p.name}
+                    width={800}
+                    height={800}
+                    loading="lazy"
+                    decoding="async"
+                    className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                  />
+                </picture>
                 {/* Badge vises kun hvis produktet er undtaget kampagnen */}
                 {p.excluded && (
                   <span className="absolute left-2 top-2 bg-foreground/80 px-2 py-0.5 text-[10px] font-semibold uppercase text-background">
