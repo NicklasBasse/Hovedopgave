@@ -13,26 +13,49 @@
  */
 
 // ---- Billede-imports (alle webp/jpg ligger i src/assets/ach/) ------------
-import pHome from "@/assets/ach/p-home-jersey.webp";
-import pAway from "@/assets/ach/p-away-sah.webp";
-import pAway2 from "@/assets/ach/p-away-sah-2.webp";
-import pAwayKids from "@/assets/ach/p-away-kids-sah.webp";
-import pAwayKids2 from "@/assets/ach/p-away-kids-sah-2.webp";
-import pAwayKidsJersey from "@/assets/ach/p-away-kids-sah-jersey.webp";
-import pShorts from "@/assets/ach/p-shorts.webp";
-import pShortsKids from "@/assets/ach/p-shorts-kids.webp";
-import pShortsKids2526 from "@/assets/ach/p-shorts-kids-2526.webp";
-import pSocksBlack from "@/assets/ach/p-socks-black.webp";
-import pSocksWhite from "@/assets/ach/p-socks-white.webp";
-import pSocksYellow from "@/assets/ach/p-socks-yellow.webp";
-import pBallBlue from "@/assets/ach/p-ball-blue-new.webp";
-import pBallGreen from "@/assets/ach/p-ball-green-new.webp";
-import pBallYellow from "@/assets/ach/p-ball-yellow-new.webp";
-import pBootbag from "@/assets/ach/p-bootbag-new.webp";
-import pBlanket from "@/assets/ach/p-blanket-new.webp";
-import pSweatshirt from "@/assets/ach/p-sweatshirt.jpg";
-import pUmbrella from "@/assets/ach/p-umbrella.jpg";
-import pCap from "@/assets/ach/p-cap.jpg";
+// Hvert produktbillede importeres TO gange: en lille fallback (`?w=500`)
+// og et responsive srcset (`?w=400;800;1200`). Det giver mobil-browsere
+// mulighed for at hente en ~80 KB-variant i stedet for 600 KB-originalen.
+import pHome from "@/assets/ach/p-home-jersey.webp?w=500&format=webp";
+import pHomeSet from "@/assets/ach/p-home-jersey.webp?w=400;800;1200&format=webp&as=srcset";
+import pAway from "@/assets/ach/p-away-sah.webp?w=500&format=webp";
+import pAwaySet from "@/assets/ach/p-away-sah.webp?w=400;800;1200&format=webp&as=srcset";
+import pAway2 from "@/assets/ach/p-away-sah-2.webp?w=500&format=webp";
+import pAway2Set from "@/assets/ach/p-away-sah-2.webp?w=400;800;1200&format=webp&as=srcset";
+import pAwayKids from "@/assets/ach/p-away-kids-sah.webp?w=500&format=webp";
+import pAwayKidsSet from "@/assets/ach/p-away-kids-sah.webp?w=400;800;1200&format=webp&as=srcset";
+import pAwayKids2 from "@/assets/ach/p-away-kids-sah-2.webp?w=500&format=webp";
+import pAwayKids2Set from "@/assets/ach/p-away-kids-sah-2.webp?w=400;800;1200&format=webp&as=srcset";
+import pAwayKidsJersey from "@/assets/ach/p-away-kids-sah-jersey.webp?w=500&format=webp";
+import pAwayKidsJerseySet from "@/assets/ach/p-away-kids-sah-jersey.webp?w=400;800;1200&format=webp&as=srcset";
+import pShorts from "@/assets/ach/p-shorts.webp?w=500&format=webp";
+import pShortsSet from "@/assets/ach/p-shorts.webp?w=400;800;1200&format=webp&as=srcset";
+import pShortsKids from "@/assets/ach/p-shorts-kids.webp?w=500&format=webp";
+import pShortsKidsSet from "@/assets/ach/p-shorts-kids.webp?w=400;800;1200&format=webp&as=srcset";
+import pShortsKids2526 from "@/assets/ach/p-shorts-kids-2526.webp?w=500&format=webp";
+import pShortsKids2526Set from "@/assets/ach/p-shorts-kids-2526.webp?w=400;800;1200&format=webp&as=srcset";
+import pSocksBlack from "@/assets/ach/p-socks-black.webp?w=500&format=webp";
+import pSocksBlackSet from "@/assets/ach/p-socks-black.webp?w=400;800;1200&format=webp&as=srcset";
+import pSocksWhite from "@/assets/ach/p-socks-white.webp?w=500&format=webp";
+import pSocksWhiteSet from "@/assets/ach/p-socks-white.webp?w=400;800;1200&format=webp&as=srcset";
+import pSocksYellow from "@/assets/ach/p-socks-yellow.webp?w=500&format=webp";
+import pSocksYellowSet from "@/assets/ach/p-socks-yellow.webp?w=400;800;1200&format=webp&as=srcset";
+import pBallBlue from "@/assets/ach/p-ball-blue-new.webp?w=500&format=webp";
+import pBallBlueSet from "@/assets/ach/p-ball-blue-new.webp?w=400;800;1200&format=webp&as=srcset";
+import pBallGreen from "@/assets/ach/p-ball-green-new.webp?w=500&format=webp";
+import pBallGreenSet from "@/assets/ach/p-ball-green-new.webp?w=400;800;1200&format=webp&as=srcset";
+import pBallYellow from "@/assets/ach/p-ball-yellow-new.webp?w=500&format=webp";
+import pBallYellowSet from "@/assets/ach/p-ball-yellow-new.webp?w=400;800;1200&format=webp&as=srcset";
+import pBootbag from "@/assets/ach/p-bootbag-new.webp?w=500&format=webp";
+import pBootbagSet from "@/assets/ach/p-bootbag-new.webp?w=400;800;1200&format=webp&as=srcset";
+import pBlanket from "@/assets/ach/p-blanket-new.webp?w=500&format=webp";
+import pBlanketSet from "@/assets/ach/p-blanket-new.webp?w=400;800;1200&format=webp&as=srcset";
+import pSweatshirt from "@/assets/ach/p-sweatshirt.jpg?w=500&format=webp";
+import pSweatshirtSet from "@/assets/ach/p-sweatshirt.jpg?w=400;800;1200&format=webp&as=srcset";
+import pUmbrella from "@/assets/ach/p-umbrella.jpg?w=500&format=webp";
+import pUmbrellaSet from "@/assets/ach/p-umbrella.jpg?w=400;800;1200&format=webp&as=srcset";
+import pCap from "@/assets/ach/p-cap.jpg?w=500&format=webp";
+import pCapSet from "@/assets/ach/p-cap.jpg?w=400;800;1200&format=webp&as=srcset";
 
 /**
  * Type-definition for et produkt.
