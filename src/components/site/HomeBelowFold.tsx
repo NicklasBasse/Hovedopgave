@@ -139,7 +139,7 @@ export default function HomeBelowFold() {
         sideImage={side2}
         sideImageSrcset={side2SetWebp}
         sideImageAvifSrcset={side2SetAvif}
-        sideAlt="ACH Spillertøj"
+        sideAlt="SAH spillertøj-kollektion 25/26"
       />
 
       <SplitFeature
