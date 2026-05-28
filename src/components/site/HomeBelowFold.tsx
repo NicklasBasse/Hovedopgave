@@ -147,7 +147,7 @@ export default function HomeBelowFold() {
         image={sectionRight}
         imageSrcset={sectionRightSetWebp}
         imageAvifSrcset={sectionRightSetAvif}
-        imageAlt="ACH Merchandise"
+        imageAlt="SAH fans i tribunen med klubbens fan-merchandise"
         eyebrow="sah MERCHANDISE"
         title="Håndbold merchandise med stolthed"
         body="For dig, der elsker fællesskabet og stemningen på lægterne. Vi har designet en fan-linje med et helt unikt SAH-mønster, der binder fans, spillere og frivillige sammen i én stærk enhed. Det markante design gør det nemt at genkende andre fans ude i bybilledet, og det fungerer som den perfekte anledning til at falde i snak om holdet."
