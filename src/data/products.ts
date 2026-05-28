@@ -12,7 +12,7 @@
  * ved build (cache-busting + automatisk lazy load).
  */
 
-// ---- Billede-imports (alle webp/jpg ligger i src/assets/ach/) ------------
+// ---- Billede-imports (alle webp/jpg ligger i src/assets/sah/) ------------
 // Hvert produktbillede importeres TO gange: en lille fallback (`?w=500`)
 // og et responsive srcset (`?w=240;480`). Det giver mobil-browsere
 // mulighed for at hente en ~80 KB-variant i stedet for 600 KB-originalen.
