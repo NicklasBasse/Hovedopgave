@@ -79,8 +79,8 @@ export const Route = createFileRoute("/spillertoj")({
 // brugeren altid kan skifte mellem dem.
 const subCategories: SubCategory[] = [
   { img: logo, label: "Alt fra SAH", to: "/se-alt-sah" },
-  { img: tileJersey, label: "Spillertøj", to: "/spillertoj" },
-  { img: tileMerch, label: "Merchandise", to: "/merchandise" },
+  { img: tileJersey, label: "SAH Spillertøj", to: "/spillertoj" },
+  { img: tileMerch, label: "SAH Merchandise", to: "/merchandise" },
 ];
 
 // Alle spillertøj-produkter er `excluded: true` → kampagne-badge vises.
