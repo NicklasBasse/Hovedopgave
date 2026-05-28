@@ -5,10 +5,10 @@ import logo from "@/assets/sah/tile-sah-logo.webp";
 
 type CatKey = "spillertoj" | "merchandise" | "sah";
 
-const NAV: { key: CatKey; label: string; to: string; img: string }[] = [
-  { key: "spillertoj", label: "Spillertøj", to: "/spillertoj", img: jersey },
-  { key: "merchandise", label: "Merchandise", to: "/merchandise", img: merch },
-  { key: "sah", label: "Alt fra SAH", to: "/se-alt-sah", img: logo },
+const NAV: { key: CatKey; label: string; to: string; img: string; alt: string }[] = [
+  { key: "spillertoj", label: "Spillertøj", to: "/spillertoj", img: jersey, alt: "SAH spillertrøje – officielt kamptøj" },
+  { key: "merchandise", label: "Merchandise", to: "/merchandise", img: merch, alt: "SAH merchandise – fan-kollektion" },
+  { key: "sah", label: "Alt fra SAH", to: "/se-alt-sah", img: logo, alt: "Skanderborg AGF Håndbold klublogo" },
 ];
 
 const SECTIONS: {
