@@ -85,6 +85,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { name: "twitter:description", content: "Oplev den nye SAH merchandise-kollektion hos SPORT 24. Fra unikt fan-mønster til moderne streetwear. Klik her, se udvalget og find din favorit!" },
       { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/68690062-3f34-4560-8630-b53595d81321/id-preview-cd7ae605--820c6175-e1b3-4210-9376-9b0c903c3229.lovable.app-1778856792417.png" },
       { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/68690062-3f34-4560-8630-b53595d81321/id-preview-cd7ae605--820c6175-e1b3-4210-9376-9b0c903c3229.lovable.app-1778856792417.png" },
+      { name: "google-site-verification", content: "abwMtofGNYOAsJd-Fdz580bKYiSit_1JZ03lMKIGkWw" },
     ],
     links: [
       {
