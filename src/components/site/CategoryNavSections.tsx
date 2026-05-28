@@ -1,14 +1,14 @@
 import { Link } from "@tanstack/react-router";
-import jersey from "@/assets/ach/tile-sah-v3.webp";
-import merch from "@/assets/ach/tile-merch-v2.webp";
-import logo from "@/assets/ach/tile-logo-v2.webp";
+import jersey from "@/assets/sah/tile-sah-spillertoj.webp";
+import merch from "@/assets/sah/tile-sah-merchandise.webp";
+import logo from "@/assets/sah/tile-sah-logo.webp";
 
 type CatKey = "spillertoj" | "merchandise" | "sah";
 
-const NAV: { key: CatKey; label: string; to: string; img: string }[] = [
-  { key: "spillertoj", label: "Spillertøj", to: "/spillertoj", img: jersey },
-  { key: "merchandise", label: "Merchandise", to: "/merchandise", img: merch },
-  { key: "sah", label: "Alt fra SAH", to: "/se-alt-sah", img: logo },
+const NAV: { key: CatKey; label: string; to: string; img: string; alt: string }[] = [
+  { key: "spillertoj", label: "Spillertøj", to: "/spillertoj", img: jersey, alt: "SAH spillertrøje – officielt kamptøj" },
+  { key: "merchandise", label: "Merchandise", to: "/merchandise", img: merch, alt: "SAH merchandise – fan-kollektion" },
+  { key: "sah", label: "Alt fra SAH", to: "/se-alt-sah", img: logo, alt: "Skanderborg AGF Håndbold klublogo" },
 ];
 
 const SECTIONS: {
@@ -71,8 +71,7 @@ export function CategoryNavSections({ showNavigation = true, activeKey }: Props)
                     <span className="flex h-[92px] w-[92px] items-center justify-center overflow-hidden rounded-full bg-muted md:h-[124px] md:w-[124px] lg:h-[140px] lg:w-[140px]">
                       <img
                         src={n.img}
-                        alt=""
-                        aria-hidden="true"
+                        alt={n.alt}
                         width={140}
                         height={140}
                         loading="lazy"

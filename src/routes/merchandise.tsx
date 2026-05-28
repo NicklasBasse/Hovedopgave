@@ -31,36 +31,36 @@ import {
 } from "@/components/site/CategoryLanding";
 
 // Billeder til underkategori-cirklerne i toppen af siden.
-import logo from "@/assets/ach/tile-logo-v2.webp";
-import tileMerch from "@/assets/ach/tile-merch-v2.webp";
-import tileJersey from "@/assets/ach/tile-sah-v3.webp";
+import logo from "@/assets/sah/tile-sah-logo.webp";
+import tileMerch from "@/assets/sah/tile-sah-merchandise.webp";
+import tileJersey from "@/assets/sah/tile-sah-spillertoj.webp";
 
 // Produktbilleder. Vi importerer hver to gange:
 //   1) En LILLE fallback (`?w=320&format=webp`) til ældre browsere og som `src`.
 //   2) Et `srcset` med flere varianter (`?w=240;480`) som moderne browsere
 //      bruger til at vælge den mindste passende størrelse. På mobil sparer
 //      det typisk 60-80 % data pr. billede sammenlignet med en fuld 1000px.
-import pAway from "@/assets/ach/p-away-sah.webp?w=320&format=webp";
-import pAwaySet from "@/assets/ach/p-away-sah.webp?w=240;480&format=webp&as=srcset";
-import pAwaySetAvif from "@/assets/ach/p-away-sah.webp?w=240;480&format=avif&as=srcset";
-import pAwayKids from "@/assets/ach/p-away-kids-sah.webp?w=320&format=webp";
-import pAwayKidsSet from "@/assets/ach/p-away-kids-sah.webp?w=240;480&format=webp&as=srcset";
-import pAwayKidsSetAvif from "@/assets/ach/p-away-kids-sah.webp?w=240;480&format=avif&as=srcset";
-import pBallBlue from "@/assets/ach/p-ball-blue-new.webp?w=320&format=webp";
-import pBallBlueSet from "@/assets/ach/p-ball-blue-new.webp?w=240;480&format=webp&as=srcset";
-import pBallBlueSetAvif from "@/assets/ach/p-ball-blue-new.webp?w=240;480&format=avif&as=srcset";
-import pBallGreen from "@/assets/ach/p-ball-green-new.webp?w=320&format=webp";
-import pBallGreenSet from "@/assets/ach/p-ball-green-new.webp?w=240;480&format=webp&as=srcset";
-import pBallGreenSetAvif from "@/assets/ach/p-ball-green-new.webp?w=240;480&format=avif&as=srcset";
-import pBallYellow from "@/assets/ach/p-ball-yellow-new.webp?w=320&format=webp";
-import pBallYellowSet from "@/assets/ach/p-ball-yellow-new.webp?w=240;480&format=webp&as=srcset";
-import pBallYellowSetAvif from "@/assets/ach/p-ball-yellow-new.webp?w=240;480&format=avif&as=srcset";
-import pBootbag from "@/assets/ach/p-bootbag-new.webp?w=320&format=webp";
-import pBootbagSet from "@/assets/ach/p-bootbag-new.webp?w=240;480&format=webp&as=srcset";
-import pBootbagSetAvif from "@/assets/ach/p-bootbag-new.webp?w=240;480&format=avif&as=srcset";
-import pBlanket from "@/assets/ach/p-blanket-new.webp?w=320&format=webp";
-import pBlanketSet from "@/assets/ach/p-blanket-new.webp?w=240;480&format=webp&as=srcset";
-import pBlanketSetAvif from "@/assets/ach/p-blanket-new.webp?w=240;480&format=avif&as=srcset";
+import pAway from "@/assets/sah/p-away-sah.webp?w=320&format=webp";
+import pAwaySet from "@/assets/sah/p-away-sah.webp?w=240;480&format=webp&as=srcset";
+import pAwaySetAvif from "@/assets/sah/p-away-sah.webp?w=240;480&format=avif&as=srcset";
+import pAwayKids from "@/assets/sah/p-away-kids-sah.webp?w=320&format=webp";
+import pAwayKidsSet from "@/assets/sah/p-away-kids-sah.webp?w=240;480&format=webp&as=srcset";
+import pAwayKidsSetAvif from "@/assets/sah/p-away-kids-sah.webp?w=240;480&format=avif&as=srcset";
+import pBallBlue from "@/assets/sah/p-ball-blue-new.webp?w=320&format=webp";
+import pBallBlueSet from "@/assets/sah/p-ball-blue-new.webp?w=240;480&format=webp&as=srcset";
+import pBallBlueSetAvif from "@/assets/sah/p-ball-blue-new.webp?w=240;480&format=avif&as=srcset";
+import pBallGreen from "@/assets/sah/p-ball-green-new.webp?w=320&format=webp";
+import pBallGreenSet from "@/assets/sah/p-ball-green-new.webp?w=240;480&format=webp&as=srcset";
+import pBallGreenSetAvif from "@/assets/sah/p-ball-green-new.webp?w=240;480&format=avif&as=srcset";
+import pBallYellow from "@/assets/sah/p-ball-yellow-new.webp?w=320&format=webp";
+import pBallYellowSet from "@/assets/sah/p-ball-yellow-new.webp?w=240;480&format=webp&as=srcset";
+import pBallYellowSetAvif from "@/assets/sah/p-ball-yellow-new.webp?w=240;480&format=avif&as=srcset";
+import pBootbag from "@/assets/sah/p-bootbag-new.webp?w=320&format=webp";
+import pBootbagSet from "@/assets/sah/p-bootbag-new.webp?w=240;480&format=webp&as=srcset";
+import pBootbagSetAvif from "@/assets/sah/p-bootbag-new.webp?w=240;480&format=avif&as=srcset";
+import pBlanket from "@/assets/sah/p-blanket-new.webp?w=320&format=webp";
+import pBlanketSet from "@/assets/sah/p-blanket-new.webp?w=240;480&format=webp&as=srcset";
+import pBlanketSetAvif from "@/assets/sah/p-blanket-new.webp?w=240;480&format=avif&as=srcset";
 
 // Definerer selve ruten + dens meta-tags til SEO og social sharing.
 export const Route = createFileRoute("/merchandise")({

@@ -7,16 +7,16 @@
  * billeder + label nedenunder – så det fungerer som en visuelt drevet menu.
  */
 import { Link } from "@tanstack/react-router";
-import jersey from "@/assets/ach/tile-sah-v3.webp";
-import merch from "@/assets/ach/tile-merch-v2.webp";
-import logo from "@/assets/ach/tile-logo-v2.webp";
+import jersey from "@/assets/sah/tile-sah-spillertoj.webp";
+import merch from "@/assets/sah/tile-sah-merchandise.webp";
+import logo from "@/assets/sah/tile-sah-logo.webp";
 
 // Konfiguration af fliserne. `as const` gør hele arrayet read-only og giver
 // TypeScript de strammest mulige typer for `to`-feltet (literal strings).
 const TILES = [
-  { src: jersey, label: "Spillertøj", to: "/spillertoj" },
-  { src: merch, label: "Merchandise", to: "/merchandise" },
-  { src: logo, label: "Alt fra SAH", to: "/se-alt-sah" },
+  { src: jersey, label: "Spillertøj", to: "/spillertoj", alt: "SAH spillertrøje – officielt kamptøj" },
+  { src: merch, label: "Merchandise", to: "/merchandise", alt: "SAH merchandise – fan-kollektion" },
+  { src: logo, label: "Alt fra SAH", to: "/se-alt-sah", alt: "Skanderborg AGF Håndbold klublogo" },
 ] as const;
 
 export function CategoryTiles() {
@@ -29,8 +29,7 @@ export function CategoryTiles() {
             <div className="flex h-[224px] w-[224px] items-center justify-center overflow-hidden rounded-full bg-muted">
               <img
                 src={t.src}
-                alt=""
-                aria-hidden="true"
+                alt={t.alt}
                 width={600}
                 height={600}
                 loading="lazy"

@@ -11,13 +11,13 @@ export function IntroBlock() {
     <section className="mx-auto max-w-[1100px] px-6 py-14 text-center">
       {/* Lille label ovenover overskriften ("eyebrow") */}
       <p className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-muted-foreground">
-        AC Horsens
+        Skanderborg AGF Håndbold
       </p>
       <h2 className="text-3xl font-black tracking-tight md:text-5xl">
-        Klæd dig i AC Horsens farver
+        Klæd dig i SAH's farver
       </h2>
       <p className="mx-auto mt-5 max-w-2xl text-[15px] text-foreground/80">
-        Tilgængelig online og i SPORT 24 - AC Horsens - Sammen skaber vi minder
+        Tilgængelig online og i SPORT 24 – SAH – Sammen skaber vi minder
       </p>
       {/* Tre tag-knapper – kosmetiske, peger på "#" */}
       <div className="mt-7 flex flex-wrap justify-center gap-3">
