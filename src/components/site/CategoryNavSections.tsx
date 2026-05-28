@@ -71,8 +71,7 @@ export function CategoryNavSections({ showNavigation = true, activeKey }: Props)
                     <span className="flex h-[92px] w-[92px] items-center justify-center overflow-hidden rounded-full bg-muted md:h-[124px] md:w-[124px] lg:h-[140px] lg:w-[140px]">
                       <img
                         src={n.img}
-                        alt=""
-                        aria-hidden="true"
+                        alt={n.alt}
                         width={140}
                         height={140}
                         loading="lazy"
