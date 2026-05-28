@@ -26,7 +26,7 @@ export function Hero() {
   return (
     <section className="relative w-full">
       {/* sr-only h1 – skjult visuelt, men hjælper SEO og skærmlæsere */}
-      <h1 className="sr-only">AC Horsens forside</h1>
+      <h1 className="sr-only">Skanderborg AGF Håndbold – SAH forside</h1>
       {/*
         Højde: På mobil bruger vi et højere format (4/5) så billedet fylder mere
         og der er plads til hele tekstblokken nederst. På desktop holder vi
@@ -39,7 +39,7 @@ export function Hero() {
           <source type="image/webp" srcSet={heroWebpSet} sizes="100vw" />
           <img
             src={heroImg}
-            alt="AC Horsens topbillede 2025"
+            alt="SAH topbillede 2026 – Skanderborg AGF Håndbold spillere i ny merchandise-kollektion"
             width={1920}
             height={1080}
             loading="eager"
