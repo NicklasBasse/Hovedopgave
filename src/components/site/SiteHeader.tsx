@@ -59,7 +59,7 @@ export function SiteHeader() {
           <a href="/" className="mx-auto flex items-center" aria-label="SPORT 24 – forside">
             <img
               src={sport24Logo}
-              alt=""
+              alt="SPORT 24 logo"
               width={400}
               height={125}
               decoding="async"
