@@ -98,8 +98,8 @@ export const Route = createFileRoute("/se-alt-sah")({
 // Underkategori-cirkler — peger til hver af de tre SAH-sider.
 const subCategories: SubCategory[] = [
   { img: logo, label: "Alt fra SAH", to: "/se-alt-sah" },
-  { img: tileJersey, label: "Spillertøj", to: "/spillertoj" },
-  { img: tileMerch, label: "Merchandise", to: "/merchandise" },
+  { img: tileJersey, label: "SAH Spillertøj", to: "/spillertoj" },
+  { img: tileMerch, label: "SAH Merchandise", to: "/merchandise" },
 ];
 
 // Samlet produktliste: rækkefølgen er bevidst — først merchandise (7 stk),

@@ -85,8 +85,8 @@ export const Route = createFileRoute("/merchandise")({
 // De tre underkategori-cirkler øverst – linker mellem SAH-undersiderne.
 const subCategories: SubCategory[] = [
   { img: logo, label: "Alt fra SAH", to: "/se-alt-sah" },
-  { img: tileJersey, label: "Spillertøj", to: "/spillertoj" },
-  { img: tileMerch, label: "Merchandise", to: "/merchandise" },
+  { img: tileJersey, label: "SAH Spillertøj", to: "/spillertoj" },
+  { img: tileMerch, label: "SAH Merchandise", to: "/merchandise" },
 ];
 
 // Produktlisten der vises i griddet. Hvert produkt har et `slug` der gør
