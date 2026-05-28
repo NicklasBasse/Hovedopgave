@@ -25,9 +25,9 @@ import {
 } from "@/components/site/CategoryLanding";
 
 // Cirkel-billeder til underkategori-rækken.
-import logo from "@/assets/sah/tile-logo-v2.webp";
-import tileJersey from "@/assets/sah/tile-sah-v3.webp";
-import tileMerch from "@/assets/sah/tile-merch-v2.webp";
+import logo from "@/assets/sah/tile-sah-logo.webp";
+import tileJersey from "@/assets/sah/tile-sah-spillertoj.webp";
+import tileMerch from "@/assets/sah/tile-sah-merchandise.webp";
 
 // Alle produktbilleder. Hvert billede importeres TO gange: en lille fallback
 // (`?w=400`) og et responsive srcset (`?w=240;480`). Mobil-browsere

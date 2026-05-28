@@ -31,9 +31,9 @@ import {
 } from "@/components/site/CategoryLanding";
 
 // Billeder til underkategori-cirklerne i toppen af siden.
-import logo from "@/assets/sah/tile-logo-v2.webp";
-import tileMerch from "@/assets/sah/tile-merch-v2.webp";
-import tileJersey from "@/assets/sah/tile-sah-v3.webp";
+import logo from "@/assets/sah/tile-sah-logo.webp";
+import tileMerch from "@/assets/sah/tile-sah-merchandise.webp";
+import tileJersey from "@/assets/sah/tile-sah-spillertoj.webp";
 
 // Produktbilleder. Vi importerer hver to gange:
 //   1) En LILLE fallback (`?w=320&format=webp`) til ældre browsere og som `src`.

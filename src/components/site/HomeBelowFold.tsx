@@ -13,19 +13,19 @@ import { ClosingHeading } from "@/components/site/ClosingHeading";
 import { SiteFooter } from "@/components/site/SiteFooter";
 
 // SplitFeature-baggrundsbilleder. AVIF + WebP for ~40% mindre payload.
-import sectionLeft from "@/assets/sah/section-left-new.webp?w=640&format=webp";
-import sectionLeftSetWebp from "@/assets/sah/section-left-new.webp?w=480;800&format=webp&as=srcset";
-import sectionLeftSetAvif from "@/assets/sah/section-left-new.webp?w=480;800&format=avif&as=srcset";
-import sectionRight from "@/assets/sah/section-right-new.webp?w=640&format=webp";
-import sectionRightSetWebp from "@/assets/sah/section-right-new.webp?w=480;800&format=webp&as=srcset";
-import sectionRightSetAvif from "@/assets/sah/section-right-new.webp?w=480;800&format=avif&as=srcset";
+import sectionLeft from "@/assets/sah/sah-merchandise-hverdag.webp?w=640&format=webp";
+import sectionLeftSetWebp from "@/assets/sah/sah-merchandise-hverdag.webp?w=480;800&format=webp&as=srcset";
+import sectionLeftSetAvif from "@/assets/sah/sah-merchandise-hverdag.webp?w=480;800&format=avif&as=srcset";
+import sectionRight from "@/assets/sah/sah-fan-stemning.webp?w=640&format=webp";
+import sectionRightSetWebp from "@/assets/sah/sah-fan-stemning.webp?w=480;800&format=webp&as=srcset";
+import sectionRightSetAvif from "@/assets/sah/sah-fan-stemning.webp?w=480;800&format=avif&as=srcset";
 // Karrusel lead-card billeder
-import side1 from "@/assets/sah/carousel-side-sah.webp?w=320&format=webp";
-import side1SetWebp from "@/assets/sah/carousel-side-sah.webp?w=320;480&format=webp&as=srcset";
-import side1SetAvif from "@/assets/sah/carousel-side-sah.webp?w=320;480&format=avif&as=srcset";
-import side2 from "@/assets/sah/carousel-side-2.webp?w=320&format=webp";
-import side2SetWebp from "@/assets/sah/carousel-side-2.webp?w=320;480&format=webp&as=srcset";
-import side2SetAvif from "@/assets/sah/carousel-side-2.webp?w=320;480&format=avif&as=srcset";
+import side1 from "@/assets/sah/sah-merchandise-kollektion.webp?w=320&format=webp";
+import side1SetWebp from "@/assets/sah/sah-merchandise-kollektion.webp?w=320;480&format=webp&as=srcset";
+import side1SetAvif from "@/assets/sah/sah-merchandise-kollektion.webp?w=320;480&format=avif&as=srcset";
+import side2 from "@/assets/sah/sah-spillertoj-kollektion.webp?w=320&format=webp";
+import side2SetWebp from "@/assets/sah/sah-spillertoj-kollektion.webp?w=320;480&format=webp&as=srcset";
+import side2SetAvif from "@/assets/sah/sah-spillertoj-kollektion.webp?w=320;480&format=avif&as=srcset";
 
 // Produktbilleder til karrusellerne — small fallback + responsive srcset.
 import pAway from "@/assets/sah/p-away-sah.webp?w=320&format=webp";

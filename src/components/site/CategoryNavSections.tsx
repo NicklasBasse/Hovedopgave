@@ -1,7 +1,7 @@
 import { Link } from "@tanstack/react-router";
-import jersey from "@/assets/sah/tile-sah-v3.webp";
-import merch from "@/assets/sah/tile-merch-v2.webp";
-import logo from "@/assets/sah/tile-logo-v2.webp";
+import jersey from "@/assets/sah/tile-sah-spillertoj.webp";
+import merch from "@/assets/sah/tile-sah-merchandise.webp";
+import logo from "@/assets/sah/tile-sah-logo.webp";
 
 type CatKey = "spillertoj" | "merchandise" | "sah";
 

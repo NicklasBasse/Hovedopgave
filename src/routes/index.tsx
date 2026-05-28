@@ -26,7 +26,7 @@ import { Hero } from "@/components/site/Hero";
 const HomeBelowFold = lazy(() => import("@/components/site/HomeBelowFold"));
 
 // Hero AVIF (~40% mindre end WebP) – modern browsers (96%+) preloader denne.
-import heroImg from "@/assets/sah/hero-sah-studio.webp?w=1280&format=avif";
+import heroImg from "@/assets/sah/sah-topbillede-2026.webp?w=1280&format=avif";
 
 export const Route = createFileRoute("/")({
   // head(): sætter <title> og meta-tags der vises i fanen og ved deling.

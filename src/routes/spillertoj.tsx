@@ -27,9 +27,9 @@ import {
 } from "@/components/site/CategoryLanding";
 
 // Billeder til underkategori-cirklerne.
-import logo from "@/assets/sah/tile-logo-v2.webp";
-import tileJersey from "@/assets/sah/tile-sah-v3.webp";
-import tileMerch from "@/assets/sah/tile-merch-v2.webp";
+import logo from "@/assets/sah/tile-sah-logo.webp";
+import tileJersey from "@/assets/sah/tile-sah-spillertoj.webp";
+import tileMerch from "@/assets/sah/tile-sah-merchandise.webp";
 
 // Produktbilleder — alle spillertøj-varianter. Importeres som lille fallback
 // + responsive srcset, så mobil ikke henter fuld-størrelse 1000px-billeder.
