@@ -113,7 +113,7 @@ export default function HomeBelowFold() {
         sideImage={side1}
         sideImageSrcset={side1SetWebp}
         sideImageAvifSrcset={side1SetAvif}
-        sideAlt="ACH produkter i fokus"
+        sideAlt="SAH merchandise-kollektion præsenteret på model"
       />
 
       <SplitFeature
