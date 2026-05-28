@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as SpillertojRouteImport } from './routes/spillertoj'
+import { Route as SitemapDotxmlRouteImport } from './routes/sitemap[.]xml'
 import { Route as SeAltSahRouteImport } from './routes/se-alt-sah'
 import { Route as ReadmeRouteImport } from './routes/readme'
 import { Route as MerchandiseRouteImport } from './routes/merchandise'
@@ -19,6 +20,11 @@ import { Route as ProduktSlugRouteImport } from './routes/produkt.$slug'
 const SpillertojRoute = SpillertojRouteImport.update({
   id: '/spillertoj',
   path: '/spillertoj',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const SitemapDotxmlRoute = SitemapDotxmlRouteImport.update({
+  id: '/sitemap.xml',
+  path: '/sitemap.xml',
   getParentRoute: () => rootRouteImport,
 } as any)
 const SeAltSahRoute = SeAltSahRouteImport.update({
@@ -52,6 +58,7 @@ export interface FileRoutesByFullPath {
   '/merchandise': typeof MerchandiseRoute
   '/readme': typeof ReadmeRoute
   '/se-alt-sah': typeof SeAltSahRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/spillertoj': typeof SpillertojRoute
   '/produkt/$slug': typeof ProduktSlugRoute
 }
@@ -60,6 +67,7 @@ export interface FileRoutesByTo {
   '/merchandise': typeof MerchandiseRoute
   '/readme': typeof ReadmeRoute
   '/se-alt-sah': typeof SeAltSahRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/spillertoj': typeof SpillertojRoute
   '/produkt/$slug': typeof ProduktSlugRoute
 }
@@ -69,6 +77,7 @@ export interface FileRoutesById {
   '/merchandise': typeof MerchandiseRoute
   '/readme': typeof ReadmeRoute
   '/se-alt-sah': typeof SeAltSahRoute
+  '/sitemap.xml': typeof SitemapDotxmlRoute
   '/spillertoj': typeof SpillertojRoute
   '/produkt/$slug': typeof ProduktSlugRoute
 }
@@ -79,6 +88,7 @@ export interface FileRouteTypes {
     | '/merchandise'
     | '/readme'
     | '/se-alt-sah'
+    | '/sitemap.xml'
     | '/spillertoj'
     | '/produkt/$slug'
   fileRoutesByTo: FileRoutesByTo
@@ -87,6 +97,7 @@ export interface FileRouteTypes {
     | '/merchandise'
     | '/readme'
     | '/se-alt-sah'
+    | '/sitemap.xml'
     | '/spillertoj'
     | '/produkt/$slug'
   id:
@@ -95,6 +106,7 @@ export interface FileRouteTypes {
     | '/merchandise'
     | '/readme'
     | '/se-alt-sah'
+    | '/sitemap.xml'
     | '/spillertoj'
     | '/produkt/$slug'
   fileRoutesById: FileRoutesById
@@ -104,6 +116,7 @@ export interface RootRouteChildren {
   MerchandiseRoute: typeof MerchandiseRoute
   ReadmeRoute: typeof ReadmeRoute
   SeAltSahRoute: typeof SeAltSahRoute
+  SitemapDotxmlRoute: typeof SitemapDotxmlRoute
   SpillertojRoute: typeof SpillertojRoute
   ProduktSlugRoute: typeof ProduktSlugRoute
 }
@@ -115,6 +128,13 @@ declare module '@tanstack/react-router' {
       path: '/spillertoj'
       fullPath: '/spillertoj'
       preLoaderRoute: typeof SpillertojRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/sitemap.xml': {
+      id: '/sitemap.xml'
+      path: '/sitemap.xml'
+      fullPath: '/sitemap.xml'
+      preLoaderRoute: typeof SitemapDotxmlRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/se-alt-sah': {
@@ -160,6 +180,7 @@ const rootRouteChildren: RootRouteChildren = {
   MerchandiseRoute: MerchandiseRoute,
   ReadmeRoute: ReadmeRoute,
   SeAltSahRoute: SeAltSahRoute,
+  SitemapDotxmlRoute: SitemapDotxmlRoute,
   SpillertojRoute: SpillertojRoute,
   ProduktSlugRoute: ProduktSlugRoute,
 }
