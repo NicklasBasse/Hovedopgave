@@ -80,8 +80,8 @@
   .ms-grid {
     grid-template-columns: 1fr 1fr;
   }
-  /* imageSide="right": billede i højre kolonne, tekst i venstre. */
-  .ms-image { order: 2; }
-  .ms-text { order: 1; padding-inline: 2rem; }
+  /* Matcher original SplitFeature imageSide="right": billede venstre, tekst højre. */
+  .ms-image { order: 1; }
+  .ms-text { order: 2; padding-inline: 2rem; }
   .ms-title { font-size: 2.25rem; line-height: 2.5rem; }
 }
