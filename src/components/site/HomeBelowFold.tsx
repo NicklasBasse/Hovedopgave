@@ -9,6 +9,7 @@
 import { CategoryTiles } from "@/components/site/CategoryTiles";
 import { ProductCarousel, type Product } from "@/components/site/ProductCarousel";
 import { SplitFeature } from "@/components/site/SplitFeature";
+import { MerchandiseSplit } from "@/components/site/MerchandiseSplit";
 import { ClosingHeading } from "@/components/site/ClosingHeading";
 import { SiteFooter } from "@/components/site/SiteFooter";
 
@@ -142,17 +143,11 @@ export default function HomeBelowFold() {
         sideAlt="SAH spillertøj-kollektion 25/26"
       />
 
-      <SplitFeature
-        imageSide="right"
+      <MerchandiseSplit
         image={sectionRight}
         imageSrcset={sectionRightSetWebp}
         imageAvifSrcset={sectionRightSetAvif}
         imageAlt="SAH fans i tribunen med klubbens fan-merchandise"
-        eyebrow="sah MERCHANDISE"
-        title="Håndbold merchandise med stolthed"
-        body="For dig, der elsker fællesskabet og stemningen på lægterne. Vi har designet en fan-linje med et helt unikt SAH-mønster, der binder fans, spillere og frivillige sammen i én stærk enhed. Det markante design gør det nemt at genkende andre fans ude i bybilledet, og det fungerer som den perfekte anledning til at falde i snak om holdet."
-        ctaLabel="Bliv en del af holdet"
-        ctaHref="/se-alt-sah"
       />
 
       <ClosingHeading />
