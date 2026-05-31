@@ -72,7 +72,8 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { name: "robots", content: "noindex" },
+      { name: "robots", content: "noindex, nofollow, noarchive, nosnippet, noimageindex" },
+      { name: "googlebot", content: "noindex, nofollow, noarchive, nosnippet, noimageindex" },
       { title: "Oplev SAH merchandise - Bliv en del af holdet | SPORT 24" },
       { name: "description", content: "Oplev den nye SAH merchandise-kollektion hos SPORT 24. Fra unikt fan-mønster til moderne streetwear. Klik her, se udvalget og find din favorit!" },
       { name: "author", content: "Lovable" },
