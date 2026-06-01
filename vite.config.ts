@@ -5,36 +5,17 @@
 //     error logger plugins, and sandbox detection (port/host/strictPort).
 // You can pass additional config via defineConfig({ vite: { ... } }) if needed.
 import { defineConfig } from "@lovable.dev/vite-tanstack-config";
-import { imagetools } from "vite-imagetools";
 
 // Redirect TanStack Start's bundled server entry to src/server.ts (our SSR error wrapper).
 // @cloudflare/vite-plugin builds from this — wrangler.jsonc main alone is insufficient.
+//
+// Bemærk: vite-imagetools er fjernet bevidst. Vi serverer originale billedfiler
+// 1:1 uden re-encoding for at sikre 100% original billedkvalitet på tværs af
+// hele sitet. Eksisterende imports med `?w=...&format=...&as=srcset` queries
+// fungerer stadig — Vite ignorerer ukendte query-parametre og returnerer
+// URL'en til originalfilen.
 export default defineConfig({
   tanstackStart: {
     server: { entry: "server" },
-  },
-  vite: {
-    plugins: [
-      // Build-time generation af responsive billeder via ?w=...&format=...
-      // Globale defaults: lavere kvalitet → markant mindre filer → bedre
-      // Website Carbon score (mål: A). Visuelt næsten identisk pga. AVIF/WebP's
-      // perceptuelle koder ved q=55-70.
-      // Bedst mulig billedkvalitet på tværs af hele sitet. Per-billede
-      // override muligt via `&quality=XX` i import-querien.
-      imagetools({
-        defaultDirectives: (url) => {
-          const params = new URLSearchParams(url.search);
-          const fmt = params.get("format");
-          if (fmt === "avif" && !params.has("quality")) {
-            params.set("quality", "80");
-            params.set("effort", "4");
-          } else if (fmt === "webp" && !params.has("quality")) {
-            params.set("quality", "95");
-            params.set("effort", "6");
-          }
-          return params;
-        },
-      }),
-    ],
   },
 });
