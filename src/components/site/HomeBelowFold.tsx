@@ -17,9 +17,9 @@ import { SiteFooter } from "@/components/site/SiteFooter";
 import sectionLeft from "@/assets/sah/sah-merchandise-hverdag.webp?w=640&format=webp";
 import sectionLeftSetWebp from "@/assets/sah/sah-merchandise-hverdag.webp?w=480;800&format=webp&as=srcset";
 import sectionLeftSetAvif from "@/assets/sah/sah-merchandise-hverdag.webp?w=480;800&format=avif&as=srcset";
-import sectionRight from "@/assets/sah/sah-fan-stemning.webp?w=640&format=webp";
-import sectionRightSetWebp from "@/assets/sah/sah-fan-stemning.webp?w=480;800&format=webp&as=srcset";
-import sectionRightSetAvif from "@/assets/sah/sah-fan-stemning.webp?w=480;800&format=avif&as=srcset";
+import sectionRight from "@/assets/sah/sah-back-jersey.png?w=640&format=webp";
+import sectionRightSetWebp from "@/assets/sah/sah-back-jersey.png?w=480;800&format=webp&as=srcset";
+import sectionRightSetAvif from "@/assets/sah/sah-back-jersey.png?w=480;800&format=avif&as=srcset";
 // Karrusel lead-card billeder
 import side1 from "@/assets/sah/sah-merchandise-kollektion.webp?w=320&format=webp";
 import side1SetWebp from "@/assets/sah/sah-merchandise-kollektion.webp?w=320;480&format=webp&as=srcset";
