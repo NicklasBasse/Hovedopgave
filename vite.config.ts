@@ -26,8 +26,8 @@ export default defineConfig({
           const params = new URLSearchParams(url.search);
           const fmt = params.get("format");
           if (fmt === "avif" && !params.has("quality")) {
-            params.set("quality", "90");
-            params.set("effort", "9");
+            params.set("quality", "80");
+            params.set("effort", "4");
           } else if (fmt === "webp" && !params.has("quality")) {
             params.set("quality", "95");
             params.set("effort", "6");
