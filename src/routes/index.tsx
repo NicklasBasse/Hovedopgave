@@ -26,7 +26,7 @@ import { Hero } from "@/components/site/Hero";
 const HomeBelowFold = lazy(() => import("@/components/site/HomeBelowFold"));
 
 // Hero som WebP (hurtigere encoding end AVIF ved høj kvalitet, undgår dev-timeout).
-import heroImg from "@/assets/sah/sah-topbillede-2026.webp?w=1280&format=webp&quality=90";
+import heroImg from "@/assets/sah/sah-topbillede-2026.webp?w=1280&quality=90&format=webp";
 
 export const Route = createFileRoute("/")({
   // head(): sætter <title> og meta-tags der vises i fanen og ved deling.
