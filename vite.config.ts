@@ -19,15 +19,17 @@ export default defineConfig({
       // Globale defaults: lavere kvalitet → markant mindre filer → bedre
       // Website Carbon score (mål: A). Visuelt næsten identisk pga. AVIF/WebP's
       // perceptuelle koder ved q=55-70.
+      // Bedst mulig billedkvalitet på tværs af hele sitet. Per-billede
+      // override muligt via `&quality=XX` i import-querien.
       imagetools({
         defaultDirectives: (url) => {
           const params = new URLSearchParams(url.search);
           const fmt = params.get("format");
           if (fmt === "avif" && !params.has("quality")) {
-            params.set("quality", "38");
+            params.set("quality", "90");
             params.set("effort", "9");
           } else if (fmt === "webp" && !params.has("quality")) {
-            params.set("quality", "55");
+            params.set("quality", "95");
             params.set("effort", "6");
           }
           return params;
